@@ -1,3 +1,9 @@
-jQuery("#main").load("./html/test.html", () => {
-    
+jQuery( document ).ready(() => {
+    jQuery("#main").load("./html/sites/intro.html", () => {
+        
+    });
 });
+
+
+
+
