@@ -1,7 +1,11 @@
 class GameStateManager {
   // loaded = false;
 
-  constructor() {}
+  constructor() {
+    if (this.instance) {
+      throw new Error("Constructor call is private, please use GameStateManager.getInstance()");
+    }
+  }
 
   static getInstance() {
     console.log(this.instance);
@@ -13,5 +17,9 @@ class GameStateManager {
 
   setLoaded() {
     this.loaded = true;
+  }
+
+  setCharacter(character) {
+    this.character = character;
   }
 }

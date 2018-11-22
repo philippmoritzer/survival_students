@@ -1,0 +1,12 @@
+.flexcontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.flexchild {
+    background-color: grey;
+    border: solid 1px black;
+    flex: 1;
+}
