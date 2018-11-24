@@ -3,7 +3,9 @@ class GameStateManager {
 
   constructor() {
     if (this.instance) {
-      throw new Error("Constructor call is private, please use GameStateManager.getInstance()");
+      throw new Error(
+        "Constructor call is private, please use GameStateManager.getInstance()"
+      );
     }
   }
 
