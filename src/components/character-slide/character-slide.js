@@ -24,11 +24,11 @@ class CharacterSlide {
 
   selectIndex() {
     jQuery("#slide" + this.id).on("click", () => {
-      createCharacterAndStartGame(this);
+      selectCharacter(this);
     });
   }
 
-  update() {
+  init() {
     this.makeElementUnique();
     this.setCharacterAttributes();
     this.selectIndex();

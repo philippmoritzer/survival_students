@@ -1,14 +1,3 @@
-const chooseStart = character => {
-  var gManager = GameStateManager.getInstance();
-  gManager.setCharacter(character);
-
-  jQuery("#main").load("../game/game.html", () => {
-    console.log(
-      "Game starting with character" + JSON.stringify(gManager.character)
-    );
-  });
-};
-
 /**
  * Loads the characterslide into a div
  * Needs a CharacterSlide Object which needs to be made unique by calling (makeElementUnique) (e.g. <div id="example">" -> <div id="example1">)
@@ -21,7 +10,7 @@ const chooseStart = character => {
 const loadCharacterSlides = (characterslide, identifier, htmlpage) => {
   jQuery(document).ready(() => {
     jQuery(identifier).innerHTML = jQuery(identifier).load(htmlpage, () => {
-      characterslide.update();
+      characterslide.init();
     });
   });
 };
@@ -59,9 +48,10 @@ loadCharacterSlides(slide3, "#character3", CHAR_SLIDE_PAGE);
  * Call this Method from CharacterSlide model
  * The right character gets injected when clicked the right slide
  * CharacterSlide is a ViewHelper Object.
+ * Selects the character
  * @param {Slide} slide
  */
-const createCharacterAndStartGame = slide => {
+const selectCharacter = slide => {
   let name = NAME_INDEX_PAIR[slide.id].name;
 
   const character = new Character(
@@ -74,6 +64,13 @@ const createCharacterAndStartGame = slide => {
   );
 
   GameStateManager.getInstance().setCharacter(character);
+};
 
-  console.log(character); //todo: entfernen
+const start = () => {
+  jQuery("#main").load("./sites/game/game.html", () => {
+    console.log(
+      "Game starting with character" +
+        JSON.stringify(GameStateManager.getInstance().character)
+    );
+  });
 };

@@ -1,0 +1,43 @@
+.flexlayout {
+  display: flex;
+  flex-direction: column;
+  /* background-color: grey; */
+  width: 100%;
+  height: 100%;
+}
+
+#top {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#center {
+  border: 1px solid black;
+  flex: 9;
+}
+#bottom {
+  flex: 6;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+#characterImage {
+  width: 64px;
+  height: 64px;
+  border: solid 1px grey;
+  border-radius: 50%;
+}
+
+#characterName {
+  margin-left: 20px;
+  font-size: 1.5em;
+}
+
+.res {
+  margin-bottom: 10px;
+  display: inline-flex;
+}

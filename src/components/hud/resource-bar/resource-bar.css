@@ -1,0 +1,46 @@
+.resourceBar {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: rgba(206, 2, 18, 0.5);
+  padding: 10px;
+  border-radius: 10px;
+  height: 70px;
+  margin: 2.5px;
+}
+
+.resourceIcon {
+  flex: 3;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 2px solid pink;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.numbersBar {
+  width: 350px;
+  height: 20px;
+  border-radius: 10%;
+  margin-left: 5px;
+  background-image: linear-gradient(#68020a, #ce0212);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.progress {
+  background-color: black;
+  height: 70%;
+  margin: 3px;
+  border-radius: 10%;
+  width: 30%;
+
+  display: flex;
+  justify-content: center;
+}
+
+.resourceBarText {
+  color: white;
+}

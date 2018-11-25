@@ -1,0 +1,10 @@
+#nameImageContainer {
+  background-color: rgba(51, 170, 51, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 30%;
+  height: 100%;
+  border-top-right-radius: 10%;
+  border-bottom-right-radius: 10%;
+}
