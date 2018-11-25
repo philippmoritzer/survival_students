@@ -2,7 +2,7 @@
 jQuery(document).ready(() => {
   var gst = GameStateManager.getInstance();
   if (!gst.loaded) {
-    jQuery("#main").load("./src/sites/intro/intro.html", () => {});
+    jQuery("#main").load("./sites/intro/intro.html", () => {});
     gst.setLoaded();
   }
 });
