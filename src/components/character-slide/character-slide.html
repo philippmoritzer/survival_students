@@ -1,14 +1,60 @@
 <head>
+  <script src="resource-bar.js"></script>
   <link
     rel="stylesheet"
     href="./components/character-slide/character-slide.css"
   />
 </head>
 <body>
-  <div id="slide">
-    <p id="money"><!-- inject the money --></p>
-    <p id="hunger"><!-- inject hunger --></p>
-    <p id="life"><!-- inject life --></p>
-    <p id="learn"><!-- inject learn level --></p>
+  <div id="characterSlide" class="characterSlide">
+    <img id="characterSelectionImage" src="../assets/images/icons/mockup.png" />
+    <h1 id="name" class="characterSelectionName"><!-- inject name --></h1>
+    <div id="test"></div>
+    <p id="money" class="characterStartAttribute">
+      Geld:
+      <!-- inject starting money -->
+    </p>
+    <div class="characterSelectionResourceDiv hunger">
+      <img
+        class="characterSelectionResourceImage "
+        src="../assets/resources/hunger.png"
+        alt=""
+      />
+      <p id="hunger" class="characterStartAttribute">
+        <!-- inject starting hunger -->
+      </p>
+    </div>
+    <div class="characterSelectionResourceDiv life">
+      <img
+        class="characterSelectionResourceImage"
+        src="../assets/resources/life.png"
+        alt=""
+      />
+      <p id="life" class="characterStartAttribute">
+        Lebensfreude:
+        <!-- inject starting life -->
+      </p>
+    </div>
+    <div class="characterSelectionResourceDiv learn">
+      <img
+        class="characterSelectionResourceImage"
+        src="../assets/resources/learn.png"
+        alt=""
+      />
+      <p id="learn" class="characterStartAttribute">
+        <!-- inject starting learn level -->
+      </p>
+    </div>
+    <p id="characterSelectionDescription" class="characterSelectionDescription">
+      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+      eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+      voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+      clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+      amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+      nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
+      diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+      Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+      sit amet.
+    </p>
   </div>
 </body>

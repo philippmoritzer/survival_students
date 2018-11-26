@@ -1,0 +1,128 @@
+#introContent {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#layer {
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  background-color: black;
+  animation: fade-out 5s forwards;
+  animation-delay: 3s;
+}
+
+#title {
+  flex: 3;
+  display: flex;
+  justify-content: center;
+}
+
+#pTitle {
+  color: #f47a42;
+  font-size: 4em;
+  font-family: "zorque";
+}
+
+#startGame {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+#pStartGame {
+  color: white;
+  font-size: 2em;
+  z-index: 2;
+  opacity: 0;
+  font-family: "ArcadeClassic";
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  animation: 2s fade-in infinite;
+  animation-delay: 3s;
+}
+
+#characterIntro {
+  flex: 5;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  z-index: 2;
+}
+
+.characterImg {
+  margin-top: 350px;
+  overflow: hidden;
+  margin-top: 100%;
+  object-fit: contain;
+  z-index: 3;
+}
+
+#characterImg1 {
+  margin-right: -3px;
+  animation: 1s slide-in forwards, 5s wiggle infinite;
+  animation-delay: 1s;
+  filter: drop-shadow(5px 5px 5px black);
+}
+#characterImg2 {
+  animation: 1s slide-in forwards, 5s wiggle infinite;
+  filter: drop-shadow(5px 5px 5px black);
+}
+#characterImg3 {
+  margin-left: -3px;
+  animation: 1s slide-in forwards, 5s wiggle infinite;
+  animation-delay: 2s;
+  filter: drop-shadow(5px 5px 5px black);
+}
+
+#spacer {
+  flex: 2;
+}
+
+@keyframes slide-in {
+  from {
+    margin-top: 100%;
+  }
+  to {
+    margin-top: 0%;
+  }
+}
+
+@keyframes wiggle {
+  0% {
+    padding-top: 0px;
+  }
+  50% {
+    padding-top: 20px;
+  }
+  100% {
+    padding-top: 0px;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

@@ -1,0 +1,70 @@
+.characterSlide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(86, 86, 86, 0.5);
+  border-radius: 10%;
+}
+
+.characterSelectionName {
+  color: white;
+  font-family: "zorque";
+}
+
+#characterSelectionImage {
+  width: 128px;
+  height: 128px;
+  border: 1px solid pink;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+
+.characterStartAttribute {
+  color: white;
+}
+
+.active {
+  background-color: rgba(86, 86, 86, 0.8);
+  margin-left: -25px;
+  margin-right: -25px;
+  z-index: 999;
+  position: relative;
+  box-shadow: 0px 0px 50px 10px #f9a022;
+}
+
+.characterSelectionResourceDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+
+.characterSelectionResourceImage {
+  width: 64px;
+  height: 64px;
+}
+
+.hunger {
+  background-color: green;
+  border-radius: 10%;
+}
+.life {
+  background-color: red;
+  border-radius: 10%;
+}
+.learn {
+  background-color: yellow;
+  border-radius: 10%;
+}
+
+.characterSelectionDescription {
+  visibility: hidden;
+  text-align: justify;
+  color: white;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

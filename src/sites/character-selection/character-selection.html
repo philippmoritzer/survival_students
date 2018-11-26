@@ -13,11 +13,25 @@
   ></script>
 </head>
 <body>
-  <h1>Bitte wählen Sie einen Character aus:</h1>
-  <div class="flexcontainer">
-    <div id="character1" class="flexchild"></div>
-    <div id="character2" class="flexchild">Child2</div>
-    <div id="character3" class="flexchild">Child3</div>
+  <div id="characterSelectionPageFlexContainer">
+    <h1 id="chooseCharacterCaption">Choose a character:</h1>
+    <div class="characterSlideFlexContainer">
+      <div id="character1" class="flexchildCharacter">
+        <!-- Inject character-slide.html -->
+      </div>
+      <div id="character2" class="flexchildCharacter">
+        <!-- Inject character-slide.html -->
+      </div>
+      <div id="character3" class="flexchildCharacter">
+        <!-- Inject character-slide.html -->
+      </div>
+    </div>
+    <button
+      id="characterSelectionLaunchButton"
+      onclick="start()"
+      disabled="true"
+    >
+      START GAME
+    </button>
   </div>
-  <button onclick="start()">START GAME</button>
 </body>
