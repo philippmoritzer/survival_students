@@ -30,7 +30,7 @@ class ResourceBar {
   }
 
   setAttributes() {
-    const IMAGE_PATH = "./../assets/resources/";
+    const IMAGE_PATH = "./../assets/images/";
     jQuery("#resourceBar" + this.id).css({ "background-color": this.color1 });
     jQuery("#numbersBar" + this.id).css({
       "background-image":

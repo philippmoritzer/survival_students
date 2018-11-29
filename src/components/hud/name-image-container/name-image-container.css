@@ -5,6 +5,6 @@
   justify-content: flex-start;
   width: 30%;
   height: 100%;
-  border-top-right-radius: 10%;
-  border-bottom-right-radius: 10%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }

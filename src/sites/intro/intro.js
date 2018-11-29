@@ -4,7 +4,7 @@ const startGame = () => {
     () => {
       const gst = GameStateManager.getInstance();
       gst.setLoaded();
-      // jQuery(document).off();
+      jQuery(document).off();
     }
   );
 };
@@ -12,6 +12,9 @@ const startGame = () => {
 setTimeout(() => {
   jQuery(document).ready(() => {
     jQuery(document).keypress(() => {
+      startGame();
+    });
+    jQuery(document).on("click", () => {
       startGame();
     });
   });

@@ -74,3 +74,11 @@ const start = () => {
     );
   });
 };
+
+const card = jQuery(".card");
+const trigger = jQuery(".characterSlideName");
+
+// trigger2 = document.querySelector(".characterSlideNameFlipped");
+// trigger2.addEventListener("click", function() {
+//   card.classList.toggle("is-flipped");
+// });

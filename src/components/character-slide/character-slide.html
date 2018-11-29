@@ -1,66 +1,158 @@
 <head>
-  <script src="resource-bar.js"></script>
   <link
     rel="stylesheet"
     href="./components/character-slide/character-slide.css"
   />
 </head>
+
 <body>
-  <div id="characterSlide" class="characterSlide">
-    <img id="characterSelectionImage" src="../assets/images/icons/mockup.png" />
-    <h1 id="name" class="characterSelectionName"><!-- inject name --></h1>
-    <div id="test"></div>
-    <div class="characterSelectionMoney">
-      <img class="characterSelectionResourceImage" src="../assets/resources/money.png" alt="">
-    <p id="money" class="characterStartAttribute">
-      Geld:
-      <!-- inject starting money -->
-    </p>
-  </div>
-    <div class="characterSelectionResourceDiv hunger">
-      <img
-        class="characterSelectionResourceImage "
-        src="../assets/resources/hunger.png"
-        alt=""
-      />
-      <div id="characterSelectionHungerProgress" class="characterSelectionHungerProgress">
-      <p id="hunger" class="characterStartAttribute">
-        <!-- inject starting hunger -->
+  <div id="characterSlide" class="characterSlide characterSlide--card card">
+    <div class="card__face card__face--front characterSlideInnerFlex">
+      <div class="characterSlideTop">
+        <img
+          class="characterPortrait"
+          src="../assets/images/icons/mockup.png"
+          alt=""
+        />
+        <p class="characterSlideName" id="name"><!-- Inject Name --></p>
       </div>
-      </p>
+
+      <div class="characterSlideCenter">
+        <div class="tooltip">
+          <span class="tooltiptext"
+            >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+            sadipscing elitr, sed diam nonumy</span
+          >
+          <img
+            class="characterSlideResourceImg"
+            src="../assets/images/money.png"
+            alt=""
+          />
+        </div>
+        <p class="characterSlideMoney" id="money"><!-- Inject Money --></p>
+      </div>
+      <div class="characterSlideBottom">
+        <div class="characterSlideResourceFlex">
+          <div class="tooltip">
+            <span class="tooltiptext"
+              >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+              erat, sed diam voluptua. At vero eos et accusam et justo duo
+              dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+              sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+              amet, consetetur sadipscing elitr, sed diam nonumy</span
+            >
+            <img
+              class="characterSlideResourceImg"
+              src="../assets/images/hunger.png"
+              alt=""
+            />
+          </div>
+          <div class="characterSlideResourceBar characterSlideHunger">
+            <div
+              id="characterSlideHungerGradient"
+              class="characterSlideHungerGradient"
+            >
+              <p id="hunger" class="characterSlideStartAttribute">
+                <!-- Inject Hunger -->
+              </p>
+            </div>
+          </div>
+          <p id="hungerM" class="characterSlideStartAttributeMobile">
+            <!-- Inject Hunger -->
+          </p>
+        </div>
+        <div class="characterSlideResourceFlex">
+          <div class="tooltip">
+            <span class="tooltiptext"
+              >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+              erat, sed diam voluptua. At vero eos et accusam et justo duo
+              dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+              sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+              amet, consetetur sadipscing elitr, sed diam nonumy</span
+            >
+            <img
+              class="characterSlideResourceImg"
+              src="../assets/images/life.png"
+              alt=""
+            />
+          </div>
+          <div class="characterSlideResourceBar characterSlideLife">
+            <div
+              id="characterSlideLifeGradient"
+              class="characterSlideLifeGradient"
+            >
+              <p id="life" class="characterSlideStartAttribute">
+                <!-- Inject Life -->
+              </p>
+            </div>
+          </div>
+          <p id="lifeM" class="characterSlideStartAttributeMobile">
+            <!-- Inject Life -->
+          </p>
+        </div>
+        <div class="characterSlideResourceFlex ">
+          <div class="tooltip">
+            <span class="tooltiptext"
+              >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+              erat, sed diam voluptua. At vero eos et accusam et justo duo
+              dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+              sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+              amet, consetetur sadipscing elitr, sed diam nonumy</span
+            >
+            <img
+              class="characterSlideResourceImg"
+              src="../assets/images/learn.png"
+              alt=""
+            />
+          </div>
+          <div class="characterSlideResourceBar characterSlideLearn">
+            <div
+              id="characterSlideLearnGradient"
+              class="characterSlideLearnGradient"
+            >
+              <p id="learn" class="characterSlideStartAttribute">
+                <!-- Inject learn -->
+              </p>
+            </div>
+          </div>
+          <p id="learnM" class="characterSlideStartAttributeMobile">
+            <!-- Inject learn -->
+          </p>
+        </div>
+      </div>
     </div>
-    <div class="characterSelectionResourceDiv life">
-      <img
-        class="characterSelectionResourceImage"
-        src="../assets/resources/life.png"
-        alt=""
-      />
-      <div class=""></div>
-      <p id="life" class="characterStartAttribute">
-        Lebensfreude:
-        <!-- inject starting life -->
-      </p>
+    <div class="card__face card__face--back">
+      <div class="characterSlideBackSide">
+        <div style="display: flex; flex-direction: row;">
+          <img
+            class="characterPortraitBackSide"
+            src="../assets/images/icons/mockup.png"
+            alt=""
+          />
+          <p id="nameB" class="characterSlideNameFlipped">
+            <!-- Inject name -->
+          </p>
+        </div>
+        <p class="characterSlideDescText" id="characterSelectionDescription">
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+          rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
+          ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+          sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+          et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+          takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+          amet, consetetur sadipscing elitr.
+        </p>
+      </div>
     </div>
-    <div class="characterSelectionResourceDiv learn">
-      <img
-        class="characterSelectionResourceImage"
-        src="../assets/resources/learn.png"
-        alt=""
-      />
-      <p id="learn" class="characterStartAttribute">
-        <!-- inject starting learn level -->
-      </p>
-    </div>
-    <p id="characterSelectionDescription" class="characterSelectionDescription">
-      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-      eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-      voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-      clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-      amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-      nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-      diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-      Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
-      sit amet.
-    </p>
   </div>
 </body>
