@@ -1,5 +1,14 @@
 //At the initial start of the game - load intro.html into the main div
-jQuery(document).ready(() => {
+// jQuery(document).ready(() => {
+//   var gst = GameStateManager.getInstance();
+//   if (!gst.loaded) {
+//     jQuery("#main").load("./sites/intro/intro.html", () => {});
+//     gst.setLoaded();
+//   }
+// });
+
+
+$(window).on('load', function() {
   var gst = GameStateManager.getInstance();
   if (!gst.loaded) {
     jQuery("#main").load("./sites/intro/intro.html", () => {});
