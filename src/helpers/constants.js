@@ -45,3 +45,23 @@ const RESOURCE_BARS = [
     image: "learn.png"
   }
 ];
+
+let hungerActions = [];
+jQuery.getJSON("./actions/hungerActions.json", (data) => {
+  hungerActions = data;
+  console.log(hungerActions);
+});
+
+const lifeActions = [];
+jQuery.getJSON("./actions/lifeActions.json", (data) => {
+  lifeActions = data;
+  console.log(hungerActions);
+});
+
+const learnActions = [];
+jQuery.getJSON("./actions/learnActions.json", (data) => {
+  learnActions = data;
+  console.log(hungerActions);
+});
+
+const actions = [hungerActions, lifeActions, learnActions];

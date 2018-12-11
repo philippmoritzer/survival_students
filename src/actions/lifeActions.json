@@ -1,0 +1,26 @@
+[
+    {
+        "name": "testname",
+        "desc": "testdesc",
+        "img": "img",
+        "type": "hunger",
+        "value": 34,
+        "cost": 500
+    },
+    {
+        "name": "testname",
+        "desc": "testdesc",
+        "img": "img",
+        "type": "hunger",
+        "value": 34,
+        "cost": 500
+    },
+    {
+        "name": "testname",
+        "desc": "testdesc",
+        "img": "img",
+        "type": "hunger",
+        "value": 34,
+        "cost": 500
+    }
+]
