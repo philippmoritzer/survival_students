@@ -24,4 +24,5 @@ $(window).on("load", function() {
 
   jQuery("#main").load("./sites/game/game.html", () => {});
   gst.setLoaded();
+  gst.initGameData();
 });
