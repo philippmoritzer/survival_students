@@ -7,7 +7,7 @@ body {
   font-family: "Helvetica", "Arial", sans-serif;
   overflow: hidden;
 
-    user-select: none;
+  user-select: none;
 }
 
 #main {
@@ -16,6 +16,23 @@ body {
   background: url("/assets/scenes/landscape.jpg") no-repeat center center fixed;
 
   background-size: cover;
+}
+
+.modal {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+}
+
+@media only screen and (max-width: 991px) {
+  #main {
+    zoom: 2;
+  }
 }
 
 @font-face {

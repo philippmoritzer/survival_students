@@ -1,0 +1,11 @@
+.areaChoiceContainer {
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/scenes/home.png");
+  background-size: 100%;
+  margin: 0;
+  padding: 0;
+
+  /* background-repeat: no-repeat; */
+  /* background-size: auto; */
+}

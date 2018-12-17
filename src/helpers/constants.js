@@ -45,3 +45,7 @@ const RESOURCE_BARS = [
     image: "learn.png"
   }
 ];
+
+//HTML component for AreaChoiceItemPage in Modal Dialog
+const AREA_CHOICE_ITEM_PAGE =
+  "./components/modals/area-choice-modal/area-choice-item/area-choice-item.html";

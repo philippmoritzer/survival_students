@@ -29,23 +29,30 @@ class GameStateManager {
     this.area = area;
   }
 
+  setNavigationItemsLoaded() {
+    this.navigationItemsLoaded = true;
+  }
+
   initGameData() {
     let hungerActions = [];
     jQuery.getJSON("./data/actions/hungerActions.json", data => {
       hungerActions = data;
-      console.log(hungerActions);
+      this.hungerActions = hungerActions;
+      console.log(this.hungerActions);
     });
 
     let lifeActions = [];
     jQuery.getJSON("./data/actions/lifeActions.json", data => {
       lifeActions = data;
-      console.log(lifeActions);
+      this.lifeActions = lifeActions;
+      console.log(this.lifeActions);
     });
 
     let learnActions = [];
     jQuery.getJSON("./data/actions/learnActions.json", data => {
       learnActions = data;
-      console.log(learnActions);
+      this.learnActions = learnActions;
+      console.log(this.learnActions);
     });
 
     const actions = [hungerActions, lifeActions, learnActions];
@@ -53,7 +60,8 @@ class GameStateManager {
     let areas = [];
     jQuery.getJSON("./data/area/areas.json", data => {
       areas = data;
-      console.log(data);
+      this.areas = areas;
+      console.log(this.areas);
     });
   }
 }

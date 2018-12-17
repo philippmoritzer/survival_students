@@ -1,17 +1,27 @@
 [
   {
-    "backgroundImage": "landscape.jpg",
-    "name": "testArea",
+    "backgroundImage": "home.png",
+    "name": "Home",
+    "type": "hunger"
+  },
+  {
+    "backgroundImage": "foodcourt.png",
+    "name": "Foodcourt",
+    "type": "hunger"
+  },
+  {
+    "backgroundImage": "hochschule.png",
+    "name": "Hochschule",
+    "type": "hunger"
+  },
+  {
+    "backgroundImage": "partymeile.png",
+    "name": "Partymeile",
     "type": "hunger"
   },
   {
     "backgroundImage": "landscape.jpg",
-    "name": "testArea",
-    "type": "hunger"
-  },
-  {
-    "backgroundImage": "landscape.jpg",
-    "name": "testArea",
+    "name": "Natur",
     "type": "hunger"
   }
 ]
