@@ -26,3 +26,29 @@ $(window).on("load", function() {
   gst.setLoaded();
   gst.initGameData();
 });
+
+const execAreaChange = area => {
+  console.log(area.backgroundImage);
+  jQuery("#main").animate({ opacity: 0 }, "slow", () => {
+    jQuery("#main")
+      .css({
+        background:
+          "url('../assets/scenes/" +
+          area.backgroundImage +
+          "') no-repeat center center fixed"
+      })
+      .animate({ opacity: 1 });
+    jQuery("#modal").css({ display: "none" });
+  });
+
+  // jQuery("#main").animate({ opacity: 0 }, "slow", () => {});
+
+  // jQuery("#main")
+  //   .css({
+  //     background:
+  //       'url("../assets/scenes/' +
+  //       area.backgroundImage +
+  //       '") no-repeat center center fixed;'
+  //   })
+  //   .animate({ opacity: 1 });
+};

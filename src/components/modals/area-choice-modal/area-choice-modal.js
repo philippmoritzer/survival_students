@@ -25,3 +25,7 @@ if (!gst.navigationItemsLoaded) {
 } else {
   load();
 }
+
+jQuery(".areaChoiceClose").on("click", () => {
+  jQuery("#modal").css({ display: "none" });
+});

@@ -25,8 +25,9 @@ class GameStateManager {
     this.character = character;
   }
 
-  changeArea(area) {
-    this.area = area;
+  changeArea(id) {
+    this.area = this.getAreaById(id);
+    execAreaChange(this.area);
   }
 
   setNavigationItemsLoaded() {
@@ -63,5 +64,9 @@ class GameStateManager {
       this.areas = areas;
       console.log(this.areas);
     });
+  }
+
+  getAreaById(id) {
+    return this.areas[id];
   }
 }

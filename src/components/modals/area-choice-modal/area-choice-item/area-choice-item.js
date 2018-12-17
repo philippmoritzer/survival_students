@@ -23,8 +23,17 @@ class AreaChoiceItem {
     });
   }
 
+  selectIndex() {
+    jQuery("#areaChoiceContainer" + this.id).on("click", () => {
+      gst.changeArea(this.id);
+    });
+  }
+
+  initHoverEvent() {}
+
   init() {
     this.makeElementUnique();
     this.setAttributes();
+    this.selectIndex();
   }
 }

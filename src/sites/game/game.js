@@ -51,17 +51,15 @@ loadResourceBars(resource_bar1, "#res1", RESOURCE_BAR_PAGE);
 loadResourceBars(resource_bar2, "#res2", RESOURCE_BAR_PAGE);
 loadResourceBars(resource_bar3, "#res3", RESOURCE_BAR_PAGE);
 
-jQuery("#gameNavigator").on("click", () => {});
-
 jQuery("#gameBackpack").on("click", () => {
+  //TODO
+});
+
+jQuery("#gameNavigator").on("click", () => {
   jQuery("#modal").load(
     "./components/modals/area-choice-modal/area-choice-modal.html",
     () => {
       jQuery(".modal").css({ display: "unset" });
     }
   );
-});
-
-jQuery("#modal").on("click", () => {
-  jQuery("#modal").css({ display: "none" });
 });
