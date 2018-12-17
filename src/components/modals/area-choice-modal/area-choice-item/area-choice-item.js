@@ -17,6 +17,7 @@ class AreaChoiceItem {
   }
 
   setAttributes() {
+    console.log(this.name);
     jQuery("#areaChoiceName" + this.id).text(this.name);
     jQuery("#areaChoiceContainer" + this.id).css({
       "background-image": "url(../assets/scenes/" + this.backgroundImage + ")"

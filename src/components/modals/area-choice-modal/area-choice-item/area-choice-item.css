@@ -5,7 +5,42 @@
   background-size: 100%;
   margin: 0;
   padding: 0;
+  cursor: pointer;
 
   /* background-repeat: no-repeat; */
   /* background-size: auto; */
+}
+
+.areaChoiceNameContainer {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 999;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.areaChoiceNameContainer:hover {
+  animation: fade-in-item 1s forwards;
+}
+
+@keyframes fade-in-item {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out-item {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
