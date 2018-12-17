@@ -24,4 +24,8 @@ class GameStateManager {
   setCharacter(character) {
     this.character = character;
   }
+
+  changeArea(area) {
+    this.area = area;
+  }
 }

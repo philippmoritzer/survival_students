@@ -47,19 +47,19 @@ const RESOURCE_BARS = [
 ];
 
 let hungerActions = [];
-jQuery.getJSON("./actions/hungerActions.json", (data) => {
+jQuery.getJSON("./data/actions/hungerActions.json", data => {
   hungerActions = data;
   console.log(hungerActions);
 });
 
 let lifeActions = [];
-jQuery.getJSON("./actions/lifeActions.json", (data) => {
+jQuery.getJSON("./data/actions/lifeActions.json", data => {
   lifeActions = data;
   console.log(lifeActions);
 });
 
 let learnActions = [];
-jQuery.getJSON("./actions/learnActions.json", (data) => {
+jQuery.getJSON("./data/actions/learnActions.json", data => {
   learnActions = data;
   console.log(learnActions);
 });
