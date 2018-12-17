@@ -1,11 +1,9 @@
 const gst = GameStateManager.getInstance();
 
 jQuery(document).ready(() => {
-  jQuery("#top").load(
+  jQuery("#gameCharacterbar").load(
     "./components/hud/name-image-container/name-image-container.html",
-    () => {
-      // jQuery("#characterName").text(gst.character.name);
-    }
+    () => {}
   );
 });
 

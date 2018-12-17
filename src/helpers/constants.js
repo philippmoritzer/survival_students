@@ -52,16 +52,16 @@ jQuery.getJSON("./actions/hungerActions.json", (data) => {
   console.log(hungerActions);
 });
 
-const lifeActions = [];
+let lifeActions = [];
 jQuery.getJSON("./actions/lifeActions.json", (data) => {
   lifeActions = data;
-  console.log(hungerActions);
+  console.log(lifeActions);
 });
 
-const learnActions = [];
+let learnActions = [];
 jQuery.getJSON("./actions/learnActions.json", (data) => {
   learnActions = data;
-  console.log(hungerActions);
+  console.log(learnActions);
 });
 
 const actions = [hungerActions, lifeActions, learnActions];

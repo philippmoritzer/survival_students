@@ -1,10 +1,20 @@
-#nameImageContainer {
-  background-color: rgba(51, 170, 51, 0.4);
+.gameCharacterImageName {
+  justify-self: flex-start;
   display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
-  width: 30%;
-  height: 100%;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+}
+
+.gameCharacterImage {
+  width: 64px;
+  height: 64px;
+  border: 1px solid pink;
+  border-radius: 50%;
+}
+
+.gameCharacterName {
+  color: white;
+  margin-left: 1.2em;
+  font-family: "zorque";
+  font-size: 1.5em;
 }

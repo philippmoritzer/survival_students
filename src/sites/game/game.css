@@ -1,43 +1,124 @@
-.flexlayout {
+.gameMainFlexContainer {
   display: flex;
   flex-direction: column;
-  /* background-color: grey; */
-  width: 100%;
   height: 100%;
 }
 
-#top {
-  flex: 2;
+.gameTop {
+  flex: 1 1 0px;
+  flex-basis: 0%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.gameCharacterbar {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.gameMoney {
+  justify-self: flex-end;
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
 }
 
-#center {
-  border: 1px solid black;
-  flex: 9;
-}
-#bottom {
-  flex: 6;
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-#characterImage {
-  width: 64px;
-  height: 64px;
-  border: solid 1px grey;
+.gameResourceImage {
+  width: 48px;
+  height: 48px;
+  border: 1px solid pink;
   border-radius: 50%;
 }
 
-#characterName {
-  margin-left: 20px;
-  font-size: 1.5em;
+.gameMoneyText {
+  color: white;
+  margin-left: 1.5em;
 }
 
-.res {
-  margin-bottom: 10px;
-  display: inline-flex;
+.gameCenter {
+  flex: 10;
+  display: flex;
+  flex-direction: row;
+}
+
+.gameActionsBar {
+  flex: 1.1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-bottom-right-radius: 10px;
+}
+
+.gameActionBarIcon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 1.5em;
+}
+
+.gameActionBarIcon:hover {
+  cursor: pointer;
+  filter: drop-shadow(5px 5px 5px #03a0a5);
+}
+
+.gameActionArea {
+  flex: 10;
+}
+
+.gameBottom {
+  flex: 2.5;
+  display: flex;
+  flex-direction: column;
+}
+
+.gameSwitchSceneAction {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.gameSwitchSceneButton {
+  font-size: 3em;
+  text-shadow: 1px 1px 2px black, 0 0 25px #00eaf7, 0 0 5px #01aeb7;
+  cursor: pointer;
+}
+
+.gameResourceBars {
+  flex: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.gameResourceBar {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+#hungerBar {
+  background-color: rgba(255, 0, 0, 0.3);
+}
+
+#lifestyleBar {
+  background-color: rgba(0, 255, 0, 0.3);
+}
+
+#learnBar {
+  background-color: rgba(0, 0, 255, 0.3);
+}
+
+#modalTest {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: none;
 }

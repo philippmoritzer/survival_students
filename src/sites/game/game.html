@@ -11,13 +11,34 @@
 </head>
 
 <body>
-  <div class="flexlayout">
-    <div id="top"><!-- Inject name-image-container.html --></div>
-    <div id="center"></div>
-    <div id="bottom">
-      <div id="res1" class="res"><!-- Inject resourcebar.html --></div>
-      <div id="res2" class="res"><!-- Inject resourcebar.html --></div>
-      <div id="res3" class="res"><!-- Inject resourcebar.html --></div>
-    </div>
+    <div class="gameMainFlexContainer">
+        <div class="gameTop">
+          <div id="gameCharacterbar" class="gameCharacterbar">
+            <!--Inject name-image-container.html-->
+            
+          </div>
+        </div>
+        <div class="gameCenter">
+          <div class="gameActionsBar">
+            <img class="gameActionBarIcon" src="../assets/images/money.png" alt="" />
+            <img class="gameActionBarIcon" src="../assets/images/money.png" alt="" />
+          </div>
+          <div class="gameActionArea"></div>
+        </div>
+        <div class="gameBottom">
+          <div class="gameSwitchSceneAction">
+            <p class="gameSwitchSceneButton">&lt;</p>
+            <p class="gameSwitchSceneButton">&gt;</p>
+          </div>
+          <div class="gameResourceBars">
+            <div id="res1" class="gameResourceBar">x</div>
+            <div id="res2" class="gameResourceBar">x</div>
+            <div id="res3" class="gameResourceBar">
+              <button id="btn">Open Modal</button>
+            </div>
+          </div>
+        </div>
+      </div>  
+      <div id="modalTest"></div>  
   </div>
 </body>
