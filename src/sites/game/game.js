@@ -59,7 +59,7 @@ jQuery("#gameNavigator").on("click", () => {
   jQuery("#modal").load(
     "./components/modals/area-choice-modal/area-choice-modal.html",
     () => {
-      jQuery(".modal").css({ display: "unset" });
+      jQuery("#modal").css({ display: "unset" });
     }
   );
 });
