@@ -1,6 +1,4 @@
 class GameStateManager {
-  // loaded = false;
-
   constructor() {
     if (this.instance) {
       throw new Error(
@@ -34,39 +32,57 @@ class GameStateManager {
     this.navigationItemsLoaded = true;
   }
 
+  /**
+   * inits the game data stored as json in data-folder
+   * asynchronous request -> returns a promise
+   */
   initGameData() {
-    let hungerActions = [];
-    jQuery.getJSON("./data/actions/hungerActions.json", data => {
-      hungerActions = data;
-      this.hungerActions = hungerActions;
-      console.log(this.hungerActions);
+    var initPromise = new Promise(function(resolve, reject) {
+      let hungerActions = [];
+      jQuery.getJSON("./data/actions/hungerActions.json", data => {
+        hungerActions = data;
+        GameStateManager.getInstance().hungerActions = hungerActions;
+        console.log(GameStateManager.getInstance().hungerActions);
+      });
+
+      let lifeActions = [];
+      jQuery.getJSON("./data/actions/lifeActions.json", data => {
+        lifeActions = data;
+        GameStateManager.getInstance().lifeActions = lifeActions;
+        console.log(GameStateManager.getInstance().lifeActions);
+      });
+
+      let learnActions = [];
+      jQuery.getJSON("./data/actions/learnActions.json", data => {
+        learnActions = data;
+        GameStateManager.getInstance().learnActions = learnActions;
+        console.log(GameStateManager.getInstance().learnActions);
+      });
+
+      const actions = [hungerActions, lifeActions, learnActions];
+
+      let areas = [];
+      jQuery.getJSON("./data/area/areas.json", data => {
+        areas = data;
+        GameStateManager.getInstance().areas = areas;
+        console.log(GameStateManager.getInstance().areas);
+        //FIX ME, fragt den letzten ab und resolvt dann
+        resolve();
+      });
     });
 
-    let lifeActions = [];
-    jQuery.getJSON("./data/actions/lifeActions.json", data => {
-      lifeActions = data;
-      this.lifeActions = lifeActions;
-      console.log(this.lifeActions);
-    });
-
-    let learnActions = [];
-    jQuery.getJSON("./data/actions/learnActions.json", data => {
-      learnActions = data;
-      this.learnActions = learnActions;
-      console.log(this.learnActions);
-    });
-
-    const actions = [hungerActions, lifeActions, learnActions];
-
-    let areas = [];
-    jQuery.getJSON("./data/area/areas.json", data => {
-      areas = data;
-      this.areas = areas;
-      console.log(this.areas);
-    });
+    this.initPromise = initPromise;
   }
 
   getAreaById(id) {
+    //FIXME: id != index
     return this.areas[id];
+  }
+
+  playMusic() {
+    var audio = new Audio("../assets/audio/background-music.mp3");
+    audio.loop = true;
+    audio.volume = 0.2;
+    audio.play();
   }
 }
