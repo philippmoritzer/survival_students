@@ -7,23 +7,23 @@
 //   }
 // });
 
-// $(window).on("load", function() {
-//   var gst = GameStateManager.getInstance();
-//   if (!gst.loaded) {
-//     jQuery("#main").load("./sites/intro/intro.html", () => {});
-//     gst.setLoaded();
-//     gst.initGameData();
-//   }
-// });
+$(window).on("load", function() {
+  var gst = GameStateManager.getInstance();
+  if (!gst.loaded) {
+    jQuery("#main").load("./sites/intro/intro.html", () => {});
+    gst.setLoaded();
+    gst.initGameData();
+  }
+});
 
 //comment in to start at game.html
 
-$(window).on("load", function() {
-  var gst = GameStateManager.getInstance();
-  gst.setLoaded();
-  gst.character = new Character(1, "Testname", 8000, 40, 40, 40);
+// $(window).on("load", function() {
+//   var gst = GameStateManager.getInstance();
+//   gst.setLoaded();
+//   gst.character = new Character(1, "Testname", 8000, 40, 40, 40);
 
-  jQuery("#main").load("./sites/game/game.html", () => {});
-  gst.setLoaded();
-  gst.initGameData();
-});
+//   jQuery("#main").load("./sites/game/game.html", () => {});
+//   gst.setLoaded();
+//   gst.initGameData();
+// });

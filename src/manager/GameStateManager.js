@@ -5,6 +5,7 @@ class GameStateManager {
         "Constructor call is private, please use GameStateManager.getInstance()"
       );
     }
+    this.day = 0;
   }
 
   static getInstance() {
@@ -30,6 +31,12 @@ class GameStateManager {
 
   setNavigationItemsLoaded() {
     this.navigationItemsLoaded = true;
+  }
+
+  incrementDayCount() {
+    if (this.day < 30) {
+      this.day++;
+    }
   }
 
   /**

@@ -57,11 +57,44 @@ jQuery("#gameBackpack").on("click", () => {
   //TODO
 });
 
+/**
+ * method to start a new day
+ */
+const newDayModal = () => {
+  gst.incrementDayCount();
+
+  jQuery("#modal").load(
+    "./components/modals/introduction-modal/introduction-modal.html",
+    () => {
+      jQuery("#introductionText").text("DAY " + gst.day);
+      jQuery("#modal").animate({ opacity: 1 }, "slow", () => {
+        jQuery("#modal").css({ display: "unset" });
+        window.setTimeout(() => {
+          jQuery("#modal")
+            .css({})
+            .animate({ opacity: 0 }, "slow", () => {
+              jQuery("#modal").css({ display: "none", opacity: 1 });
+            });
+        }, 3000);
+      });
+    }
+  );
+};
+
+//initial call for first day
+newDayModal();
+
+jQuery("#gameEndDayButton").on("click", () => {
+  newDayModal();
+});
+
 jQuery("#gameNavigator").on("click", () => {
   jQuery("#modal").load(
     "./components/modals/area-choice-modal/area-choice-modal.html",
     () => {
-      jQuery("#modal").css({ display: "unset" });
+      jQuery(".modal").css({
+        display: "unset"
+      });
     }
   );
 });
@@ -99,8 +132,7 @@ const loadActionItems = (actionItem, identifier, htmlpage) => {
 //TODO: Randomize
 //make sure data is loaded, if not, try again
 
-gst.initPromise.then(function(val) {
-  console.log("HALLOOOO");
+gst.initPromise.then(val => {
   const actionItem1 = new ActionItem(0, gst.hungerActions[0]);
   const actionItem2 = new ActionItem(1, gst.hungerActions[1]);
   const actionItem3 = new ActionItem(2, gst.learnActions[0]);

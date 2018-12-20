@@ -1,0 +1,14 @@
+.introductionModal {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.introductionText {
+  color: white;
+  font-family: ArcadeClassic;
+  font-size: 3em;
+}
