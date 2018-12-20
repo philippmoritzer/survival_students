@@ -1,5 +1,32 @@
 const gst = GameStateManager.getInstance();
 
+/**
+ * method to start a new day
+ */
+const newDayModal = () => {
+  gst.incrementDayCount();
+
+  jQuery("#modal").load(
+    "./components/modals/introduction-modal/introduction-modal.html",
+    () => {
+      jQuery("#introductionText").text("DAY " + gst.day);
+      jQuery("#modal").animate({ opacity: 1 }, "slow", () => {
+        jQuery("#modal").css({ display: "unset" });
+        window.setTimeout(() => {
+          jQuery("#modal")
+            .css({})
+            .animate({ opacity: 0 }, "slow", () => {
+              jQuery("#modal").css({ display: "none", opacity: 1 });
+            });
+        }, 3000);
+      });
+    }
+  );
+};
+
+//initial call for first day
+newDayModal();
+
 jQuery(document).ready(() => {
   jQuery("#gameCharacterbar").load(
     "./components/hud/name-image-container/name-image-container.html",
@@ -57,33 +84,6 @@ jQuery("#gameBackpack").on("click", () => {
   //TODO
 });
 
-/**
- * method to start a new day
- */
-const newDayModal = () => {
-  gst.incrementDayCount();
-
-  jQuery("#modal").load(
-    "./components/modals/introduction-modal/introduction-modal.html",
-    () => {
-      jQuery("#introductionText").text("DAY " + gst.day);
-      jQuery("#modal").animate({ opacity: 1 }, "slow", () => {
-        jQuery("#modal").css({ display: "unset" });
-        window.setTimeout(() => {
-          jQuery("#modal")
-            .css({})
-            .animate({ opacity: 0 }, "slow", () => {
-              jQuery("#modal").css({ display: "none", opacity: 1 });
-            });
-        }, 3000);
-      });
-    }
-  );
-};
-
-//initial call for first day
-newDayModal();
-
 jQuery("#gameEndDayButton").on("click", () => {
   newDayModal();
 });
@@ -134,7 +134,7 @@ const loadActionItems = (actionItem, identifier, htmlpage) => {
 
 gst.initPromise.then(val => {
   const actionItem1 = new ActionItem(0, gst.hungerActions[0]);
-  const actionItem2 = new ActionItem(1, gst.hungerActions[1]);
+  const actionItem2 = new ActionItem(1, gst.lifeActions[1]);
   const actionItem3 = new ActionItem(2, gst.learnActions[0]);
 
   //initial loading of action items into the divs.
@@ -142,3 +142,5 @@ gst.initPromise.then(val => {
   loadActionItems(actionItem2, "#gameAction2", ACTION_ITEM_PAGE);
   loadActionItems(actionItem3, "#gameAction3", ACTION_ITEM_PAGE);
 });
+
+const switchItems = () => {};

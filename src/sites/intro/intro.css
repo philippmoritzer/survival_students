@@ -67,19 +67,17 @@
 #characterImg1 {
   margin-right: -3px;
   animation: 1s slide-in forwards, 5s wiggle infinite;
-  -moz-animation: 1s slide-in forwards, 5s wiggle infinite;
   animation-delay: 1s;
   filter: drop-shadow(5px 5px 5px black);
 }
 #characterImg2 {
   animation: 1s slide-in forwards, 5s wiggle infinite;
-  -moz-animation: 1s slide-in forwards, 5s wiggle infinite;
   filter: drop-shadow(5px 5px 5px black);
 }
 #characterImg3 {
   margin-left: -3px;
   animation: 1s slide-in forwards, 5s wiggle infinite;
-  -moz-animation: 1s slide-in forwards, 5s wiggle infinite;
+  animation-delay: 2s;
   filter: drop-shadow(5px 5px 5px black);
 }
 
