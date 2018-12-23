@@ -1,25 +1,30 @@
 [
   {
+    "index": 0,
     "backgroundImage": "home.png",
     "name": "Home",
     "type": "hunger"
   },
   {
+    "index": 1,
     "backgroundImage": "foodcourt.png",
     "name": "Foodcourt",
     "type": "hunger"
   },
   {
+    "index": 2,
     "backgroundImage": "hochschule.png",
     "name": "Hochschule",
     "type": "hunger"
   },
   {
+    "index": 3,
     "backgroundImage": "partymeile.png",
     "name": "Partymeile",
     "type": "hunger"
   },
   {
+    "index": 4,
     "backgroundImage": "landscape.jpg",
     "name": "Natur",
     "type": "hunger"

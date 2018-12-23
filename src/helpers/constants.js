@@ -46,6 +46,9 @@ const RESOURCE_BARS = [
   }
 ];
 
+const ACTIONS_PER_AREA = 3;
+const MAX_TURN_COUNT = 3;
+
 //HTML component for AreaChoiceItemPage in Modal Dialog
 const AREA_CHOICE_ITEM_PAGE =
   "./components/modals/area-choice-modal/area-choice-item/area-choice-item.html";

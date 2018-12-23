@@ -4,7 +4,7 @@ const gst = GameStateManager.getInstance();
  * method to start a new day
  */
 const newDayModal = () => {
-  gst.incrementDayCount();
+  gst.changeDay();
 
   jQuery("#modal").load(
     "./components/modals/introduction-modal/introduction-modal.html",
@@ -24,13 +24,13 @@ const newDayModal = () => {
   );
 };
 
-//initial call for first day
-newDayModal();
-
 jQuery(document).ready(() => {
   jQuery("#gameCharacterbar").load(
     "./components/hud/name-image-container/name-image-container.html",
-    () => {}
+    () => {
+      //initial call for first day
+      newDayModal();
+    }
   );
 });
 
@@ -74,6 +74,10 @@ const resource_bar3 = new ResourceBar(
   gst.character.learn
 );
 
+activeResourceBars.push(resource_bar1);
+activeResourceBars.push(resource_bar2);
+activeResourceBars.push(resource_bar3);
+
 loadResourceBars(resource_bar1, "#res1", RESOURCE_BAR_PAGE);
 loadResourceBars(resource_bar2, "#res2", RESOURCE_BAR_PAGE);
 loadResourceBars(resource_bar3, "#res3", RESOURCE_BAR_PAGE);
@@ -116,6 +120,13 @@ const execAreaChange = area => {
       .animate({ opacity: 1 });
     jQuery("#modal").css({ display: "none" });
   });
+  const actionItem1 = new ActionItem(0, area.actions[0]);
+  const actionItem2 = new ActionItem(1, area.actions[1]);
+  const actionItem3 = new ActionItem(2, area.actions[2]);
+
+  loadActionItems(actionItem1, "#gameAction1", ACTION_ITEM_PAGE);
+  loadActionItems(actionItem2, "#gameAction2", ACTION_ITEM_PAGE);
+  loadActionItems(actionItem3, "#gameAction3", ACTION_ITEM_PAGE);
 };
 
 const ACTION_ITEM_PAGE = "./components/hud/action-item/action-item.html";
@@ -133,14 +144,20 @@ const loadActionItems = (actionItem, identifier, htmlpage) => {
 //make sure data is loaded, if not, try again
 
 gst.initPromise.then(val => {
-  const actionItem1 = new ActionItem(0, gst.hungerActions[0]);
-  const actionItem2 = new ActionItem(1, gst.lifeActions[1]);
-  const actionItem3 = new ActionItem(2, gst.learnActions[0]);
+  gst.changeAreaTasks();
+  console.log("########" + JSON.stringify(gst.getAreaByIndex(0)));
+  const area = gst.getAreaByIndex(0);
+  const actionItem1 = new ActionItem(0, area.actions[0]);
+  const actionItem2 = new ActionItem(1, area.actions[1]);
+  const actionItem3 = new ActionItem(2, area.actions[2]);
 
-  //initial loading of action items into the divs.
   loadActionItems(actionItem1, "#gameAction1", ACTION_ITEM_PAGE);
   loadActionItems(actionItem2, "#gameAction2", ACTION_ITEM_PAGE);
   loadActionItems(actionItem3, "#gameAction3", ACTION_ITEM_PAGE);
+
+  //initial loading of action items into the divs.
 });
 
-const switchItems = () => {};
+const switchItems = () => {
+  gst.areas;
+};

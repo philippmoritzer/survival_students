@@ -38,16 +38,13 @@ class ResourceBar {
     });
     jQuery("#resourceIcon" + this.id).attr("src", IMAGE_PATH + this.image);
     jQuery("#resourceBarText" + this.id).text(this.progress + "%");
-    // TODO
-    // jQuery("#progress" + this.id).css({
-    //   "background-color": "rgba(27, 94, 32, 0.7)"
-    // });
 
     console.log(IMAGE_PATH + this.image);
   }
 
-  updateState() {
-    jQuery("#progress" + this.id).css({ width: this.progress + "%" });
+  updateState(value) {
+    jQuery("#progress" + this.id).css({ width: value + "%" });
+    jQuery("#resourceBarText" + this.id).text(value + "%");
   }
 
   setProgress(progress) {
@@ -57,6 +54,5 @@ class ResourceBar {
   init() {
     this.makeElementUnique();
     this.setAttributes();
-    this.updateState();
   }
 }

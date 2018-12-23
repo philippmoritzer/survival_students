@@ -6,6 +6,7 @@ class GameStateManager {
       );
     }
     this.day = 0;
+    this.turnCount = 0;
   }
 
   static getInstance() {
@@ -24,8 +25,9 @@ class GameStateManager {
     this.character = character;
   }
 
-  changeArea(id) {
-    this.area = this.getAreaById(id);
+  changeArea(index) {
+    this.area = this.getAreaByIndex(index);
+    console.log(index);
     execAreaChange(this.area);
   }
 
@@ -33,9 +35,11 @@ class GameStateManager {
     this.navigationItemsLoaded = true;
   }
 
-  incrementDayCount() {
+  changeDay() {
     if (this.day < 30) {
       this.day++;
+      this.turnCount = 0;
+      changeUIDay();
     }
   }
 
@@ -44,7 +48,7 @@ class GameStateManager {
    * asynchronous request -> returns a promise
    */
   initGameData() {
-    var initPromise = new Promise(function(resolve, reject) {
+    let initPromise = new Promise((resolve, reject) => {
       let hungerActions = [];
       jQuery.getJSON("./data/actions/hungerActions.json", data => {
         hungerActions = data;
@@ -72,7 +76,7 @@ class GameStateManager {
       jQuery.getJSON("./data/area/areas.json", data => {
         areas = data;
         GameStateManager.getInstance().areas = areas;
-        console.log(GameStateManager.getInstance().areas);
+
         //FIX ME, fragt den letzten ab und resolvt dann
         resolve();
       });
@@ -81,9 +85,96 @@ class GameStateManager {
     this.initPromise = initPromise;
   }
 
-  getAreaById(id) {
-    //FIXME: id != index
-    return this.areas[id];
+  getAreaByIndex(index) {
+    for (let i = 0; i < this.areas.length; i++) {
+      const area = this.areas[i];
+      console.log(JSON.stringify(area));
+      console.log(JSON.stringify(index));
+      console.log(area.index === index);
+      if (area.index === index) {
+        return area;
+      }
+      console.log("hallo");
+    }
+  }
+  /**
+   * Method that inits the Tasks in a certain Area
+   * needs to be called once the game starts (on day one)
+   * and on every day change
+   */
+  changeAreaTasks() {
+    for (let area of this.areas) {
+      area.actions = [];
+      switch (area.name) {
+        case "Home":
+          for (let i = 0; i < ACTIONS_PER_AREA; i++) {
+            console.log("hallo");
+            switch (i) {
+              case 0:
+                area.actions.push(
+                  this.hungerActions[
+                    Math.floor(Math.random() * this.hungerActions.length)
+                  ]
+                );
+                break;
+              case 1:
+                area.actions.push(
+                  this.learnActions[
+                    Math.floor(Math.random() * this.learnActions.length)
+                  ]
+                );
+                break;
+              case 2:
+                area.actions.push(
+                  this.lifeActions[
+                    Math.floor(Math.random() * this.lifeActions.length)
+                  ]
+                );
+                break;
+            }
+          }
+
+          break;
+        case "Foodcourt":
+          for (let i = 0; i < ACTIONS_PER_AREA; i++) {
+            area.actions.push(
+              this.hungerActions[
+                Math.floor(Math.random() * this.hungerActions.length)
+              ]
+            );
+          }
+          break;
+        case "Hochschule":
+          for (let i = 0; i < ACTIONS_PER_AREA; i++) {
+            area.actions.push(
+              this.learnActions[
+                Math.floor(Math.random() * this.learnActions.length)
+              ]
+            );
+          }
+          break;
+        case "Partymeile":
+          for (let i = 0; i < ACTIONS_PER_AREA; i++) {
+            area.actions.push(
+              this.lifeActions[
+                Math.floor(Math.random() * this.lifeActions.length)
+              ]
+            );
+          }
+          break;
+        case "Natur":
+          for (let i = 0; i < ACTIONS_PER_AREA; i++) {
+            area.actions.push(
+              this.learnActions[
+                Math.floor(Math.random() * this.learnActions.length)
+              ]
+            );
+          }
+          break;
+      }
+    }
+    console.log(this.areas);
+    return this.areas;
   }
 
   playMusic() {
