@@ -18,7 +18,7 @@ const newDayModal = () => {
             .animate({ opacity: 0 }, "slow", () => {
               jQuery("#modal").css({ display: "none", opacity: 1 });
             });
-        }, 3000);
+        }, 1500);
       });
     }
   );
@@ -145,7 +145,7 @@ const loadActionItems = (actionItem, identifier, htmlpage) => {
 
 gst.initPromise.then(val => {
   gst.changeAreaTasks();
-  console.log("########" + JSON.stringify(gst.getAreaByIndex(0)));
+  gst.changeArea(0);
   const area = gst.getAreaByIndex(0);
   const actionItem1 = new ActionItem(0, area.actions[0]);
   const actionItem2 = new ActionItem(1, area.actions[1]);

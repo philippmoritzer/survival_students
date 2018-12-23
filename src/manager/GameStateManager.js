@@ -10,7 +10,6 @@ class GameStateManager {
   }
 
   static getInstance() {
-    console.log(this.instance);
     if (!this.instance) {
       this.instance = new GameStateManager();
     }
@@ -27,7 +26,7 @@ class GameStateManager {
 
   changeArea(index) {
     this.area = this.getAreaByIndex(index);
-    console.log(index);
+
     execAreaChange(this.area);
   }
 
@@ -36,10 +35,11 @@ class GameStateManager {
   }
 
   changeDay() {
+    this.changeAreaTasks();
     if (this.day < 30) {
       this.day++;
       this.turnCount = 0;
-      changeUIDay();
+      changeUIDay(this.area);
     }
   }
 
@@ -53,21 +53,18 @@ class GameStateManager {
       jQuery.getJSON("./data/actions/hungerActions.json", data => {
         hungerActions = data;
         GameStateManager.getInstance().hungerActions = hungerActions;
-        console.log(GameStateManager.getInstance().hungerActions);
       });
 
       let lifeActions = [];
       jQuery.getJSON("./data/actions/lifeActions.json", data => {
         lifeActions = data;
         GameStateManager.getInstance().lifeActions = lifeActions;
-        console.log(GameStateManager.getInstance().lifeActions);
       });
 
       let learnActions = [];
       jQuery.getJSON("./data/actions/learnActions.json", data => {
         learnActions = data;
         GameStateManager.getInstance().learnActions = learnActions;
-        console.log(GameStateManager.getInstance().learnActions);
       });
 
       const actions = [hungerActions, lifeActions, learnActions];
@@ -76,7 +73,6 @@ class GameStateManager {
       jQuery.getJSON("./data/area/areas.json", data => {
         areas = data;
         GameStateManager.getInstance().areas = areas;
-
         //FIX ME, fragt den letzten ab und resolvt dann
         resolve();
       });
@@ -88,13 +84,9 @@ class GameStateManager {
   getAreaByIndex(index) {
     for (let i = 0; i < this.areas.length; i++) {
       const area = this.areas[i];
-      console.log(JSON.stringify(area));
-      console.log(JSON.stringify(index));
-      console.log(area.index === index);
       if (area.index === index) {
         return area;
       }
-      console.log("hallo");
     }
   }
   /**
@@ -108,7 +100,6 @@ class GameStateManager {
       switch (area.name) {
         case "Home":
           for (let i = 0; i < ACTIONS_PER_AREA; i++) {
-            console.log("hallo");
             switch (i) {
               case 0:
                 area.actions.push(
@@ -173,7 +164,6 @@ class GameStateManager {
           break;
       }
     }
-    console.log(this.areas);
     return this.areas;
   }
 

@@ -38,8 +38,6 @@ class ResourceBar {
     });
     jQuery("#resourceIcon" + this.id).attr("src", IMAGE_PATH + this.image);
     jQuery("#resourceBarText" + this.id).text(this.progress + "%");
-
-    console.log(IMAGE_PATH + this.image);
   }
 
   updateState(value) {

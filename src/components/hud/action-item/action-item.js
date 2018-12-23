@@ -28,7 +28,6 @@ class ActionItem {
   }
 
   setStyles() {
-    console.log(this.action.type);
     switch (this.action.type) {
       case "hunger":
         jQuery("#actionContainer" + this.id).css({
@@ -60,34 +59,52 @@ class ActionItem {
         jQuery("#gameEndDayButton").attr("disabled", false);
       }
 
-      if (gst.turnCount < 3) {
+      if (gst.turnCount < 3 && gst.character.money >= this.action.cost) {
         gst.turnCount++;
         jQuery("#gameTurnIndicatorText").text(
           gst.turnCount + " / " + MAX_TURN_COUNT
         );
 
-        console.log(this.action.type);
         switch (this.action.type) {
           case "hunger":
-            console.log(gst.character.money);
             gst.character.money = gst.character.money - this.action.cost;
+
             gst.character.hunger = gst.character.hunger + this.action.value;
+            if (gst.character.hunger > 100) {
+              gst.character.hunger = 100;
+            }
             activeResourceBars[0].updateState(gst.character.hunger);
             break;
           case "life":
-            console.log(gst.character.life);
             gst.character.money = gst.character.money - this.action.cost;
             gst.character.life = gst.character.life + this.action.value;
+            if (gst.character.life > 100) {
+              gst.character.life = 100;
+            }
             activeResourceBars[1].updateState(gst.character.life);
             break;
           case "learn":
-            console.log(gst.character.learn);
             gst.character.money = gst.character.money - this.action.cost;
             gst.character.learn = gst.character.learn + this.action.value;
+            if (gst.character.learn > 100) {
+              gst.character.learn = 100;
+            }
             activeResourceBars[2].updateState(gst.character.learn);
             break;
         }
+        jQuery(".gameMoneyText").animate(
+          {
+            opacity: "0"
+          },
+          100
+        );
         jQuery(".gameMoneyText").text(gst.character.money);
+        jQuery(".gameMoneyText").animate(
+          {
+            opacity: "1"
+          },
+          1000
+        );
       }
     });
   }

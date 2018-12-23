@@ -21,19 +21,45 @@
       </div>
     </div>
     <div class="gameCenter">
+  
       <div class="gameActionsBar">
+        <!--TODO: Tooltip auslagern-->
+          <div class="gameTooltip">
+              <span class="gameTooltiptext"
+                >Entscheidungsbaum</span
+              >
+          <img
+          id="gameDecision"
+          class="gameActionBarIcon"
+          src="../assets/images/flow.png"
+          alt=""
+        />
+        </div>
+        <div class="gameTooltip">
+            <span class="gameTooltiptext"
+              >Inventar</span
+            >
+        <img
+        id="gameBackpack"
+        class="gameActionBarIcon"
+        src="../assets/images/backpack.png"
+        alt=""
+        
+      />
+        </div>
+        <div class="gameTooltip">
+            <span class="gameTooltiptext"
+              >Navigator</span
+            >
         <img
           id="gameNavigator"
           class="gameActionBarIcon"
           src="../assets/images/compass.png"
           alt=""
         />
-        <img
-          id="gameBackpack"
-          class="gameActionBarIcon"
-          src="../assets/images/backpack.png"
-          alt=""
-        />
+       </div>
+        <button class="gameEndDayButton" id="gameEndDayButton" disabled="true">End Day</button>
+
       </div>
       <div class="gameActionArea">
         <div id="gameAction1" class="gameAction">
@@ -50,7 +76,6 @@
     <div class="gameBottom">
       <div class="gameSwitchSceneAction">
         <p class="gameSwitchSceneButton">&lt;</p>
-        <button class="gameEndDayButton" id="gameEndDayButton" disabled="true">End Day</button>
         <p class="gameSwitchSceneButton">&gt;</p>
       </div>
       <div class="gameResourceBars">

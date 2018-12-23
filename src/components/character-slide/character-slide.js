@@ -66,7 +66,6 @@ class CharacterSlide {
 
   selectIndex() {
     jQuery("#characterSlide" + this.id).on("click", () => {
-      console.log("happens selectIndex");
       selectCharacter(this);
 
       var ids = [0, 1, 2];
@@ -75,7 +74,7 @@ class CharacterSlide {
       jQuery("#characterSelectionDescription" + this.id).css({
         visibility: "visible"
       });
-      jQuery("#characterSelectionLaunchButton").attr("disabled", false);
+      jQuery("#launchButton").attr("disabled", false);
     });
   }
 
@@ -98,7 +97,6 @@ class CharacterSlide {
 
   removeActiveClasses(ids) {
     for (var i in ids) {
-      console.log(i);
       jQuery("#characterSlide" + i).removeClass("active");
       jQuery("#characterSelectionDescription" + this.id).css({
         visibility: "hidden"
