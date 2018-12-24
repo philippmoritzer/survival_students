@@ -25,6 +25,14 @@ class ActionItem {
       "id",
       jQuery("#actionCost").attr("id") + this.id
     );
+    jQuery("#actionLabelResource").attr(
+      "id",
+      jQuery("#actionLabelResource").attr("id") + this.id
+    );
+    jQuery("#actionResourceCost").attr(
+      "id",
+      jQuery("#actionResourceCost").attr("id") + this.id
+    );
   }
 
   setStyles() {
@@ -51,61 +59,17 @@ class ActionItem {
     jQuery("#actionName" + this.id).text(this.action.name);
     jQuery("#actionCost" + this.id).text(this.action.cost);
     jQuery("#actionDesc" + this.id).text(this.action.desc);
+    jQuery("#actionLabelResource" + this.id).text(this.action.type + ": ");
+    jQuery("#actionResourceCost" + this.id).text(this.action.value);
   }
 
   select() {
     jQuery("#actionContainer" + this.id).on("click", () => {
-      if (gst.turnCount === 2) {
-        jQuery("#gameEndDayButton").attr("disabled", false);
-      }
-
-      if (gst.turnCount < 3 && gst.character.money >= this.action.cost) {
-        gst.turnCount++;
-        jQuery("#gameTurnIndicatorText").text(
-          gst.turnCount + " / " + MAX_TURN_COUNT
-        );
-
-        switch (this.action.type) {
-          case "hunger":
-            gst.character.money = gst.character.money - this.action.cost;
-
-            gst.character.hunger = gst.character.hunger + this.action.value;
-            if (gst.character.hunger > 100) {
-              gst.character.hunger = 100;
-            }
-            activeResourceBars[0].updateState(gst.character.hunger);
-            break;
-          case "life":
-            gst.character.money = gst.character.money - this.action.cost;
-            gst.character.life = gst.character.life + this.action.value;
-            if (gst.character.life > 100) {
-              gst.character.life = 100;
-            }
-            activeResourceBars[1].updateState(gst.character.life);
-            break;
-          case "learn":
-            gst.character.money = gst.character.money - this.action.cost;
-            gst.character.learn = gst.character.learn + this.action.value;
-            if (gst.character.learn > 100) {
-              gst.character.learn = 100;
-            }
-            activeResourceBars[2].updateState(gst.character.learn);
-            break;
-        }
-        jQuery(".gameMoneyText").animate(
-          {
-            opacity: "0"
-          },
-          100
-        );
-        jQuery(".gameMoneyText").text(gst.character.money);
-        jQuery(".gameMoneyText").animate(
-          {
-            opacity: "1"
-          },
-          1000
-        );
-      }
+      loadModal(
+        "./components/modals/action-confirmation-modal/action-confirmation-modal.html"
+      );
+      //TODO: Execute action -> modal
+      //executeAction(this.action);
     });
   }
 

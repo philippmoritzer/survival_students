@@ -1,0 +1,45 @@
+.actionConfirmationClose {
+  right: 0;
+  font-size: 3em;
+  color: white;
+  padding: 25px;
+  cursor: pointer;
+  position: absolute;
+}
+
+.actionConfirmationContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.actionConfirmationText {
+  color: white;
+}
+
+.actionConfirmationTextDesc {
+  text-align: justify;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.actionConfirmationImage {
+  transform: scale(0.5);
+  object-fit: contain;
+}
+
+.actionConfirmationRewardImg {
+  width: 64px;
+  height: 64px;
+}
+
+@media only screen and (max-width: 991px) {
+  .actionConfirmationImage {
+    transform: scale(0.3);
+  }
+  .actionConfirmationTextDesc {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}

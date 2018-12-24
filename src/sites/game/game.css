@@ -94,6 +94,7 @@
   cursor: pointer;
   /* filter: drop-shadow(5px 5px 5px #03a0a5); */
   filter: drop-shadow(5px 5px 5px white);
+  transform: scale(1.2);
 }
 
 .gameActionArea {
@@ -109,6 +110,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .gameBottom {
@@ -200,5 +202,12 @@
   40%,
   60% {
     transform: translate3d(4px, 0, 0);
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .gameActionArea {
+    flex-direction: column;
+    width: 100%;
   }
 }

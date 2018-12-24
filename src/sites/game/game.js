@@ -18,7 +18,7 @@ const newDayModal = () => {
             .animate({ opacity: 0 }, "slow", () => {
               jQuery("#modal").css({ display: "none", opacity: 1 });
             });
-        }, 1500);
+        }, 10);
       });
     }
   );
@@ -93,14 +93,7 @@ jQuery("#gameEndDayButton").on("click", () => {
 });
 
 jQuery("#gameNavigator").on("click", () => {
-  jQuery("#modal").load(
-    "./components/modals/area-choice-modal/area-choice-modal.html",
-    () => {
-      jQuery(".modal").css({
-        display: "unset"
-      });
-    }
-  );
+  loadModal("./components/modals/area-choice-modal/area-choice-modal.html");
 });
 
 /**

@@ -1,8 +1,10 @@
 .actionContainer {
+  position: relative;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 25px;
+  border: 2px solid #696969;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,10 +13,6 @@
   box-shadow: 15px 16px 17px -5px rgba(0, 0, 0, 0.75);
 
   cursor: pointer;
-}
-
-.actionContainer:hover {
-  border: 1px solid gold;
 }
 
 .actionImage {
@@ -26,14 +24,26 @@
   color: white;
 }
 
-p.actionName {
+.actionName {
   color: white;
 }
 
-p.actionCost {
+.actionCost {
   color: white;
 }
 
+.actionContainerOverlay {
+  background: black;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .actionCostContainer {
   display: flex;
   flex-direction: row;
@@ -41,8 +51,23 @@ p.actionCost {
   align-items: center;
 }
 
+.actionContainerOverlay:hover {
+  animation: fade-in-item 0.5s forwards;
+}
+
+@keyframes fade-in-item {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @media only screen and (max-width: 991px) {
   .actionContainer {
-    margin: 2px;
+    flex-direction: column;
+    border: 1px solid #696969;
+    border-radius: 10px;
   }
 }

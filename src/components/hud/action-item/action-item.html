@@ -11,9 +11,21 @@
     />
     <p id="actionName" class="actionName">Action Name</p>
     <p id="actionDesc" class="actionName"></p>
-    <div class="actionCostContainer">
-      <span class="actionLabel">Kosten: </span>
-      <p id="actionCost" class="actionCost">asd</p>
+
+    <div class="actionContainerOverlay">
+      <div class="actionCostContainer">
+        <span class="actionLabel">Kosten: </span>
+        <p id="actionCost" class="actionCost"><!--Inject action cost--></p>
+      </div>
+      <div class="actionCostContainer">
+        <span id="actionLabelResource" class="actionCost"
+          ><!--Inject Resource Label--></span
+        >
+        <p id="actionResourceCost" class="actionCost">
+          <!--Inject resource value-->
+        </p>
+      </div>
+      <div></div>
     </div>
   </div>
 </body>

@@ -1,8 +1,8 @@
 .areaChoiceGrid {
- top: 50%;
- left:50%;
- transform: translate(-50%,-50%);
- position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
   display: grid;
   grid-template-columns: 384px 384px;
   grid-template-rows: 216px 216px;
@@ -19,7 +19,10 @@
 }
 
 .areaChoiceClose {
-  float: right; font-size: 3em; color: white; padding: 25px;
+  float: right;
+  font-size: 3em;
+  color: white;
+  padding: 25px;
   cursor: pointer;
 }
 
