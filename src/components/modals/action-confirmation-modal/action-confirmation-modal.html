@@ -11,31 +11,41 @@
 <body>
   <div id="actionConfirmationClose" class="actionConfirmationClose">X</div>
   <div class="actionConfirmationContainer">
+    <div class="actionConfirmationImageContainer">
     <img
       class="actionConfirmationImage"
       src="../assets/images/icons/mockup.png"
       alt=""
     />
-    <h1 class="actionConfirmationText">Lorem Ipsum 1</h1>
-    <h4 class="actionConfirmationText actionConfirmationTextDesc">
-      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-      eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-      voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-      clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-      amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-      nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-      diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-      Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
-      sit amet.
+  </div>
+    <h1 id="actionConfirmationActionName" class="actionConfirmationText">
+      <!--Inject Action Name-->
+    </h1>
+    <h4 id="actionConfirmationActionDesc" class="actionConfirmationText actionConfirmationTextDesc">
+      <!-- Inject Action Description -->
     </h2>
-    <div><p class="actionConfirmationText ">Kosten: 800</p></div>
-    <div><p class="actionConfirmationText ">Bringt: 50 Hunger</p></div>
-    Belohnung:
-    <img
-      class="actionConfirmationRewardImg"
-      src="../assets/images/icons/mockup.png"
-      alt=""
-    />
-    <button class="acceptButton" id="acceptButton">MACHEN</button>
+    <div class="actionConfirmationValueContainer">
+      <p class="actionConfirmationText">Kosten: </p>
+      <p id="actionConfirmationCost" class="actionConfirmationText">
+        <!--Inject Action Cost-->
+      </p>
+    </div>
+    <div class="actionConfirmationValueContainer">
+      <p class="actionConfirmationText ">Bringt: </p>
+      <p id="actionConfirmationResourceValue" class="actionConfirmationText ">Bringt: </p>
+      <p id="actionConfirmationResourceType" class="actionConfirmationText ">Bringt: </p>
+    </div>
+    <div class="actionConfirmationValueContainer">
+      <!--TODO: ITEMS-->
+      <p class="actionConfirmationText">Belohnung (Gegenstand): </p>
+        <img
+        class="actionConfirmationRewardImg"
+        src="../assets/images/icons/mockup.png"
+        alt=""
+      />
+    </div>
+    
+    
+    <button class="actionConfirmationAcceptButton" id="actionConfirmationAcceptButton">Diese Aktion ausführen</button>
   </div>
 </body>

@@ -15,6 +15,8 @@ const changeUIDay = area => {
 };
 
 const executeAction = action => {
+  console.log("hello");
+  console.log("#####type" + action.type);
   if (gst.turnCount === 2) {
     jQuery("#gameEndDayButton").attr("disabled", false);
   }
@@ -29,27 +31,41 @@ const executeAction = action => {
       case "hunger":
         gst.character.money = gst.character.money - action.cost;
 
-        gst.character.hunger = gst.character.hunger + action.value;
-        if (gst.character.hunger > 100) {
-          gst.character.hunger = 100;
+        round(
+          (gst.character.hunger.value =
+            gst.character.hunger.value +
+            action.value * gst.character.hunger.multiplier),
+          0
+        );
+        if (gst.character.hunger.value > 100) {
+          gst.character.hunger.value = 100;
         }
-        activeResourceBars[0].updateState(gst.character.hunger);
+        activeResourceBars[0].updateState(gst.character.hunger.value);
         break;
       case "life":
         gst.character.money = gst.character.money - action.cost;
-        gst.character.life = gst.character.life + action.value;
-        if (gst.character.life > 100) {
-          gst.character.life = 100;
+        gst.character.life.value = round(
+          gst.character.life.value +
+            action.value * gst.character.life.multiplier,
+          0
+        );
+        if (gst.character.life.value > 100) {
+          gst.character.life.value = 100;
         }
-        activeResourceBars[1].updateState(gst.character.life);
+        console.log(gst.character.life.value);
+        activeResourceBars[1].updateState(gst.character.life.value);
         break;
       case "learn":
         gst.character.money = gst.character.money - action.cost;
-        gst.character.learn = gst.character.learn + action.value;
-        if (gst.character.learn > 100) {
-          gst.character.learn = 100;
+        gst.character.learn.value = round(
+          gst.character.learn.value +
+            action.value * gst.character.learn.multiplier,
+          0
+        );
+        if (gst.character.learn.value > 100) {
+          gst.character.learn.value = 100;
         }
-        activeResourceBars[2].updateState(gst.character.learn);
+        activeResourceBars[2].updateState(gst.character.learn.value);
         break;
     }
     jQuery(".gameMoneyText").animate(

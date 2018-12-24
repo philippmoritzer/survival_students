@@ -1,24 +1,36 @@
+const HUNGER_RESOURCE_1 = new Resource(100, 1, 20);
+const HUNGER_RESOURCE_2 = new Resource(25, 0.3, 20);
+const HUNGER_RESOURCE_3 = new Resource(50, 0.5, 20);
+
+const LIFE_RESOURCE_1 = new Resource(25, 0.3, 20);
+const LIFE_RESOURCE_2 = new Resource(100, 1, 20);
+const LIFE_RESOURCE_3 = new Resource(50, 0.5, 20);
+
+const LEARN_RESOURCE_1 = new Resource(25, 0.3, 20);
+const LEARN_RESOURCE_2 = new Resource(50, 1, 20);
+const LEARN_RESOURCE_3 = new Resource(100, 0.5, 20);
+
 //Declaring the starting values for different characters
 //possibly easier to change and balance out
 //First dimension:
 //[0] = Justus
 //[1] = Lisa
-//[2] = Temp
+//[2] = Soeren
 //Second Dimension:
 //[0] = Money
-//[1] = hunger
-//[2] = lebensgefühl
-//[3] = learnlevel
+//[1] = hunger: Resource (class)
+//[2] = life: Resource (class)
+//[3] = learn: Resource (class)
 const STARTING_VALUES = [
-  [1000, 100, 25, 50],
-  [50, 25, 100, 50],
-  [200, 50, 25, 100]
+  [1000, HUNGER_RESOURCE_1, LIFE_RESOURCE_1, LEARN_RESOURCE_1],
+  [50, HUNGER_RESOURCE_2, LIFE_RESOURCE_2, LEARN_RESOURCE_2],
+  [200, HUNGER_RESOURCE_3, LIFE_RESOURCE_3, LEARN_RESOURCE_3]
 ];
 
 const NAME_INDEX_PAIR = [
   { index: 0, name: "Justus" },
   { index: 1, name: "Lisa" },
-  { index: 2, name: "Temp" }
+  { index: 2, name: "Sören" }
 ];
 
 //pre-determined resourcebars

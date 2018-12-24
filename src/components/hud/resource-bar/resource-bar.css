@@ -1,6 +1,7 @@
 .resourceBar {
   display: inline-flex;
   flex-direction: row;
+  justify-content: center;
   align-items: center;
   background-color: rgba(206, 2, 18, 0.5);
   padding: 10px;
@@ -8,6 +9,7 @@
   height: 70px;
   margin: 2.5px;
   box-shadow: 15px 16px 17px -5px rgba(0, 0, 0, 0.75);
+  position: relative;
 }
 
 .resourceIcon {
@@ -22,28 +24,28 @@
 .numbersBar {
   width: 350px;
   height: 20px;
-  border-radius: 10%;
   margin-left: 5px;
   background-image: linear-gradient(#68020a, #ce0212);
-
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 }
 
 .progress {
-  background-color: black;
-  height: 70%;
-  margin: 3px;
-  border-radius: 10%;
-  width: 30%;
-
-  display: flex;
-  justify-content: center;
+  height: 18px;
+  border-radius: 5px;
+  position: absolute;
+  width: 0%;
+  justify-content: flex-start;
+  box-shadow: inset 0 0 15px black;
 }
 
 .resourceBarText {
   color: white;
+  font-weight: bold;
+  text-align: center;
+  z-index: 500;
 }
 
 @media only screen and (max-width: 991px) {

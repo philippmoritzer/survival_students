@@ -38,19 +38,32 @@ class ResourceBar {
     });
     jQuery("#resourceIcon" + this.id).attr("src", IMAGE_PATH + this.image);
     jQuery("#resourceBarText" + this.id).text(this.progress + "%");
+    jQuery("#progress" + this.id).animate(
+      { width: this.progress + "%" },
+      "slow"
+    );
+    jQuery("#progress" + this.id).css({
+      "background-color": this.color1
+    });
   }
 
   updateState(value) {
-    jQuery("#progress" + this.id).css({ width: value + "%" });
+    jQuery("#progress" + this.id).css({ "box-shadow": "inset 0 0 15px white" });
+    jQuery("#progress" + this.id).animate(
+      { width: value + "%" },
+      "slow",
+      () => {
+        jQuery("#progress" + this.id).css({
+          "box-shadow": "inset 0 0 15px black"
+        });
+      }
+    );
     jQuery("#resourceBarText" + this.id).text(value + "%");
-  }
-
-  setProgress(progress) {
-    this.progress = progress;
   }
 
   init() {
     this.makeElementUnique();
     this.setAttributes();
+    this.updateState(this.progress);
   }
 }

@@ -65,6 +65,7 @@ class ActionItem {
 
   select() {
     jQuery("#actionContainer" + this.id).on("click", () => {
+      currentAction = this.action;
       loadModal(
         "./components/modals/action-confirmation-modal/action-confirmation-modal.html"
       );

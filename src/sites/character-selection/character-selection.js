@@ -46,21 +46,22 @@ loadCharacterSlides(slide3, "#character3", CHAR_SLIDE_PAGE);
 
 /**
  * Call this Method from CharacterSlide model
- * The right character gets injected when clicked the right slide
+ * The character gets injected when clicked the character's slide
  * CharacterSlide is a ViewHelper Object.
  * Selects the character
  * @param {Slide} slide
  */
-const selectCharacter = slide => {
-  let name = NAME_INDEX_PAIR[slide.id].name;
+const selectCharacter = id => {
+  let name = NAME_INDEX_PAIR[id].name;
+  let startingValues = STARTING_VALUES[id];
 
   const character = new Character(
-    slide.id,
+    id,
     name,
-    slide.money,
-    slide.hunger,
-    slide.life,
-    slide.learn
+    startingValues[0],
+    startingValues[1],
+    startingValues[2],
+    startingValues[3]
   );
 
   GameStateManager.getInstance().setCharacter(character);

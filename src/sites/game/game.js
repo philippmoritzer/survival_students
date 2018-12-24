@@ -51,7 +51,7 @@ const resource_bar1 = new ResourceBar(
   RESOURCE_BARS[0].color2,
   RESOURCE_BARS[0].color3,
   RESOURCE_BARS[0].image,
-  gst.character.hunger
+  gst.character.hunger.value
 );
 
 const resource_bar2 = new ResourceBar(
@@ -61,7 +61,7 @@ const resource_bar2 = new ResourceBar(
   RESOURCE_BARS[1].color2,
   RESOURCE_BARS[1].color3,
   RESOURCE_BARS[1].image,
-  gst.character.life
+  gst.character.life.value
 );
 
 const resource_bar3 = new ResourceBar(
@@ -71,7 +71,7 @@ const resource_bar3 = new ResourceBar(
   RESOURCE_BARS[2].color2,
   RESOURCE_BARS[2].color3,
   RESOURCE_BARS[2].image,
-  gst.character.learn
+  gst.character.learn.value
 );
 
 activeResourceBars.push(resource_bar1);

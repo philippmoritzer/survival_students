@@ -56,17 +56,17 @@ class CharacterSlide {
     jQuery("#name" + this.id).text(NAME_INDEX_PAIR[this.id].name);
     jQuery("#nameB" + this.id).text(NAME_INDEX_PAIR[this.id].name);
     jQuery("#money" + this.id).text(this.money);
-    jQuery("#hunger" + this.id).text(this.hunger);
-    jQuery("#hungerM" + this.id).text(this.hunger);
-    jQuery("#life" + this.id).text(this.life);
-    jQuery("#lifeM" + this.id).text(this.life);
-    jQuery("#learn" + this.id).text(this.learn);
-    jQuery("#learnM" + this.id).text(this.learn);
+    jQuery("#hunger" + this.id).text(this.hunger.value);
+    jQuery("#hungerM" + this.id).text(this.hunger.value);
+    jQuery("#life" + this.id).text(this.life.value);
+    jQuery("#lifeM" + this.id).text(this.life.value);
+    jQuery("#learn" + this.id).text(this.learn.value);
+    jQuery("#learnM" + this.id).text(this.learn.value);
   }
 
   selectIndex() {
     jQuery("#characterSlide" + this.id).on("click", () => {
-      selectCharacter(this);
+      selectCharacter(this.id);
 
       var ids = [0, 1, 2];
       this.removeActiveClasses(ids);
