@@ -36,6 +36,10 @@ class GameStateManager {
 
   changeDay() {
     this.changeAreaTasks();
+    if (this.day !== 0) {
+      this.executeLoss();
+    }
+    this.checkLosingCondition();
     if (this.day < 30) {
       this.day++;
       this.turnCount = 0;
@@ -165,6 +169,24 @@ class GameStateManager {
       }
     }
     return this.areas;
+  }
+
+  /**
+   * Loses predefined Value each day
+   * call in changeDay()-Method
+   */
+  executeLoss() {
+    this.character.hunger.value =
+      this.character.hunger.value - this.character.hunger.lossPerDay;
+    this.character.life.value =
+      this.character.life.value - this.character.life.lossPerDay;
+    this.character.learn.value =
+      this.character.learn.value - this.character.learn.lossPerDay;
+    updateAllResourceBars();
+  }
+
+  checkLosingCondition() {
+    //TODO
   }
 
   playMusic() {

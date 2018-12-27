@@ -84,6 +84,12 @@ const executeAction = action => {
   }
 };
 
+const updateAllResourceBars = () => {
+  activeResourceBars[0].updateState(gst.character.hunger.value);
+  activeResourceBars[1].updateState(gst.character.life.value);
+  activeResourceBars[2].updateState(gst.character.learn.value);
+};
+
 const loadModal = url => {
   jQuery("#modal").load(url, () => {
     jQuery(".modal").css({

@@ -97,6 +97,16 @@
   transform: scale(1.2);
 }
 
+.gameInventory {
+  display: none;
+  position: absolute;
+  background-color: black;
+  width: 300px;
+  height: 300px;
+
+  z-index: 500;
+}
+
 .gameActionArea {
   flex: 10;
   display: flex;

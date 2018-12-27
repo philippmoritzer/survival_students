@@ -18,7 +18,7 @@ const newDayModal = () => {
             .animate({ opacity: 0 }, "slow", () => {
               jQuery("#modal").css({ display: "none", opacity: 1 });
             });
-        }, 10);
+        }, 1750);
       });
     }
   );
@@ -154,3 +154,31 @@ gst.initPromise.then(val => {
 const switchItems = () => {
   gst.areas;
 };
+
+console.log();
+console.log();
+
+inventoryDisplayed = false;
+
+const hideInventory = () => {
+  jQuery("#gameInventory").css({
+    display: "none"
+  });
+  inventoryDisplayed = false;
+};
+
+jQuery("#gameInventory").load("./components/hud/inventory/inventory.html");
+
+jQuery("#gameBackpack").on("click", () => {
+  if (!inventoryDisplayed) {
+    const offset = jQuery("#gameBackpack").offset();
+    jQuery("#gameInventory").css({
+      top: offset.top,
+      left: offset.left + 64,
+      display: "unset"
+    });
+    inventoryDisplayed = true;
+  } else {
+    hideInventory();
+  }
+});
