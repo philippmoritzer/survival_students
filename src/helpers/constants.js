@@ -28,9 +28,9 @@ const STARTING_VALUES = [
 ];
 
 const NAME_INDEX_PAIR = [
-  { index: 0, name: "Justus" },
-  { index: 1, name: "Lisa" },
-  { index: 2, name: "Sören" }
+  { index: 1, name: "Justus" },
+  { index: 2, name: "Lisa" },
+  { index: 3, name: "Sören" }
 ];
 
 //pre-determined resourcebars

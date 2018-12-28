@@ -5,8 +5,6 @@ class GameStateManager {
         "Constructor call is private, please use GameStateManager.getInstance()"
       );
     }
-    this.day = 0;
-    this.turnCount = 0;
   }
 
   static getInstance() {
@@ -22,6 +20,13 @@ class GameStateManager {
 
   setCharacter(character) {
     this.character = character;
+  }
+
+  startGame() {
+    this.day = 0;
+    this.turnCount = 0;
+    this.character.items = [];
+    this.character.items.push(this.items[0]);
   }
 
   changeArea(index) {
@@ -58,26 +63,22 @@ class GameStateManager {
         items = data;
         console.log(data);
         GameStateManager.getInstance().items = items;
-        GameStateManager.getInstance().character.items = [];
-        GameStateManager.getInstance().character.items.push(
-          GameStateManager.getInstance().items[0]
-        );
       });
 
       let hungerActions = [];
-      jQuery.getJSON("./data/actions/hungerActions.json", data => {
+      jQuery.getJSON("./data/actions/all/hunger-actions.json", data => {
         hungerActions = data;
         GameStateManager.getInstance().hungerActions = hungerActions;
       });
 
       let lifeActions = [];
-      jQuery.getJSON("./data/actions/lifeActions.json", data => {
+      jQuery.getJSON("./data/actions/all/life-actions.json", data => {
         lifeActions = data;
         GameStateManager.getInstance().lifeActions = lifeActions;
       });
 
       let learnActions = [];
-      jQuery.getJSON("./data/actions/learnActions.json", data => {
+      jQuery.getJSON("./data/actions/all/learn-actions.json", data => {
         learnActions = data;
         GameStateManager.getInstance().learnActions = learnActions;
       });
@@ -94,6 +95,40 @@ class GameStateManager {
     });
 
     this.initPromise = initPromise;
+  }
+
+  loadCharacterSpecificActions() {
+    console.log("hi");
+    let characterSpecificActionFolder = "character" + this.character.id;
+    console.log(characterSpecificActionFolder);
+    return new Promise((resolve, reject) => {
+      jQuery.getJSON(
+        "./data/actions/" +
+          characterSpecificActionFolder +
+          "/hunger-actions.json",
+        data => {
+          console.log(data);
+          this.hungerActions = this.hungerActions.concat(data);
+        }
+      );
+      jQuery.getJSON(
+        "./data/actions/" +
+          characterSpecificActionFolder +
+          "/learn-actions.json",
+        data => {
+          this.learnActions = this.learnActions.concat(data);
+        }
+      );
+      jQuery.getJSON(
+        "./data/actions/" +
+          characterSpecificActionFolder +
+          "/life-actions.json",
+        data => {
+          this.lifeActions = this.lifeActions.concat(data);
+          resolve();
+        }
+      );
+    });
   }
 
   getAreaByIndex(index) {

@@ -69,17 +69,7 @@ const selectCharacter = id => {
 
 const start = () => {
   jQuery("#main").load("./sites/game/game.html", () => {
-    console.log(
-      "Game starting with character" +
-        JSON.stringify(GameStateManager.getInstance().character)
-    );
+    console.log("Game starting with character" + JSON.stringify(gst.character));
+    gst.startGame();
   });
 };
-
-const card = jQuery(".card");
-const trigger = jQuery(".characterSlideName");
-
-// trigger2 = document.querySelector(".characterSlideNameFlipped");
-// trigger2.addEventListener("click", function() {
-//   card.classList.toggle("is-flipped");
-// });

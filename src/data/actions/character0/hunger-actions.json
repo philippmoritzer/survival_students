@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Character 1 Hunger Event",
+    "desc": "Character 1 Hunger Event Desc",
+    "img": "img",
+    "type": "hunger",
+    "value": 34,
+    "cost": 500
+  }
+]

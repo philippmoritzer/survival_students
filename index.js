@@ -19,7 +19,7 @@ $(window).on("load", function() {
   const LEARN_RESOURCE_1 = new Resource(25, 0.3, 20);
 
   gst.character = new Character(
-    1,
+    0,
     "Testname",
     80000,
     HUNGER_RESOURCE_1,
@@ -32,4 +32,7 @@ $(window).on("load", function() {
   jQuery("#main").load("./sites/game/game.html", () => {});
   gst.setLoaded();
   gst.initGameData();
+  gst.initPromise.then(() => {
+    gst.startGame();
+  });
 });

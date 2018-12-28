@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Character 2 Life Event",
+    "desc": "Character 2 Life Event Desc",
+    "img": "img",
+    "type": "life",
+    "value": 34,
+    "cost": 500
+  }
+]

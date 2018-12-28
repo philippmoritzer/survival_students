@@ -1,5 +1,7 @@
 const gst = GameStateManager.getInstance();
 
+jQuery("#gameTitle").text("Survival - Playing as " + gst.character.name);
+
 /**
  * method to start a new day
  */
@@ -133,17 +135,19 @@ const loadActionItems = (actionItem, identifier, htmlpage) => {
 //make sure data is loaded, if not, try again
 
 gst.initPromise.then(val => {
-  gst.changeAreaTasks();
-  gst.changeArea(0);
-  console.log(JSON.stringify(gst.character));
-  const area = gst.getAreaByIndex(0);
-  const actionItem1 = new ActionItem(0, area.actions[0]);
-  const actionItem2 = new ActionItem(1, area.actions[1]);
-  const actionItem3 = new ActionItem(2, area.actions[2]);
+  gst.loadCharacterSpecificActions().then(val => {
+    gst.changeAreaTasks();
+    gst.changeArea(0);
+    console.log(JSON.stringify(gst.character));
+    const area = gst.getAreaByIndex(0);
+    const actionItem1 = new ActionItem(0, area.actions[0]);
+    const actionItem2 = new ActionItem(1, area.actions[1]);
+    const actionItem3 = new ActionItem(2, area.actions[2]);
 
-  loadActionItems(actionItem1, "#gameAction1", ACTION_ITEM_PAGE);
-  loadActionItems(actionItem2, "#gameAction2", ACTION_ITEM_PAGE);
-  loadActionItems(actionItem3, "#gameAction3", ACTION_ITEM_PAGE);
+    loadActionItems(actionItem1, "#gameAction1", ACTION_ITEM_PAGE);
+    loadActionItems(actionItem2, "#gameAction2", ACTION_ITEM_PAGE);
+    loadActionItems(actionItem3, "#gameAction3", ACTION_ITEM_PAGE);
+  });
 
   //initial loading of action items into the divs.
 });
