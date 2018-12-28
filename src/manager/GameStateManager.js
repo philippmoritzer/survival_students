@@ -56,7 +56,12 @@ class GameStateManager {
       let items = [];
       jQuery.getJSON("./data/items/items.json", data => {
         items = data;
+        console.log(data);
         GameStateManager.getInstance().items = items;
+        GameStateManager.getInstance().character.items = [];
+        GameStateManager.getInstance().character.items.push(
+          GameStateManager.getInstance().items[0]
+        );
       });
 
       let hungerActions = [];

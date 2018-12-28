@@ -13,6 +13,6 @@
     "sellfor": 50,
     "image": "phone.png",
     "type": "life",
-    "value": "0.1" //0.1 = +10%
+    "value": "0.1"
   }
 ]

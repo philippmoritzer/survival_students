@@ -35,10 +35,17 @@
       <p id="actionConfirmationResourceValue" class="actionConfirmationText ">Bringt: </p>
       <p id="actionConfirmationResourceType" class="actionConfirmationText ">Bringt: </p>
     </div>
-    <div class="actionConfirmationValueContainer">
+    <div id="actionConfirmationValueContainer" class="actionConfirmationValueContainer">
       <!--TODO: ITEMS-->
       <p class="actionConfirmationText">Belohnung (Gegenstand): </p>
+      <!--Inject item Hover-->
+      <div class="actionConfirmationItemTooltip">
+        <span id="actionConfirmationItemTooltipText" class="actionConfirmationItemTooltipText"
+          ><!--Inject hover-item.html--></span
+        >
+      </div>
         <img
+        id="actionConfirmationRewardImg"
         class="actionConfirmationRewardImg"
         src="../assets/images/icons/mockup.png"
         alt=""

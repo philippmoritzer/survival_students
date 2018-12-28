@@ -1,9 +1,10 @@
 .sellItemModalClose {
-  float: right;
+  right: 0;
   font-size: 3em;
   color: white;
   padding: 25px;
   cursor: pointer;
+  position: absolute;
 }
 
 .sellItemModalContainer {

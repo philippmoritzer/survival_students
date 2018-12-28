@@ -40,3 +40,7 @@
   left: 50%;
   margin-left: -30px;
 }
+
+.inventoryTooltip:hover .inventoryTooltipText {
+  visibility: visible;
+}

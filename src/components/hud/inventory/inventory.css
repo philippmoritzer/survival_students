@@ -11,15 +11,18 @@
 .inventoryHeading {
   font-family: ArcadeClassic;
   color: black;
-  font-size: 1em;
+  font-size: 1.1em;
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
+  width: 100%;
 }
 
 .inventoryCloseButton {
   float: right;
   cursor: pointer;
+  padding: 5px;
 }
 
 .inventoryGrid {
@@ -29,8 +32,4 @@
   grid-row-gap: 5px;
   box-shadow: inset 0 0 15px black;
   padding: 5px;
-}
-
-.inventoryTooltip:hover .inventoryTooltipText {
-  visibility: visible;
 }

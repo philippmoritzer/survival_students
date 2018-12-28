@@ -135,8 +135,6 @@ const loadActionItems = (actionItem, identifier, htmlpage) => {
 gst.initPromise.then(val => {
   gst.changeAreaTasks();
   gst.changeArea(0);
-  gst.character.items = [];
-  gst.character.items.push(gst.items[0]);
   console.log(JSON.stringify(gst.character));
   const area = gst.getAreaByIndex(0);
   const actionItem1 = new ActionItem(0, area.actions[0]);
@@ -173,7 +171,7 @@ jQuery("#gameBackpack").on("click", () => {
     const offset = jQuery("#gameBackpack").offset();
     jQuery("#gameInventory").css({
       top: offset.top,
-      left: offset.left + 64,
+      left: offset.left + 78,
       display: "unset"
     });
     inventoryDisplayed = true;
