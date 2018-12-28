@@ -11,6 +11,8 @@
     "title": "Handynummer",
     "description": "Erhöht das Ansehen (+ 10% auf Lifestyle)",
     "sellfor": 50,
-    "image": "phone.png"
+    "image": "phone.png",
+    "type": "life",
+    "value": "0.1" //0.1 = +10%
   }
 ]
