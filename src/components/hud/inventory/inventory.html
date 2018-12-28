@@ -2,7 +2,11 @@
   <link rel="stylesheet" href="./components/hud/inventory/inventory.css" />
   <script
     type="text/javascript"
-    src="./components/hud/inventory/inventory.js"
+    src="./components/hud/inventory/inventory-item/inventory-item.js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="./components/hud/hover-item/hover-item.js"
   ></script>
 </head>
 <body>
@@ -12,23 +16,11 @@
       <p>Rucksack</p>
       <p id="inventoryCloseButton" class="inventoryCloseButton">X</p>
     </div>
-    <div class="inventoryGrid">
-      <div class="inventoryGridItem">
-        <div class="inventoryItemTooltip">
-          <span class="inventoryItemTooltipText">Tooltip text</span>
-          <!-- <img
-            class="inventoryItemImage"
-            src="../assets/images/icons/mockup.png"
-            alt=""
-          /> -->
-        </div>
-      </div>
-      <div class="inventoryGridItem"></div>
-      <div class="inventoryGridItem"></div>
-      <div class="inventoryGridItem"></div>
-      <div class="inventoryGridItem"></div>
-      <div class="inventoryGridItem"></div>
-      <div class="inventoryGridItem"></div>
-    </div>
+
+    <div id="inventoryGrid" class="inventoryGrid"><!--Inject Grid--></div>
   </div>
+  <script
+    type="text/javascript"
+    src="./components/hud/inventory/inventory.js"
+  ></script>
 </body>

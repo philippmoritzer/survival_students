@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "title": "Semesterticket",
+    "description": "Erlaubt es, kostenfrei zu allen Locations zu gelangen.",
+    "sellfor": 150,
+    "image": "ticket.png"
+  },
+  {
+    "id": 2,
+    "title": "Handynummer",
+    "description": "Erhöht das Ansehen (+ 10% auf Lifestyle)",
+    "sellfor": 50,
+    "image": "phone.png"
+  }
+]

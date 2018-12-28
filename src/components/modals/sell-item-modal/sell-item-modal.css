@@ -1,0 +1,31 @@
+.sellItemModalClose {
+  float: right;
+  font-size: 3em;
+  color: white;
+  padding: 25px;
+  cursor: pointer;
+}
+
+.sellItemModalContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.sellItemModalText {
+  font-size: 1.5em;
+  color: white;
+}
+
+.sellItemAcceptButton {
+  margin-top: 50px;
+  width: 250px;
+  height: 50px;
+}
+
+.bold {
+  font-weight: bold;
+}

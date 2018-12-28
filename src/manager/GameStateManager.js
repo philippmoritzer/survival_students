@@ -53,6 +53,12 @@ class GameStateManager {
    */
   initGameData() {
     let initPromise = new Promise((resolve, reject) => {
+      let items = [];
+      jQuery.getJSON("./data/items/items.json", data => {
+        items = data;
+        GameStateManager.getInstance().items = items;
+      });
+
       let hungerActions = [];
       jQuery.getJSON("./data/actions/hungerActions.json", data => {
         hungerActions = data;
@@ -187,6 +193,41 @@ class GameStateManager {
 
   checkLosingCondition() {
     //TODO
+  }
+
+  /**
+   * adds an item to a character
+   * @param {item-id} id
+   */
+  addItem(id) {
+    const item = this.getItemById(id);
+    this.character.items.push(item);
+    addItemUI(item);
+  }
+
+  sellItem(item) {
+    for (let i = 0; i < this.character.items.length; i++) {
+      const element = this.character.items[i];
+      if (item.id === element.id) {
+        this.character.items.splice(i, 1);
+        break;
+      }
+    }
+    this.character.money = this.character.money + item.sellfor;
+    updateMoneyUI(this.character.money);
+  }
+
+  /**
+   * gets item by id
+   * @param {*} id
+   */
+  getItemById(id) {
+    for (let i = 0; i < this.items.length; i++) {
+      const item = this.items[i];
+      if (item.id === id) {
+        return item;
+      }
+    }
   }
 
   playMusic() {

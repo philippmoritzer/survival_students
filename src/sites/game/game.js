@@ -84,10 +84,6 @@ loadResourceBars(resource_bar3, "#res3", RESOURCE_BAR_PAGE);
 
 gst.playMusic();
 
-jQuery("#gameBackpack").on("click", () => {
-  //TODO
-});
-
 jQuery("#gameEndDayButton").on("click", () => {
   newDayModal();
 });
@@ -139,6 +135,9 @@ const loadActionItems = (actionItem, identifier, htmlpage) => {
 gst.initPromise.then(val => {
   gst.changeAreaTasks();
   gst.changeArea(0);
+  gst.character.items = [];
+  gst.character.items.push(gst.items[0]);
+  console.log(JSON.stringify(gst.character));
   const area = gst.getAreaByIndex(0);
   const actionItem1 = new ActionItem(0, area.actions[0]);
   const actionItem2 = new ActionItem(1, area.actions[1]);

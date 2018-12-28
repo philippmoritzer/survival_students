@@ -1,5 +1,6 @@
 let activeResourceBars = [];
 let currentAction = null;
+let tempRemoveItem = null;
 
 const changeUIDay = area => {
   jQuery("#gameEndDayButton").attr("disabled", true);
@@ -15,8 +16,6 @@ const changeUIDay = area => {
 };
 
 const executeAction = action => {
-  console.log("hello");
-  console.log("#####type" + action.type);
   if (gst.turnCount === 2) {
     jQuery("#gameEndDayButton").attr("disabled", false);
   }
@@ -68,26 +67,59 @@ const executeAction = action => {
         activeResourceBars[2].updateState(gst.character.learn.value);
         break;
     }
-    jQuery(".gameMoneyText").animate(
-      {
-        opacity: "0"
-      },
-      100
-    );
-    jQuery(".gameMoneyText").text(gst.character.money);
-    jQuery(".gameMoneyText").animate(
-      {
-        opacity: "1"
-      },
-      1000
-    );
+    updateMoneyUI(gst.character.money);
+
+    if (action.reward) {
+      gst.addItem(action.reward);
+    }
   }
 };
 
+/**
+ * method has to be called when a resource value changes
+ * to update the UI
+ */
 const updateAllResourceBars = () => {
   activeResourceBars[0].updateState(gst.character.hunger.value);
   activeResourceBars[1].updateState(gst.character.life.value);
   activeResourceBars[2].updateState(gst.character.learn.value);
+};
+
+/**
+ * updates the UI (Backpack) when adding an item
+ * @param {*} item
+ */
+const addItemUI = item => {
+  const invItem = new InventoryItem(uuidv4(), item);
+
+  jQuery.get(
+    "./components/hud/inventory/inventory-item/inventory-item.html",
+    data => {
+      $("#inventoryGrid").append(data);
+      invItem.init();
+    }
+  );
+};
+
+const removeItemsUI = item => {};
+
+/**
+ * updates the money
+ */
+const updateMoneyUI = newValue => {
+  jQuery(".gameMoneyText").animate(
+    {
+      opacity: "0"
+    },
+    100
+  );
+  jQuery("#gameMoney").text(newValue);
+  jQuery("#gameMoney").animate(
+    {
+      opacity: "1"
+    },
+    1000
+  );
 };
 
 const loadModal = url => {

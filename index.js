@@ -27,6 +27,8 @@ $(window).on("load", function() {
     LEARN_RESOURCE_1
   );
 
+  gst.character.items = [];
+
   jQuery("#main").load("./sites/game/game.html", () => {});
   gst.setLoaded();
   gst.initGameData();
