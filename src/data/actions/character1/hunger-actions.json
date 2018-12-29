@@ -1,10 +1,12 @@
 [
+
   {
-    "name": "Character 2 Hunger Event",
-    "desc": "Character 2 Hunger Event Desc",
+    "name": "Supermarkt",
+    "desc": "Kokosnuss zum Trinken, weil das macht man so in Asien",
     "img": "img",
     "type": "hunger",
     "value": 34,
-    "cost": 500
+    "cost": 500,
+    "area": 1
   }
 ]

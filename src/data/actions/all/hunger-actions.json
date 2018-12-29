@@ -8,35 +8,156 @@
     "cost": 500
   },
   {
-    "name": "HungerEvent2",
-    "desc": "HungerEvent1Desc2",
+    "name": "XXL Burgerhaus- Die mit dem großen M",
+    "desc": "Ein Menü bestehend aus Burger, Pommes und einem Getränk",
     "img": "test.png",
     "type": "hunger",
     "value": 34,
-    "cost": 500
+    "cost": 500,
+    "area": 1
   },
   {
-    "name": "HungerEvent3",
-    "desc": "HungerEvent1Desc3",
-    "img": "img",
+    "name": "Der Hühnchenmann aus Kentucky",
+    "desc": "Eimer mit heißen Flügeln",
+    "img": "kfc.png",
     "type": "hunger",
     "value": 32,
-    "cost": 500
+    "cost": 500,
+    "area": 1
   },
   {
-    "name": "HungerEvent4",
-    "desc": "HungerEvent1Desc4",
-    "img": "img",
+    "name": "Bäcker",
+    "desc": "Frühstück für den perfekten Start in den Tag",
+    "img": "kfc.png",
     "type": "hunger",
-    "value": 12,
-    "cost": 500
+    "value": 32,
+    "cost": 500,
+    "area": 1
   },
   {
-    "name": "HungerEvent5",
-    "desc": "HungerEvent1Desc5",
-    "img": "img",
+    "name": "Coffeeshop",
+    "desc": "Tee",
+    "img": "kfc.png",
     "type": "hunger",
-    "value": 71,
-    "cost": 500
+    "value": 32,
+    "cost": 500,
+    "area": 1
+  },
+  {
+    "name": "Coffeeshop",
+    "desc": "Eiskaffee",
+    "img": "kfc.png",
+    "type": "hunger",
+    "value": 32,
+    "cost": 500,
+    "area": 1
+  },
+  {
+    "name": "Ostsee",
+    "desc": "Fischbrötchen",
+    "img": "kfc.png",
+    "type": "hunger",
+    "value": 32,
+    "cost": 500,
+    "area": 1
+  },
+  {
+    "name": "Ostsee",
+    "desc": "Backfisch",
+    "img": "kfc.png",
+    "type": "hunger",
+    "value": 32,
+    "cost": 500,
+    "area": 1
+  },
+  {
+    "name": "Fastfoodrestaurant",
+    "desc": "Pommes",
+    "img": "kfc.png",
+    "type": "hunger",
+    "value": 32,
+    "cost": 500,
+    "area": 1
+  },
+  {
+    "name": "Eiscafé",
+    "desc": "Das vermeintlich beste Eis der Stadt",
+    "img": "kfc.png",
+    "type": "hunger",
+    "value": 32,
+    "cost": 500,
+    "area": 1
+  },
+  {
+    "name": "Dönerladen",
+    "desc": "Der beste Döner der Stadt; mit oder ohne scharf",
+    "img": "kfc.png",
+    "type": "hunger",
+    "value": 32,
+    "cost": 500,
+    "area": 1
+  },
+  {
+    "name": "Ostsee",
+    "desc": "Fischbrötchen",
+    "img": "kfc.png",
+    "type": "hunger",
+    "value": 32,
+    "cost": 500,
+    "area": 1
+  },
+  {
+    "name": "Der Hühnchenmann aus Kentucky",
+    "desc": "Chicken Nuggets",
+    "img": "kfc.png",
+    "type": "hunger",
+    "value": 32,
+    "cost": 500,
+    "area": 1
+  },
+  {
+    "name": "Italienischer Takeaway",
+    "desc": "Pasta",
+    "img": "kfc.png",
+    "type": "hunger",
+    "value": 32,
+    "cost": 500,
+    "area": 1
+  },
+  {
+    "name": "Italienischer Takeaway",
+    "desc": "Pizza",
+    "img": "kfc.png",
+    "type": "hunger",
+    "value": 32,
+    "cost": 500,
+    "area": 1
+  },
+  {
+    "name": "Asiarestaurant",
+    "desc": "Sushi",
+    "img": "kfc.png",
+    "type": "hunger",
+    "value": 32,
+    "cost": 500,
+    "area": 1
+  },
+  {
+    "name": "Asiarestaurant",
+    "desc": "Bratreis",
+    "img": "kfc.png",
+    "type": "hunger",
+    "value": 32,
+    "cost": 500,
+    "area": 1
+  },
+  {
+    "name": "Asiarestaurant",
+    "desc": "Ramen",
+    "img": "kfc.png",
+    "type": "hunger",
+    "value": 32,
+    "cost": 500,
+    "area": 1
   }
 ]
