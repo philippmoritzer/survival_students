@@ -6,7 +6,8 @@
     "type": "life",
     "value": 34,
     "cost": 500,
-    "reward": 2
+    "reward": 2,
+    "area": 3
   },
   {
     "name": "LifeEvent2",
@@ -14,7 +15,8 @@
     "img": "img",
     "type": "life",
     "value": 34,
-    "cost": 500
+    "cost": 500,
+    "area": 3
   },
   {
     "name": "LifeEvent3",
@@ -22,7 +24,8 @@
     "img": "img",
     "type": "life",
     "value": 34,
-    "cost": 500
+    "cost": 500,
+    "area": 3
   },
   {
     "name": "LifeEvent4",
@@ -30,7 +33,8 @@
     "img": "img",
     "type": "life",
     "value": 34,
-    "cost": 500
+    "cost": 500,
+    "area": 0
   },
   {
     "name": "LifeEvent5",
@@ -38,46 +42,7 @@
     "img": "img",
     "type": "life",
     "value": 34,
-    "cost": 500
-  },
-  {
-    "name": "LifeEvent6",
-    "desc": "LifeEvent1Desc6",
-    "img": "img",
-    "type": "life",
-    "value": 34,
-    "cost": 500
-  },
-  {
-    "name": "LifeEvent7",
-    "desc": "LifeEvent1Desc7",
-    "img": "img",
-    "type": "life",
-    "value": 34,
-    "cost": 500
-  },
-  {
-    "name": "LifeEvent8",
-    "desc": "LifeEvent1Desc8",
-    "img": "img",
-    "type": "life",
-    "value": 34,
-    "cost": 500
-  },
-  {
-    "name": "LifeEvent9",
-    "desc": "LifeEvent1Desc9",
-    "img": "img",
-    "type": "life",
-    "value": 34,
-    "cost": 500
-  },
-  {
-    "name": "LifeEvent10",
-    "desc": "LifeEvent1Desc10",
-    "img": "img",
-    "type": "life",
-    "value": 34,
-    "cost": 500
+    "cost": 500,
+    "area": 1
   }
 ]

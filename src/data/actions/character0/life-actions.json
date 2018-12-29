@@ -5,6 +5,7 @@
     "img": "img",
     "type": "life",
     "value": 34,
-    "cost": 500
+    "cost": 500,
+    "area": 1
   }
 ]

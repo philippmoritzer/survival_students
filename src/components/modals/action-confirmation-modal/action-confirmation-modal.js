@@ -11,6 +11,10 @@ jQuery("#actionConfirmationActionName").text(currentAction.name);
 jQuery("#actionConfirmationActionDesc").text(currentAction.desc);
 jQuery("#actionConfirmationResourceValue").text(currentAction.value + " ");
 jQuery("#actionConfirmationResourceType").text(currentAction.type + " ");
+jQuery("#actionConfirmationImage").attr(
+  "src",
+  "../assets/images/actions/" + currentAction.img
+);
 
 jQuery("#actionConfirmationAcceptButton").on("click", () => {
   executeAction(currentAction);

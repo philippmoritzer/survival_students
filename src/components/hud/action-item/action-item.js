@@ -61,6 +61,11 @@ class ActionItem {
     jQuery("#actionDesc" + this.id).text(this.action.desc);
     jQuery("#actionLabelResource" + this.id).text(this.action.type + ": ");
     jQuery("#actionResourceCost" + this.id).text(this.action.value);
+    if (this.action.img && this.action.img !== "img") {
+      //TODO img löschen
+      const imgPath = "../assets/images/actions/";
+      jQuery("#actionImage" + this.id).attr("src", imgPath + "test.png");
+    }
   }
 
   select() {

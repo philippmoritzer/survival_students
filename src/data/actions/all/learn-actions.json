@@ -1,11 +1,12 @@
 [
   {
-    "name": "LearnEvent1",
-    "desc": "LearnEvent1Desc1",
-    "img": "img",
+    "name": "Übungsaufgaben bearbeiten",
+    "desc": "Bearbeite die Übungsaufgaben um deinen Lernstand aufzufrischen",
+    "img": "test.png",
     "type": "learn",
     "value": 34,
-    "cost": 500
+    "cost": 500,
+    "area": 0
   },
   {
     "name": "LearnEvent2",
@@ -34,46 +35,6 @@
   {
     "name": "LearnEvent5",
     "desc": "LearnEvent1Desc5",
-    "img": "img",
-    "type": "learn",
-    "value": 34,
-    "cost": 500
-  },
-  {
-    "name": "LearnEvent6",
-    "desc": "LearnEvent1Desc6",
-    "img": "img",
-    "type": "learn",
-    "value": 34,
-    "cost": 500
-  },
-  {
-    "name": "LearnEvent7",
-    "desc": "LearnEvent1Desc7",
-    "img": "img",
-    "type": "learn",
-    "value": 34,
-    "cost": 500
-  },
-  {
-    "name": "LearnEvent8",
-    "desc": "LearnEvent1Desc8",
-    "img": "img",
-    "type": "learn",
-    "value": 34,
-    "cost": 500
-  },
-  {
-    "name": "LearnEvent9",
-    "desc": "LearnEvent1Desc9",
-    "img": "img",
-    "type": "learn",
-    "value": 34,
-    "cost": 500
-  },
-  {
-    "name": "LearnEvent10",
-    "desc": "LearnEvent1Desc10",
     "img": "img",
     "type": "learn",
     "value": 34,

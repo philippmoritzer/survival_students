@@ -10,7 +10,7 @@
   {
     "name": "HungerEvent2",
     "desc": "HungerEvent1Desc2",
-    "img": "img",
+    "img": "test.png",
     "type": "hunger",
     "value": 34,
     "cost": 500
@@ -37,46 +37,6 @@
     "img": "img",
     "type": "hunger",
     "value": 71,
-    "cost": 500
-  },
-  {
-    "name": "HungerEvent6",
-    "desc": "HungerEvent1Desc6",
-    "img": "img",
-    "type": "hunger",
-    "value": -34,
-    "cost": 500
-  },
-  {
-    "name": "HungerEvent7",
-    "desc": "HungerEvent1Desc7",
-    "img": "img",
-    "type": "hunger",
-    "value": 34,
-    "cost": 500
-  },
-  {
-    "name": "HungerEvent8",
-    "desc": "HungerEvent1Desc8",
-    "img": "img",
-    "type": "hunger",
-    "value": 34,
-    "cost": 500
-  },
-  {
-    "name": "HungerEvent9",
-    "desc": "HungerEvent1Desc9",
-    "img": "img",
-    "type": "hunger",
-    "value": 34,
-    "cost": 500
-  },
-  {
-    "name": "HungerEvent10",
-    "desc": "HungerEvent1Desc10",
-    "img": "img",
-    "type": "hunger",
-    "value": 34,
     "cost": 500
   }
 ]

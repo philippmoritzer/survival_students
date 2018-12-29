@@ -152,24 +152,30 @@ class GameStateManager {
           for (let i = 0; i < ACTIONS_PER_AREA; i++) {
             switch (i) {
               case 0:
+                let sAction = this.hungerActions[
+                  Math.floor(Math.random() * this.hungerActions.length)
+                ];
+
                 area.actions.push(
-                  this.hungerActions[
-                    Math.floor(Math.random() * this.hungerActions.length)
-                  ]
+                  this.evaluateAreaActionFit(sAction, this.hungerActions, area)
                 );
                 break;
               case 1:
+                let sAction2 = this.lifeActions[
+                  Math.floor(Math.random() * this.lifeActions.length)
+                ];
+
                 area.actions.push(
-                  this.learnActions[
-                    Math.floor(Math.random() * this.learnActions.length)
-                  ]
+                  this.evaluateAreaActionFit(sAction2, this.lifeActions, area)
                 );
                 break;
               case 2:
+                let sAction3 = this.learnActions[
+                  Math.floor(Math.random() * this.learnActions.length)
+                ];
+
                 area.actions.push(
-                  this.lifeActions[
-                    Math.floor(Math.random() * this.lifeActions.length)
-                  ]
+                  this.evaluateAreaActionFit(sAction3, this.learnActions, area)
                 );
                 break;
             }
@@ -178,43 +184,79 @@ class GameStateManager {
           break;
         case "Foodcourt":
           for (let i = 0; i < ACTIONS_PER_AREA; i++) {
+            let foodcourtAction = this.hungerActions[
+              Math.floor(Math.random() * this.hungerActions.length)
+            ];
+
             area.actions.push(
-              this.hungerActions[
-                Math.floor(Math.random() * this.hungerActions.length)
-              ]
+              this.evaluateAreaActionFit(
+                foodcourtAction,
+                this.hungerActions,
+                area
+              )
             );
           }
           break;
         case "Hochschule":
           for (let i = 0; i < ACTIONS_PER_AREA; i++) {
+            let hochschuleAction = this.learnActions[
+              Math.floor(Math.random() * this.learnActions.length)
+            ];
             area.actions.push(
-              this.learnActions[
-                Math.floor(Math.random() * this.learnActions.length)
-              ]
+              this.evaluateAreaActionFit(
+                hochschuleAction,
+                this.learnActions,
+                area
+              )
             );
           }
           break;
         case "Partymeile":
           for (let i = 0; i < ACTIONS_PER_AREA; i++) {
+            let partymeileAction = this.lifeActions[
+              Math.floor(Math.random() * this.lifeActions.length)
+            ];
             area.actions.push(
-              this.lifeActions[
-                Math.floor(Math.random() * this.lifeActions.length)
-              ]
+              this.evaluateAreaActionFit(
+                partymeileAction,
+                this.lifeActions,
+                area
+              )
             );
           }
           break;
         case "Natur":
           for (let i = 0; i < ACTIONS_PER_AREA; i++) {
+            let naturAction = this.learnActions[
+              Math.floor(Math.random() * this.learnActions.length)
+            ];
             area.actions.push(
-              this.learnActions[
-                Math.floor(Math.random() * this.learnActions.length)
-              ]
+              this.evaluateAreaActionFit(naturAction, this.learnActions, area)
             );
           }
           break;
       }
     }
     return this.areas;
+  }
+
+  /**
+   *  makes sure the right action is displayed only in the right area
+   * called in method changeAreaTasks();
+   *
+   * @param action -initial action
+   * @param actions wanted actionArray (hunger, life or learn)
+   * @param area - the area where the action should be checked for
+   */
+  evaluateAreaActionFit(action, actions, area) {
+    while (action.area !== area.index) {
+      console.log("stuck");
+      action = actions[Math.floor(Math.random() * actions.length)];
+      if (!action.area) {
+        break;
+      }
+    }
+    return action;
   }
 
   /**
