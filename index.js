@@ -19,7 +19,7 @@ $(window).on("load", function() {
   const LEARN_RESOURCE_1 = new Resource(25, 0.3, 20);
 
   gst.character = new Character(
-    0,
+    1,
     "Testname",
     80000,
     HUNGER_RESOURCE_1,

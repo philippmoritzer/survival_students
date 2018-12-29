@@ -300,6 +300,22 @@ class GameStateManager {
   }
 
   /**
+   * checks if the character owns an item
+   * a character is only allowed to own a item once.
+   * @param {*} item item to check
+   */
+  characterOwnsItem(item) {
+    for (let i = 0; i < this.character.items.length; i++) {
+      const element = this.character.items[i];
+      if (element.id === item.id) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+
+  /**
    * gets item by id
    * @param {*} id
    */

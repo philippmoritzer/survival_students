@@ -64,7 +64,7 @@ class ActionItem {
     if (this.action.img && this.action.img !== "img") {
       //TODO img löschen
       const imgPath = "../assets/images/actions/";
-      jQuery("#actionImage" + this.id).attr("src", imgPath + "test.png");
+      jQuery("#actionImage" + this.id).attr("src", imgPath + this.action.img);
     }
   }
 
