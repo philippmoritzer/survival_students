@@ -17,7 +17,6 @@ jQuery("#actionConfirmationAcceptButton").on("click", () => {
   closeModal();
 });
 
-console.log(JSON.stringify(currentAction));
 if (currentAction.reward) {
   const item = gst.getItemById(currentAction.reward);
   if (!gst.characterOwnsItem(item)) {
@@ -31,9 +30,9 @@ if (currentAction.reward) {
         hoverItem.init();
       }
     );
+  } else {
+    jQuery("#actionConfirmationValueContainer").css({
+      display: "none"
+    });
   }
-} else {
-  jQuery("#actionConfirmationValueContainer").css({
-    display: "none"
-  });
 }

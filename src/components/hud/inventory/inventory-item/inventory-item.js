@@ -39,11 +39,9 @@ class InventoryItem {
   }
 
   initRightClickEvent() {
-    jQuery("#inventoryGridItem" + this.id).mousedown(() => {
-      if (event.which === 3) {
-        tempRemoveItem = this.item;
-        loadModal("./components/modals/sell-item-modal/sell-item-modal.html");
-      }
+    jQuery("#inventoryGridItem" + this.id).on("click", () => {
+      tempRemoveItem = this.item;
+      loadModal("./components/modals/sell-item-modal/sell-item-modal.html");
     });
   }
 

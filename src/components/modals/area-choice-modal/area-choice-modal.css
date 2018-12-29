@@ -30,5 +30,6 @@
   .areaChoiceGrid {
     grid-template-columns: 192px 192px;
     grid-template-rows: 108px 108px;
+    height: 324px;
   }
 }

@@ -24,6 +24,7 @@ const newDayModal = () => {
       });
     }
   );
+  jQuery("#gameActionBarTopItemDay").text("Tag " + gst.day + " / 30");
 };
 
 jQuery(document).ready(() => {
@@ -118,6 +119,8 @@ const execAreaChange = area => {
   loadActionItems(actionItem1, "#gameAction1", ACTION_ITEM_PAGE);
   loadActionItems(actionItem2, "#gameAction2", ACTION_ITEM_PAGE);
   loadActionItems(actionItem3, "#gameAction3", ACTION_ITEM_PAGE);
+
+  jQuery("#gameActionBarTopItemLocation").text(gst.area.name);
 };
 
 const ACTION_ITEM_PAGE = "./components/hud/action-item/action-item.html";

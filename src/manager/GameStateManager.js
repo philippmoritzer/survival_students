@@ -273,8 +273,19 @@ class GameStateManager {
     updateAllResourceBars();
   }
 
+  /**
+   * method that checks if losing condition is met
+   * needs to be called whenever the character is losing a
+   * resource
+   */
   checkLosingCondition() {
-    //TODO
+    if (
+      this.character.hunger.value <= 0 ||
+      this.character.life.value <= 0 ||
+      this.character.learn.value <= 0
+    ) {
+      initLoseUI();
+    }
   }
 
   /**
@@ -284,6 +295,23 @@ class GameStateManager {
   addItem(id) {
     const item = this.getItemById(id);
     this.character.items.push(item);
+
+    if (item.type && item.value) {
+      switch (item.type) {
+        case "hunger":
+          this.character.hunger.multiplier =
+            this.character.hunger.multiplier + item.value;
+          break;
+        case "life":
+          this.character.life.multiplier =
+            this.character.life.multiplier + item.value;
+          break;
+        case "learn":
+          this.character.learn.multiplier =
+            this.character.learn.multiplier + item.value;
+          break;
+      }
+    }
     addItemUI(item);
   }
 
@@ -296,7 +324,26 @@ class GameStateManager {
       }
     }
     this.character.money = this.character.money + item.sellfor;
+    //make sure the bonus of the item is not granted anymore
+    if (item.type && item.value) {
+      switch (item.type) {
+        case "hunger":
+          this.character.hunger.multiplier =
+            this.character.hunger.multiplier - item.value;
+          break;
+        case "life":
+          this.character.life.multiplier =
+            this.character.life.multiplier - item.value;
+          break;
+
+        case "learn":
+          this.character.learn.multiplier =
+            this.character.learn.multiplier - item.value;
+          break;
+      }
+    }
     updateMoneyUI(this.character.money);
+    removeItemsUI(item);
   }
 
   /**

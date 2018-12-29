@@ -90,18 +90,23 @@ const updateAllResourceBars = () => {
  * @param {*} item
  */
 const addItemUI = item => {
-  const invItem = new InventoryItem(uuidv4(), item);
+  const invItem = new InventoryItem(item.id, item);
 
   jQuery.get(
     "./components/hud/inventory/inventory-item/inventory-item.html",
     data => {
-      $("#inventoryGrid").append(data);
+      jQuery("#inventoryGrid").append(data);
       invItem.init();
     }
   );
 };
 
-const removeItemsUI = item => {};
+const removeItemsUI = item => {
+  console.log("##DELETE");
+  jQuery("#inventoryGridItem" + item.id).remove();
+  console.log("inventoryGridItem" + item.id);
+  closeModal();
+};
 
 /**
  * updates the money
@@ -120,6 +125,10 @@ const updateMoneyUI = newValue => {
     },
     1000
   );
+};
+
+const initLoseUI = () => {
+  jQuery("#main").load("./sites/outro/outro.html");
 };
 
 const loadModal = url => {
