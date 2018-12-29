@@ -5,12 +5,31 @@ jQuery("#actionConfirmationClose").on("click", () => {
 jQuery("#actionConfirmationCost").text(currentAction.cost);
 jQuery("#actionConfirmationActionName").text(currentAction.name);
 jQuery("#actionConfirmationActionDesc").text(currentAction.desc);
-jQuery("#actionConfirmationResourceValue").text(currentAction.value + " ");
-jQuery("#actionConfirmationResourceType").text(currentAction.type + " ");
 jQuery("#actionConfirmationImage").attr(
   "src",
   "../assets/images/actions/" + currentAction.img
 );
+
+switch (currentAction.type) {
+  case "hunger":
+    jQuery("#actionConfirmationResourceImg").attr(
+      "src",
+      "../assets/images/hunger.png"
+    );
+    break;
+  case "life":
+    jQuery("#actionConfirmationResourceImg").attr(
+      "src",
+      "../assets/images/life.png"
+    );
+    break;
+  case "learn":
+    jQuery("#actionConfirmationResourceImg").attr(
+      "src",
+      "../assets/images/learn.png"
+    );
+    break;
+}
 
 jQuery("#actionConfirmationAcceptButton").on("click", () => {
   executeAction(currentAction);
@@ -30,9 +49,9 @@ if (currentAction.reward) {
         hoverItem.init();
       }
     );
-  } else {
-    jQuery("#actionConfirmationValueContainer").css({
-      display: "none"
-    });
   }
+} else {
+  jQuery("#actionConfirmationValueContainer").css({
+    display: "none"
+  });
 }

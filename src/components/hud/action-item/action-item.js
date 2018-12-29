@@ -25,13 +25,9 @@ class ActionItem {
       "id",
       jQuery("#actionCost").attr("id") + this.id
     );
-    jQuery("#actionLabelResource").attr(
+    jQuery("#actionResourceImg").attr(
       "id",
-      jQuery("#actionLabelResource").attr("id") + this.id
-    );
-    jQuery("#actionResourceCost").attr(
-      "id",
-      jQuery("#actionResourceCost").attr("id") + this.id
+      jQuery("#actionResourceImg").attr("id") + this.id
     );
   }
 
@@ -59,12 +55,30 @@ class ActionItem {
     jQuery("#actionName" + this.id).text(this.action.name);
     jQuery("#actionCost" + this.id).text(this.action.cost);
     jQuery("#actionDesc" + this.id).text(this.action.desc);
-    jQuery("#actionLabelResource" + this.id).text(this.action.type + ": ");
-    jQuery("#actionResourceCost" + this.id).text(this.action.value);
     if (this.action.img && this.action.img !== "img") {
       //TODO img löschen
       const imgPath = "../assets/images/actions/";
       jQuery("#actionImage" + this.id).attr("src", imgPath + this.action.img);
+    }
+    switch (this.action.type) {
+      case "hunger":
+        jQuery("#actionResourceImg" + this.id).attr(
+          "src",
+          "../assets/images/hunger.png"
+        );
+        break;
+      case "life":
+        jQuery("#actionResourceImg" + this.id).attr(
+          "src",
+          "../assets/images/life.png"
+        );
+        break;
+      case "learn":
+        jQuery("#actionResourceImg" + this.id).attr(
+          "src",
+          "../assets/images/learn.png"
+        );
+        break;
     }
   }
 
