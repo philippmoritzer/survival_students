@@ -10,7 +10,7 @@
   {
     "name": "XXL Burgerhaus- Die mit dem großen M",
     "desc": "Ein Menü bestehend aus Burger, Pommes und einem Getränk",
-    "img": "test.png",
+    "img": "burger.png",
     "type": "hunger",
     "value": 34,
     "cost": 500,
@@ -28,7 +28,7 @@
   {
     "name": "Bäcker",
     "desc": "Frühstück für den perfekten Start in den Tag",
-    "img": "kfc.png",
+    "img": "bread.png",
     "type": "hunger",
     "value": 32,
     "cost": 500,
@@ -37,7 +37,7 @@
   {
     "name": "Coffeeshop",
     "desc": "Tee",
-    "img": "kfc.png",
+    "img": "tea.png",
     "type": "hunger",
     "value": 32,
     "cost": 500,
@@ -46,7 +46,7 @@
   {
     "name": "Coffeeshop",
     "desc": "Eiskaffee",
-    "img": "kfc.png",
+    "img": "eiskaffee.png",
     "type": "hunger",
     "value": 32,
     "cost": 500,
@@ -55,7 +55,7 @@
   {
     "name": "Ostsee",
     "desc": "Fischbrötchen",
-    "img": "kfc.png",
+    "img": "fish.png",
     "type": "hunger",
     "value": 32,
     "cost": 500,
@@ -64,7 +64,7 @@
   {
     "name": "Ostsee",
     "desc": "Backfisch",
-    "img": "kfc.png",
+    "img": "fish.png",
     "type": "hunger",
     "value": 32,
     "cost": 500,
@@ -73,7 +73,7 @@
   {
     "name": "Fastfoodrestaurant",
     "desc": "Pommes",
-    "img": "kfc.png",
+    "img": "fries.png",
     "type": "hunger",
     "value": 32,
     "cost": 500,
@@ -82,7 +82,7 @@
   {
     "name": "Eiscafé",
     "desc": "Das vermeintlich beste Eis der Stadt",
-    "img": "kfc.png",
+    "img": "ice.png",
     "type": "hunger",
     "value": 32,
     "cost": 500,
@@ -90,17 +90,8 @@
   },
   {
     "name": "Dönerladen",
-    "desc": "Der beste Döner der Stadt; mit oder ohne scharf",
-    "img": "kfc.png",
-    "type": "hunger",
-    "value": 32,
-    "cost": 500,
-    "area": 1
-  },
-  {
-    "name": "Ostsee",
-    "desc": "Fischbrötchen",
-    "img": "kfc.png",
+    "desc": "Der beste Döner der Stadt, mit oder ohne scharf",
+    "img": "kebab.png",
     "type": "hunger",
     "value": 32,
     "cost": 500,
@@ -118,7 +109,7 @@
   {
     "name": "Italienischer Takeaway",
     "desc": "Pasta",
-    "img": "kfc.png",
+    "img": "pasta.png",
     "type": "hunger",
     "value": 32,
     "cost": 500,
@@ -127,7 +118,7 @@
   {
     "name": "Italienischer Takeaway",
     "desc": "Pizza",
-    "img": "kfc.png",
+    "img": "pizza.png",
     "type": "hunger",
     "value": 32,
     "cost": 500,
@@ -136,7 +127,7 @@
   {
     "name": "Asiarestaurant",
     "desc": "Sushi",
-    "img": "kfc.png",
+    "img": "sushi.png",
     "type": "hunger",
     "value": 32,
     "cost": 500,
@@ -145,7 +136,7 @@
   {
     "name": "Asiarestaurant",
     "desc": "Bratreis",
-    "img": "kfc.png",
+    "img": "rice.png",
     "type": "hunger",
     "value": 32,
     "cost": 500,
@@ -154,7 +145,7 @@
   {
     "name": "Asiarestaurant",
     "desc": "Ramen",
-    "img": "kfc.png",
+    "img": "ramen.png",
     "type": "hunger",
     "value": 32,
     "cost": 500,

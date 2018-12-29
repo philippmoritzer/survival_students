@@ -2,7 +2,7 @@
   {
     "name": "Nobelrestaurant",
     "desc": "Kobe Steak",
-    "img": "img",
+    "img": "steak.png",
     "type": "hunger",
     "value": 34,
     "cost": 500,
@@ -12,7 +12,7 @@
     "name": "Nobelrestaurant",
     "desc": "Irgendso ein Fancy shit",
     "img": "img",
-    "type": "hunger",
+    "type": "teuer.png",
     "value": 34,
     "cost": 500,
     "area": 1
@@ -29,7 +29,7 @@
   {
     "name": "Nobelrestaurant",
     "desc": "Kaviar",
-    "img": "img",
+    "img": "fish.png",
     "type": "hunger",
     "value": 34,
     "cost": 500,
