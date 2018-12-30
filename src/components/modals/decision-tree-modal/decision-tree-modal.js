@@ -17,7 +17,11 @@ for (let i = 0; i < actionHistory.length; i++) {
   jQuery.get(
     "./components/modals/decision-tree-modal/decision-tree-item/decision-tree-item.html",
     data => {
-      let dTreeItem = new DecisionTreeItem(i, actionHistory[i]);
+      let dTreeItem = new DecisionTreeItem(
+        i,
+        actionHistory[i].action,
+        actionHistory[i].calcValue
+      );
       jQuery("#decisionTreeContent").append(data);
       dTreeItem.init();
     }

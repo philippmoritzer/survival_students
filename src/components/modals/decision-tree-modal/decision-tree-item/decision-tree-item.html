@@ -5,5 +5,41 @@
   />
 </head>
 <body>
-  <p style="color: white; font-size: 1.5em">I am an item</p>
+  <p id="decisionTreeItemActionName" class="decisionTreeItemActionName">
+    <!--Inject action name-->
+  </p>
+  <div class="decisionTreeItemContainer">
+    <div class="decisionTreeItemResourceContainer">
+      <div class="decisionTreeItemRowFlex">
+        <img
+          class="decisionTreeItemImg"
+          src="../assets/images/money.png"
+          alt=""
+        />
+        <p
+          class="decisionTreeItemText"
+          id="decisionTreeItemMoney"
+          style="color: #00FF66	; font-size: 1.3em"
+        >
+          <!--Inject cost-->
+        </p>
+      </div>
+      <div class="decisionTreeItemRowFlex" style="margin-left: 20px;">
+        <!--Change Image based on action-->
+        <img
+          class="decisionTreeItemImg"
+          id="decisionTreeItemResourceImg"
+          src="../assets/images/hunger.png"
+          alt=""
+        />
+        <p
+          class="decisionTreeItemText"
+          id="decisionTreeItemResourceText"
+          style="color:#990000	; font-size: 1.3em"
+        >
+          <!--Inject calculated Action Value-->
+        </p>
+      </div>
+    </div>
+  </div>
 </body>

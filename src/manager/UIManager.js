@@ -27,28 +27,32 @@ const executeAction = action => {
       gst.turnCount + " / " + MAX_TURN_COUNT
     );
 
+    let calculatedValue;
     switch (action.type) {
       case "hunger":
         gst.character.money = gst.character.money - action.cost;
 
-        round(
-          (gst.character.hunger.value =
-            gst.character.hunger.value +
-            action.value * gst.character.hunger.multiplier),
+        calculatedValue = round(
+          action.value * gst.character.hunger.multiplier,
           0
         );
+        gst.character.hunger.value =
+          gst.character.hunger.value + calculatedValue;
+
         if (gst.character.hunger.value > 100) {
           gst.character.hunger.value = 100;
         }
+
         activeResourceBars[0].updateState(gst.character.hunger.value);
         break;
       case "life":
         gst.character.money = gst.character.money - action.cost;
-        gst.character.life.value = round(
-          gst.character.life.value +
-            action.value * gst.character.life.multiplier,
+
+        calculatedValue = round(
+          action.value * gst.character.life.multiplier,
           0
         );
+        gst.character.life.value = gst.character.life.value + calculatedValue;
         if (gst.character.life.value > 100) {
           gst.character.life.value = 100;
         }
@@ -57,11 +61,11 @@ const executeAction = action => {
         break;
       case "learn":
         gst.character.money = gst.character.money - action.cost;
-        gst.character.learn.value = round(
-          gst.character.learn.value +
-            action.value * gst.character.learn.multiplier,
+        calculatedValue = round(
+          action.value * gst.character.learn.multiplier,
           0
         );
+        gst.character.learn.value = gst.character.learn.value + calculatedValue;
         if (gst.character.learn.value > 100) {
           gst.character.learn.value = 100;
         }
@@ -73,7 +77,7 @@ const executeAction = action => {
     if (action.reward) {
       gst.addItem(action.reward);
     }
-    actionHistory.push(action);
+    actionHistory.push({ action: action, calcValue: calculatedValue });
   }
 };
 

@@ -11,7 +11,7 @@ class DecisionTreeTitle {
   }
 
   setAttributes() {
-    jQuery("#decisionTreeTitleText" + this.id).text("Tag " + this.id + 1);
+    jQuery("#decisionTreeTitleText" + this.id).text("Tag " + (this.id + 1));
   }
 
   init() {

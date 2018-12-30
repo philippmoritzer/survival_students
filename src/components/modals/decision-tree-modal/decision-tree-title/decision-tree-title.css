@@ -2,3 +2,9 @@
   color: white;
   font-size: 2em;
 }
+
+.decisionTreeSeparator {
+  color: white;
+  margin-left: 10%;
+  margin-right: 10%;
+}
