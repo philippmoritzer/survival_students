@@ -1,6 +1,7 @@
 let activeResourceBars = [];
 let currentAction = null;
 let tempRemoveItem = null;
+let actionHistory = [];
 
 const changeUIDay = area => {
   jQuery("#gameEndDayButton").attr("disabled", true);
@@ -72,6 +73,7 @@ const executeAction = action => {
     if (action.reward) {
       gst.addItem(action.reward);
     }
+    actionHistory.push(action);
   }
 };
 

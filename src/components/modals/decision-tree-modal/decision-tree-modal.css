@@ -1,0 +1,16 @@
+.decisionTreeModalClose {
+  right: 0;
+  font-size: 3em;
+  color: white;
+  padding: 25px;
+  cursor: pointer;
+  position: absolute;
+}
+
+.decisionTreeContent {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+
+  overflow-y: scroll;
+}

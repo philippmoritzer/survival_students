@@ -186,3 +186,8 @@ jQuery("#gameBackpack").on("click", () => {
     hideInventory();
   }
 });
+
+jQuery("#gameDecision").on("click", () => {
+  console.log("hello");
+  loadModal("./components/modals/decision-tree-modal/decision-tree-modal.html");
+});

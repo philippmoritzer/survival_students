@@ -10,7 +10,7 @@ jQuery(() => {
       "./components/hud/inventory/inventory-item/inventory-item.html",
       data => {
         let invItem = new InventoryItem(item.id, item);
-        $("#inventoryGrid").append(data);
+        jQuery("#inventoryGrid").append(data);
         invItem.init();
       }
     );
