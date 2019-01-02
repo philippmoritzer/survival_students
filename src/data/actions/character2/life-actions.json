@@ -1,5 +1,14 @@
 [
   {
+    "name": "Fitnessstudio",
+    "desc": "Ab ins Gym",
+    "img": "gym.png",
+    "type": "life",
+    "value": 34,
+    "cost": 500,
+    "area": 3
+  },
+    {
     "name": "Character 3 Learn Event",
     "desc": "Character 3 Learn Event Desc",
     "img": "img",

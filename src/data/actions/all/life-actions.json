@@ -1,8 +1,8 @@
 [
   {
-    "name": "LifeEvent1",
-    "desc": "LifeEvent1Desc1",
-    "img": "img",
+    "name": "Bartour",
+    "desc": "Eine Bartour mit den Echten",
+    "img": "beer.png",
     "type": "life",
     "value": 34,
     "cost": 500,
@@ -10,39 +10,68 @@
     "area": 3
   },
   {
-    "name": "LifeEvent2",
-    "desc": "LifeEvent1Desc2",
-    "img": "img",
+    "name": "Bar-Sports",
+    "desc": "Pool, Dart o.ä.",
+    "img": "pool.png",
     "type": "life",
     "value": 34,
     "cost": 500,
     "area": 3
   },
   {
-    "name": "LifeEvent3",
-    "desc": "LifeEvent1Desc3",
-    "img": "img",
+    "name": "KONZERT",
+    "desc": "Wer auch immer ist in der Stadt",
+    "img": "microphone.png",
     "type": "life",
     "value": 34,
     "cost": 500,
     "area": 3
   },
   {
-    "name": "LifeEvent4",
-    "desc": "LifeEvent1Desc4",
-    "img": "img",
+    "name": "In da CLub",
+    "desc": "Feiern bis zum Umkippen",
+    "img": "disco-ball.png",
     "type": "life",
     "value": 34,
     "cost": 500,
-    "area": 0
+    "area": 3
   },
   {
-    "name": "LifeEvent5",
-    "desc": "LifeEvent1Desc5",
-    "img": "img",
+    "name": "Joggen gehen",
+    "desc": "Nichts geht über einen Lauf durch den Wald, obwohl...",
+    "img": "shoe.png",
     "type": "life",
     "value": 34,
     "cost": 500,
-    "area": 1
-  }
+    "area": 3
+  },
+  {
+    "name": "Stadion",
+    "desc": "Ein Nachmittag im Stadion, was will man mehr",
+    "img": "soccer.png",
+    "type": "life",
+    "value": 34,
+    "cost": 500,
+    "area": 3
+  },
+  {
+    "name": "Fitnessstudio",
+    "desc": "Ab ins Gym",
+    "img": "gym2.png",
+    "type": "life",
+    "value": 34,
+    "cost": 500,
+    "area": 3
+  },
+  [
+    {
+      "name": "Sports Night",
+      "desc": "Ein sportlicher Abend in einer Bar der Wahl",
+      "img": "american-football.png",
+      "type": "life",
+      "value": 34,
+      "cost": 500,
+      "area": 3
+    }
+  ]
 ]

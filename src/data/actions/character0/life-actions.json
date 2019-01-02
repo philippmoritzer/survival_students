@@ -1,7 +1,7 @@
 [
   {
-    "name": "Character 1 Life Event",
-    "desc": "Character 1 Life Event Desc",
+    "name": "Sports Night",
+    "desc": "Ein sportlicher Abend in einer Bar der Wahl",
     "img": "img",
     "type": "life",
     "value": 34,
