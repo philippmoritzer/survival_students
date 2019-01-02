@@ -2,31 +2,26 @@
   {
     "index": 0,
     "backgroundImage": "home.png",
-    "name": "Home",
-    "type": "hunger"
+    "name": "Home"
   },
   {
     "index": 1,
     "backgroundImage": "foodcourt.png",
-    "name": "Foodcourt",
-    "type": "hunger"
+    "name": "Foodcourt"
   },
   {
     "index": 2,
     "backgroundImage": "hochschule.png",
-    "name": "Hochschule",
-    "type": "hunger"
+    "name": "Hochschule"
   },
   {
     "index": 3,
     "backgroundImage": "partymeile.png",
-    "name": "Partymeile",
-    "type": "hunger"
+    "name": "City"
   },
   {
     "index": 4,
     "backgroundImage": "landscape.jpg",
-    "name": "Natur",
-    "type": "hunger"
+    "name": "Natur"
   }
 ]

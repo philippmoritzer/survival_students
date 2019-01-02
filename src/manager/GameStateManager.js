@@ -211,17 +211,13 @@ class GameStateManager {
             );
           }
           break;
-        case "Partymeile":
+        case "City":
           for (let i = 0; i < ACTIONS_PER_AREA; i++) {
-            let partymeileAction = this.lifeActions[
+            let cityAction = this.lifeActions[
               Math.floor(Math.random() * this.lifeActions.length)
             ];
             area.actions.push(
-              this.evaluateAreaActionFit(
-                partymeileAction,
-                this.lifeActions,
-                area
-              )
+              this.evaluateAreaActionFit(cityAction, this.lifeActions, area)
             );
           }
           break;
