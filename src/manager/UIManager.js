@@ -4,6 +4,9 @@ let tempRemoveItem = null;
 let actionHistory = [];
 
 const changeUIDay = area => {
+  if (gst.day === 1) {
+  }
+
   jQuery("#gameEndDayButton").attr("disabled", true);
   jQuery("#gameTurnIndicatorText").text(gst.turnCount + " / " + MAX_TURN_COUNT);
 

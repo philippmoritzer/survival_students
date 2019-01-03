@@ -42,7 +42,7 @@ class GameStateManager {
   changeDay() {
     this.changeAreaTasks();
     if (this.day !== 0) {
-      this.executeLoss();
+      this.executeResourceLoss();
     }
     this.checkLosingCondition();
     if (this.day < 30) {
@@ -268,7 +268,7 @@ class GameStateManager {
    * Loses predefined Value each day
    * call in changeDay()-Method
    */
-  executeLoss() {
+  executeResourceLoss() {
     this.character.hunger.value =
       this.character.hunger.value - this.character.hunger.lossPerDay;
     this.character.life.value =

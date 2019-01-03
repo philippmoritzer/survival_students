@@ -63,10 +63,12 @@
 
 .gameActionBarTopItemDay {
   font-size: 1.2em;
+  text-align: center;
 }
 
 .gameActionBarTopItemLocation {
   font-size: 1.1em;
+  text-align: center;
 }
 
 .gameActionLayoutFix {

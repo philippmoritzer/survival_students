@@ -25,6 +25,14 @@ const newDayModal = () => {
     }
   );
   jQuery("#gameActionBarTopItemDay").text("Tag  " + gst.day + " / 30");
+  if (gst.day === 1) {
+    console.log("hallooo before timeout");
+    setTimeout(function() {
+      console.log("hallo from timeout");
+      loadModal("./components/modals/tutorial-modal/tutorial-modal.html");
+      initTutorialModal();
+    }, 3500);
+  }
 };
 
 jQuery(document).ready(() => {
@@ -187,5 +195,5 @@ jQuery("#gameDecision").on("click", () => {
 
 jQuery("#gameTutorial").on("click", () => {
   loadModal("./components/modals/tutorial-modal/tutorial-modal.html");
-  initTutorialModal(() => {});
+  initTutorialModal();
 });

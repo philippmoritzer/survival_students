@@ -1,4 +1,4 @@
-#introContent {
+.introContent {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -9,7 +9,7 @@
   left: 0;
 }
 
-#layer {
+.introLayer {
   height: 100%;
   width: 100%;
   z-index: 2;
@@ -18,26 +18,28 @@
   animation-delay: 3s;
 }
 
-#title {
+.introTitle {
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  flex: 3;
+  flex: 2.5;
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 
-#pTitle {
+.introTitleText {
   color: #f47a42;
   font-size: 4em;
   font-family: "zorque";
+  text-align: center;
 }
 
-#startGame {
-  flex: 1;
+.introStartGame {
+  flex: 2;
   display: flex;
   justify-content: center;
 }
 
-#pStartGame {
+.introStartGameText {
   color: white;
   font-size: 2em;
   z-index: 2;
@@ -48,7 +50,7 @@
   animation-delay: 3s;
 }
 
-#characterIntro {
+.introCharacterContainer {
   flex: 5;
   display: flex;
   flex-direction: row;
@@ -56,7 +58,7 @@
   z-index: 2;
 }
 
-.characterImg {
+.introCharacterImg {
   margin-top: 350px;
   overflow: hidden;
   margin-top: 100%;
@@ -64,24 +66,24 @@
   z-index: 3;
 }
 
-#characterImg1 {
+#introCharacterImg1 {
   margin-right: -3px;
   animation: 1s slide-in forwards, 5s wiggle infinite;
   animation-delay: 1s;
   filter: drop-shadow(5px 5px 5px black);
 }
-#characterImg2 {
+#introCharacterImg2 {
   animation: 1s slide-in forwards, 5s wiggle infinite;
   filter: drop-shadow(5px 5px 5px black);
 }
-#characterImg3 {
+#introCharacterImg3 {
   margin-left: -3px;
   animation: 1s slide-in forwards, 5s wiggle infinite;
   animation-delay: 2s;
   filter: drop-shadow(5px 5px 5px black);
 }
 
-#spacer {
+.introSpacer {
   flex: 2;
 }
 

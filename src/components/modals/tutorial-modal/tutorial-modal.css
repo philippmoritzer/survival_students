@@ -3,7 +3,14 @@
   font-size: 3em;
   color: white;
   padding: 25px;
+  margin-top: 10%;
   cursor: pointer;
   position: absolute;
   z-index: 1000;
+}
+
+@media only screen and (max-width: 991px) {
+  .tutorialModalClose {
+    font-size: 2em;
+  }
 }

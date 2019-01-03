@@ -72,5 +72,6 @@
     flex-direction: column;
     border: 1px solid #696969;
     border-radius: 10px;
+    box-shadow: none;
   }
 }

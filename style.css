@@ -44,8 +44,3 @@ body {
     zoom: 2;
   }
 }
-@media only screen and (min-width: 767px) and (max-width: 769px) {
-  #main {
-    zoom: 1.5;
-  }
-}
