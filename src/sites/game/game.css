@@ -54,6 +54,21 @@
   box-shadow: 0px 0px 20px -1px rgba(0, 0, 0, 1);
 }
 
+.gameActionBarTopItemText {
+  font-weight: bold;
+  font-family: ArcadeClassic;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.gameActionBarTopItemDay {
+  font-size: 1.2em;
+}
+
+.gameActionBarTopItemLocation {
+  font-size: 1.1em;
+}
+
 .gameActionLayoutFix {
   display: flex;
   flex-direction: column;

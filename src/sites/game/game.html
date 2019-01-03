@@ -1,7 +1,5 @@
 <head>
-  <title id="gameTitle">
-    Survival - Playing as {{ Charactername // TODO }}
-  </title>
+  <title id="gameTitle">Survival - Playing as</title>
   <link
     rel="stylesheet"
     type="text/css"
@@ -30,14 +28,16 @@
       <div class="gameActionsBar">
         <div id="gameActionBarTopItems" class="gameActionBarTopItems">
           <p
+            class="gameActionBarTopItemDay gameActionBarTopItemText"
             id="gameActionBarTopItemDay"
-            style="font-size: 1.2em; font-weight: bold;"
+            style="font-size: 1.2em; "
           >
             <!--Inject day-->
           </p>
           <p
+            class="gameActionBarTopItemLocation gameActionBarTopItemText"
             id="gameActionBarTopItemLocation"
-            style="font-size: 1.1em; font-weight: bold;"
+            style="font-size: 1.1em;"
           >
             <!--Inject Ort-->
           </p>
@@ -82,7 +82,7 @@
             id="gameEndDayButton"
             disabled="true"
           >
-            End Day
+            TAG ENDE
           </button>
         </div>
       </div>

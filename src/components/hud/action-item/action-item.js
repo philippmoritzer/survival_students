@@ -88,8 +88,6 @@ class ActionItem {
       loadModal(
         "./components/modals/action-confirmation-modal/action-confirmation-modal.html"
       );
-      //TODO: Execute action -> modal
-      //executeAction(this.action);
     });
   }
 

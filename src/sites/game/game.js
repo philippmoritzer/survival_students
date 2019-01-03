@@ -11,7 +11,7 @@ const newDayModal = () => {
   jQuery("#modal").load(
     "./components/modals/introduction-modal/introduction-modal.html",
     () => {
-      jQuery("#introductionText").text("DAY " + gst.day);
+      jQuery("#introductionText").text("TAG " + gst.day);
       jQuery("#modal").animate({ opacity: 1 }, "slow", () => {
         jQuery("#modal").css({ display: "unset" });
         window.setTimeout(() => {
@@ -24,7 +24,7 @@ const newDayModal = () => {
       });
     }
   );
-  jQuery("#gameActionBarTopItemDay").text("Tag " + gst.day + " / 30");
+  jQuery("#gameActionBarTopItemDay").text("Tag  " + gst.day + " / 30");
 };
 
 jQuery(document).ready(() => {
@@ -130,10 +130,6 @@ const loadActionItems = (actionItem, identifier, htmlpage) => {
     });
   });
 };
-
-//creating
-//TODO: Randomize
-//make sure data is loaded, if not, try again
 
 gst.initPromise.then(val => {
   gst.loadCharacterSpecificActions().then(val => {
