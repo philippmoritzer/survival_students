@@ -13,26 +13,21 @@
   ></script>
 </head>
 <body>
-  <div class="characterSelectionPageFlexContainer">
-    <h1 class="chooseCharacterCaption">Choose a character:</h1>
-    <div class="characterSlideFlexContainer">
-      <div id="character1" class="characterSelectionContainer">
-        <!-- Inject character-slide.html -->
+  <div style="width: 100%; height: 100%; display: flex; align-items:center; justify-content: center; flex-direction: column;">
+    
+    
+  <div class="characterSelectionCardCarousel">
+      <div id="character1" class="characterSelectionSlide">
+        <!--Inject character-slide.html-->
+      </div>      
+      <div id="character2" class="characterSelectionSlide">
+        <!--Inject character-slide.html-->
       </div>
-      <div id="character2" class="characterSelectionContainer">
-        <!-- Inject character-slide.html -->
-      </div>
-      <div id="character3" class="characterSelectionContainer">
-        <!-- Inject character-slide.html -->
+      <div id="character3" class="characterSelectionSlide">
+        <!--Inject character-slide.html-->
       </div>
     </div>
-    <button
-      id="launchButton"
-      class="launchButton"
-      onclick="start()"
-      disabled="true"
-    >
-      START GAME
-    </button>
-  </div>
+    <div class="characterSelectionStartGame">
+        <button disabled=true id="characterSelectionGameStartButton" onclick="start()" class="characterSelectionGameStartButton">Start Game</button>
+    </div>
 </body>

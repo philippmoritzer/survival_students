@@ -28,9 +28,9 @@ const STARTING_VALUES = [
 ];
 
 const NAME_INDEX_PAIR = [
-  { index: 1, name: "Justus" },
-  { index: 2, name: "Lisa" },
-  { index: 3, name: "Sören" }
+  { index: 1, name: "Justus", portrait: "../assets/images/justus.png" },
+  { index: 2, name: "Lisa", portrait: "../assets/images/lisa.png" },
+  { index: 3, name: "Sören", portrait: "../assets/images/soren.png" }
 ];
 
 //pre-determined resourcebars
@@ -64,3 +64,5 @@ const MAX_TURN_COUNT = 3;
 //HTML component for AreaChoiceItemPage in Modal Dialog
 const AREA_CHOICE_ITEM_PAGE =
   "./components/modals/area-choice-modal/area-choice-item/area-choice-item.html";
+
+const RESOURCE_BAR_PAGE = "./components/hud/resource-bar/resource-bar.html";

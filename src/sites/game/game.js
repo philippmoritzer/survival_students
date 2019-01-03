@@ -37,8 +37,6 @@ jQuery(document).ready(() => {
   );
 });
 
-const RESOURCE_BAR_PAGE = "./components/hud/resource-bar/resource-bar.html";
-
 const loadResourceBars = (resourceBar, identifier, htmlpage) => {
   jQuery(document).ready(() => {
     jQuery(identifier).innerHTML = jQuery(identifier).load(htmlpage, () => {

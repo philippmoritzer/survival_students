@@ -1,60 +1,120 @@
-.characterSelectionPageFlexContainer {
+.characterSelectionStartGame {
   display: flex;
-  flex-direction: column;
   width: 100%;
-  height: 100%;
-  align-items: center;
-}
-
-.characterSlideFlexContainer {
-  display: flex;
   flex-direction: row;
-  flex: 6;
-  width: 100%;
-  height: 100%;
+  justify-content: flex-end;
+  flex: 1.5;
 }
 
-.flexchildCharacter {
-  flex: 1;
+.characterSelectionGameStartButton:hover {
+  letter-spacing: 0.5em;
+  background-color: #f08c99;
 }
 
-.chooseCharacterCaption {
-  flex: 0.5;
-  font-family: "ArcadeClassic";
+.characterSelectionGameStartButton {
   color: white;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
-
-.launchButton {
-  flex: 1;
-  background-color: rgba(0, 0, 0, 0.5);
-  background-repeat: no-repeat;
-  border: none;
+.characterSelectionGameStartButton {
+  float: right;
   cursor: pointer;
-  overflow: hidden;
-  outline: none;
-  margin-top: 15px;
-  font-family: "ArcadeClassic";
-  color: #f47a42;
-  font-size: 5em;
-  border-radius: 20px;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  height: 2em;
+  margin: 20px;
+  border-radius: 15px;
+  box-shadow: 15px 16px 17px -5px rgba(0, 0, 0, 0.75);
+  font-family: ArcadeClassic;
+  background-color: grey;
+  font-size: 2em;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.characterSelectionContainer {
-  flex: 25;
+.characterSelectionCardCarousel {
   display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 100%;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex: 9;
 }
 
-.launchButton:hover {
-  background-color: rgba(0, 0, 0, 1);
-  color: #f7560c;
+.characterSelectionCardCarousel .characterSelectionSlide {
+  height: 50rem;
+  width: 24rem;
+  position: relative;
+  z-index: 1;
+  -webkit-transform: scale(0.6) translateY(-2rem);
+  transform: scale(0.6) translateY(-2rem);
+  opacity: 0;
+  cursor: pointer;
+  pointer-events: none;
+  background: #2e5266;
+  background: linear-gradient(to top, #2e5266, #6e8898);
+  transition: 1s;
 }
-@media only screen and (max-width: 991px) {
-  .characterSlideFlexContainer {
-    flex-direction: column;
+
+.characterSelectionCardCarousel .characterSelectionSlide:after {
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  border-radius: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  bottom: -5rem;
+  -webkit-filter: blur(4px);
+  filter: blur(4px);
+}
+
+.characterSelectionCardCarousel .characterSelectionSlide:nth-child(1):before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  color: #fff;
+}
+
+.characterSelectionCardCarousel .characterSelectionSlide:nth-child(2):before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.characterSelectionCardCarousel .characterSelectionSlide:nth-child(3):before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.characterSelectionCardCarousel .characterSelectionSlide.active {
+  z-index: 3;
+  -webkit-transform: scale(1) translateY(0) translateX(0);
+  transform: scale(1) translateY(0) translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+  transition: 1s;
+}
+
+.characterSelectionCardCarousel .characterSelectionSlide.prev,
+.characterSelectionCardCarousel .characterSelectionSlide.next {
+  z-index: 2;
+  -webkit-transform: scale(0.8) translateY(-1rem) translateX(0);
+  transform: scale(0.8) translateY(-1rem) translateX(0);
+  opacity: 0.6;
+  pointer-events: auto;
+  transition: 1s;
+}
+
+@media only screen and (max-width: 640px) {
+  html,
+  body {
+    zoom: 1.5;
+  }
+
+  .characterSelectionCardCarousel {
+    zoom: 3;
   }
 }

@@ -8,99 +8,122 @@ class CharacterSlide {
   }
 
   makeElementUnique() {
-    jQuery("#characterSlide").attr(
+    jQuery("#characterSlideName").attr(
       "id",
-      jQuery("#characterSlide").attr("id") + this.id
+      jQuery("#characterSlideName").attr("id") + this.id
     );
-    jQuery("#name").attr("id", jQuery("#name").attr("id") + this.id);
-    jQuery("#nameB").attr("id", jQuery("#nameB").attr("id") + this.id);
-    jQuery("#money").attr("id", jQuery("#money").attr("id") + this.id);
-    jQuery("#hunger").attr("id", jQuery("#hunger").attr("id") + this.id);
-    jQuery("#hungerM").attr("id", jQuery("#hungerM").attr("id") + this.id);
-    jQuery("#life").attr("id", jQuery("#life").attr("id") + this.id);
-    jQuery("#lifeM").attr("id", jQuery("#lifeM").attr("id") + this.id);
-    jQuery("#learn").attr("id", jQuery("#learn").attr("id") + this.id);
-    jQuery("#learnM").attr("id", jQuery("#learnM").attr("id") + this.id);
-    jQuery("#card").attr("id", jQuery("#card").attr("id") + this.id);
-    jQuery("#characterSelectionDescription").attr(
+    jQuery("#characterSlideMoney").attr(
       "id",
-      jQuery("#characterSelectionDescription").attr("id") + this.id
+      jQuery("#characterSlideMoney").attr("id") + this.id
     );
-    jQuery("#characterSlideHungerGradient").attr(
+
+    jQuery("#characterSlideHungerResource").attr(
       "id",
-      jQuery("#characterSlideHungerGradient").attr("id") + this.id
+      jQuery("#characterSlideHungerResource").attr("id") + this.id
     );
-    jQuery("#characterSlideLifeGradient").attr(
+
+    jQuery("#characterSlideLifeResource").attr(
       "id",
-      jQuery("#characterSlideLifeGradient").attr("id") + this.id
+      jQuery("#characterSlideLifeResource").attr("id") + this.id
     );
-    jQuery("#characterSlideLearnGradient").attr(
+
+    jQuery("#characterSlideLearnResource").attr(
       "id",
-      jQuery("#characterSlideLearnGradient").attr("id") + this.id
+      jQuery("#characterSlideLearnResource").attr("id") + this.id
+    );
+
+    jQuery("#characterSlideCharacterImage").attr(
+      "id",
+      jQuery("#characterSlideCharacterImage").attr("id") + this.id
+    );
+
+    jQuery("#characterSlideContainer").attr(
+      "id",
+      jQuery("#characterSlideContainer").attr("id") + this.id
     );
   }
 
-  setSpecificStyle() {
-    jQuery("#characterSlideHungerGradient" + this.id).css({
-      width: this.hunger + "%"
-    });
-    jQuery("#characterSlideLifeGradient" + this.id).css({
-      width: this.life + "%"
-    });
-    jQuery("#characterSlideLearnGradient" + this.id).css({
-      width: this.learn + "%"
-    });
-  }
+  setSpecificStyle() {}
 
   setCharacterAttributes() {
-    jQuery("#name" + this.id).text(NAME_INDEX_PAIR[this.id].name);
-    jQuery("#nameB" + this.id).text(NAME_INDEX_PAIR[this.id].name);
-    jQuery("#money" + this.id).text(this.money);
-    jQuery("#hunger" + this.id).text(this.hunger.value);
-    jQuery("#hungerM" + this.id).text(this.hunger.value);
-    jQuery("#life" + this.id).text(this.life.value);
-    jQuery("#lifeM" + this.id).text(this.life.value);
-    jQuery("#learn" + this.id).text(this.learn.value);
-    jQuery("#learnM" + this.id).text(this.learn.value);
+    jQuery("#characterSlideName" + this.id).text(NAME_INDEX_PAIR[this.id].name);
+    jQuery("#characterSlideCharacterImage" + this.id).attr(
+      "src",
+      NAME_INDEX_PAIR[this.id].portrait
+    );
+    jQuery("#characterSlideMoney" + this.id).text(this.money);
+
+    const resourceBarCSlide1 = new ResourceBar(
+      uuidv4(),
+      RESOURCE_BARS[0].type,
+      RESOURCE_BARS[0].color1,
+      RESOURCE_BARS[0].color2,
+      RESOURCE_BARS[0].color3,
+      RESOURCE_BARS[0].image,
+      this.hunger.value
+    );
+
+    const resourceBarCSlide2 = new ResourceBar(
+      uuidv4(),
+      RESOURCE_BARS[1].type,
+      RESOURCE_BARS[1].color1,
+      RESOURCE_BARS[1].color2,
+      RESOURCE_BARS[1].color3,
+      RESOURCE_BARS[1].image,
+      this.life.value
+    );
+
+    const resourceBarCSlide3 = new ResourceBar(
+      uuidv4(),
+      RESOURCE_BARS[2].type,
+      RESOURCE_BARS[2].color1,
+      RESOURCE_BARS[2].color2,
+      RESOURCE_BARS[2].color3,
+      RESOURCE_BARS[2].image,
+      this.learn.value
+    );
+
+    this.loadResourceBars(
+      resourceBarCSlide1,
+      "#characterSlideHungerResource" + this.id,
+      RESOURCE_BAR_PAGE
+    );
+
+    this.loadResourceBars(
+      resourceBarCSlide2,
+      "#characterSlideLifeResource" + this.id,
+      RESOURCE_BAR_PAGE
+    );
+
+    this.loadResourceBars(
+      resourceBarCSlide3,
+      "#characterSlideLearnResource" + this.id,
+      RESOURCE_BAR_PAGE
+    );
+  }
+
+  loadResourceBars(resourceBar, identifier, htmlpage) {
+    jQuery(document).ready(() => {
+      jQuery(identifier).innerHTML = jQuery(identifier).load(htmlpage, () => {
+        resourceBar.init();
+        jQuery("#resourceBar" + resourceBar.id).css({
+          width: "75%",
+          height: "80%"
+        });
+      });
+    });
   }
 
   selectIndex() {
-    jQuery("#characterSlide" + this.id).on("click", () => {
+    jQuery("#characterSlideContainer" + this.id).on("click", () => {
+      console.log("hi");
       selectCharacter(this.id);
-
-      var ids = [0, 1, 2];
-      this.removeActiveClasses(ids);
-      jQuery("#characterSlide" + this.id).addClass("active");
-      jQuery("#characterSelectionDescription" + this.id).css({
-        visibility: "visible"
-      });
-      jQuery("#launchButton").attr("disabled", false);
-    });
-  }
-
-  addTurnEvent() {
-    jQuery("#name" + this.id).on("click", () => {
-      jQuery("#characterSlide" + this.id).addClass("is-flipped");
-    });
-    jQuery("#nameB" + this.id).on("click", () => {
-      jQuery("#characterSlide" + this.id).removeClass("is-flipped");
     });
   }
 
   init() {
     this.makeElementUnique();
     this.setCharacterAttributes();
-    this.setSpecificStyle();
     this.selectIndex();
-    this.addTurnEvent();
-  }
-
-  removeActiveClasses(ids) {
-    for (var i in ids) {
-      jQuery("#characterSlide" + i).removeClass("active");
-      jQuery("#characterSelectionDescription" + this.id).css({
-        visibility: "hidden"
-      });
-    }
   }
 }

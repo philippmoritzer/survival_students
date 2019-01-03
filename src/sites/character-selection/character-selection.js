@@ -15,6 +15,56 @@ const loadCharacterSlides = (characterslide, identifier, htmlpage) => {
   });
 };
 
+$num = $(".characterSelectionSlide").length;
+$even = $num / 2;
+$odd = ($num + 1) / 2;
+
+if ($num % 2 == 0) {
+  $(".characterSelectionSlide:nth-child(" + $even + ")").addClass("active");
+  $(".characterSelectionSlide:nth-child(" + $even + ")")
+    .prev()
+    .addClass("prev");
+  $(".characterSelectionSlide:nth-child(" + $even + ")")
+    .next()
+    .addClass("next");
+} else {
+  $(".characterSelectionSlide:nth-child(" + $odd + ")").addClass("active");
+  $(".characterSelectionSlide:nth-child(" + $odd + ")")
+    .prev()
+    .addClass("prev");
+  $(".characterSelectionSlide:nth-child(" + $odd + ")")
+    .next()
+    .addClass("next");
+}
+
+jQuery(".characterSelectionSlide").click(function() {
+  $slide = jQuery(".active").width();
+  console.log(jQuery(".active").position().left);
+
+  if (jQuery(this).hasClass("next")) {
+    jQuery(".characterSelectionCardCarousel")
+      .stop(false, true)
+      .animate({ left: "-=" + $slide });
+  } else if (jQuery(this).hasClass("prev")) {
+    jQuery(".characterSelectionCardCarousel")
+      .stop(false, true)
+      .animate({ left: "+=" + $slide });
+  }
+
+  jQuery(this).removeClass("prev next");
+  jQuery(this)
+    .siblings()
+    .removeClass("prev active next");
+
+  jQuery(this).addClass("active");
+  jQuery(this)
+    .prev()
+    .addClass("prev");
+  jQuery(this)
+    .next()
+    .addClass("next");
+});
+
 //injecting the data
 const CHAR_SLIDE_PAGE = "./components/character-slide/character-slide.html";
 
@@ -58,14 +108,19 @@ const selectCharacter = id => {
   const character = new Character(
     id,
     name,
+    NAME_INDEX_PAIR[id].portrait,
     startingValues[0],
     startingValues[1],
     startingValues[2],
     startingValues[3]
   );
 
+  jQuery("#characterSelectionGameStartButton").attr("disabled", false);
+
   GameStateManager.getInstance().setCharacter(character);
 };
+
+selectCharacter(1);
 
 const start = () => {
   jQuery("#main").load("./sites/game/game.html", () => {
