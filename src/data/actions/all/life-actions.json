@@ -63,15 +63,13 @@
     "cost": 500,
     "area": 3
   },
-  [
-    {
-      "name": "Sports Night",
-      "desc": "Ein sportlicher Abend in einer Bar der Wahl",
-      "img": "american-football.png",
-      "type": "life",
-      "value": 34,
-      "cost": 500,
-      "area": 3
-    }
-  ]
+
+  {
+    "name": "Sports Night",
+    "desc": "Ein sportlicher Abend in einer Bar der Wahl",
+    "img": "american-football.png",
+    "type": "life",
+    "value": 34,
+    "cost": 500
+  }
 ]

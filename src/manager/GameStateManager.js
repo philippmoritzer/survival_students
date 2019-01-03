@@ -69,18 +69,21 @@ class GameStateManager {
       jQuery.getJSON("./data/actions/all/hunger-actions.json", data => {
         hungerActions = data;
         GameStateManager.getInstance().hungerActions = hungerActions;
+        console.log(GameStateManager.getInstance().hungerAction);
       });
 
       let lifeActions = [];
       jQuery.getJSON("./data/actions/all/life-actions.json", data => {
         lifeActions = data;
         GameStateManager.getInstance().lifeActions = lifeActions;
+        console.log((GameStateManager.getInstance().lifeActions = lifeActions));
       });
 
       let learnActions = [];
       jQuery.getJSON("./data/actions/all/learn-actions.json", data => {
         learnActions = data;
         GameStateManager.getInstance().learnActions = learnActions;
+        console.log(GameStateManager.getInstance().learnActions);
       });
 
       const actions = [hungerActions, lifeActions, learnActions];
@@ -108,7 +111,9 @@ class GameStateManager {
           "/hunger-actions.json",
         data => {
           console.log(data);
-          this.hungerActions = this.hungerActions.concat(data);
+          GameStateManager.getInstance().hungerActions = GameStateManager.getInstance().hungerActions.concat(
+            data
+          );
         }
       );
       jQuery.getJSON(
@@ -116,7 +121,9 @@ class GameStateManager {
           characterSpecificActionFolder +
           "/learn-actions.json",
         data => {
-          this.learnActions = this.learnActions.concat(data);
+          GameStateManager.getInstance().learnActions = GameStateManager.getInstance().learnActions.concat(
+            data
+          );
         }
       );
       jQuery.getJSON(
@@ -124,7 +131,9 @@ class GameStateManager {
           characterSpecificActionFolder +
           "/life-actions.json",
         data => {
-          this.lifeActions = this.lifeActions.concat(data);
+          GameStateManager.getInstance().lifeActions = GameStateManager.getInstance().lifeActions.concat(
+            data
+          );
           resolve();
         }
       );
