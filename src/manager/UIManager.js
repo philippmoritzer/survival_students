@@ -137,6 +137,10 @@ const initLoseUI = () => {
   jQuery("#main").load("./sites/outro/outro.html");
 };
 
+const initWinUI = () => {
+  //TODO
+};
+
 const loadModal = url => {
   jQuery("#modal").load(url, () => {
     jQuery(".modal").css({

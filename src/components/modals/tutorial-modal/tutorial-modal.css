@@ -1,0 +1,9 @@
+.tutorialModalClose {
+  right: 0;
+  font-size: 3em;
+  color: white;
+  padding: 25px;
+  cursor: pointer;
+  position: absolute;
+  z-index: 1000;
+}

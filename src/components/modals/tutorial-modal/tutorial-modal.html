@@ -1,0 +1,17 @@
+<head>
+  <link
+    rel="stylesheet"
+    href="./components/modals/tutorial-modal/tutorial-modal.css"
+  />
+</head>
+<body>
+  <div id="tutorialModalClose" class="tutorialModalClose">X</div>
+  <div id="tutorialModalContainer" class="tutorialModalContainer">
+    <!--Inject Tutorial Elements (tutorial-element.html)-->
+  </div>
+  <script>
+    jQuery("#tutorialModalClose").on("click", () => {
+      closeModal();
+    });
+  </script>
+</body>

@@ -1,0 +1,20 @@
+.tutorialElementContainer {
+  position: absolute;
+  width: auto;
+  height: auto;
+  border: 1px solid orange;
+}
+
+.tutorialElementContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.tutorialElementText {
+  color: white;
+  margin: 5px;
+  text-align: justify;
+  line-height: 1.5;
+}

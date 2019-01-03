@@ -69,7 +69,7 @@ class GameStateManager {
       jQuery.getJSON("./data/actions/all/hunger-actions.json", data => {
         hungerActions = data;
         GameStateManager.getInstance().hungerActions = hungerActions;
-        console.log(GameStateManager.getInstance().hungerAction);
+        console.log(GameStateManager.getInstance().hungerActions);
       });
 
       let lifeActions = [];

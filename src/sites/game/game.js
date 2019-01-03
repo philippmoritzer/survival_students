@@ -188,6 +188,10 @@ jQuery("#gameBackpack").on("click", () => {
 });
 
 jQuery("#gameDecision").on("click", () => {
-  console.log("hello");
   loadModal("./components/modals/decision-tree-modal/decision-tree-modal.html");
+});
+
+jQuery("#gameTutorial").on("click", () => {
+  loadModal("./components/modals/tutorial-modal/tutorial-modal.html");
+  initTutorialModal(() => {});
 });

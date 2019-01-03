@@ -12,15 +12,15 @@
     "name": "Nobelrestaurant",
     "desc": "Irgendso ein Fancy shit",
     "img": "img",
-    "type": "teuer.png",
+    "type": "hunger",
     "value": 34,
     "cost": 500,
     "area": 1
   },
   {
     "name": "Nobelrestaurant",
-    "desc": "",
-    "img": "img",
+    "desc": "Irgendso ein Fancy shit",
+    "img": "teuer.png",
     "type": "hunger",
     "value": 34,
     "cost": 500,
