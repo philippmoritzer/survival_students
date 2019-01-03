@@ -49,6 +49,12 @@ class ActionItem {
         });
         break;
     }
+
+    if (this.action.cost > gst.character.money) {
+      jQuery("#actionCost" + this.id).css({
+        color: "#8B0000"
+      });
+    }
   }
 
   setAttributes() {

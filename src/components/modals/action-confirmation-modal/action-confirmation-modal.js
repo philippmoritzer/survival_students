@@ -31,6 +31,11 @@ switch (currentAction.type) {
     break;
 }
 
+if (currentAction.cost > gst.character.money) {
+  jQuery("#actionConfirmationAcceptButton").text("Nicht genug Geld.");
+  jQuery("#actionConfirmationAcceptButton").attr("disabled", true);
+}
+
 jQuery("#actionConfirmationAcceptButton").on("click", () => {
   executeAction(currentAction);
   closeModal();
