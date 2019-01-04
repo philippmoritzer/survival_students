@@ -89,6 +89,7 @@ class ActionItem {
   }
 
   select() {
+    playPopupSound();
     jQuery("#actionContainer" + this.id).on("click", () => {
       currentAction = this.action;
       loadModal(

@@ -1,4 +1,5 @@
 const gst = GameStateManager.getInstance();
+stopIntroMusic();
 
 jQuery("#gameTitle").text("Survival - Playing as " + gst.character.name);
 
@@ -91,8 +92,6 @@ loadResourceBars(resource_bar1, "#res1", RESOURCE_BAR_PAGE);
 loadResourceBars(resource_bar2, "#res2", RESOURCE_BAR_PAGE);
 loadResourceBars(resource_bar3, "#res3", RESOURCE_BAR_PAGE);
 
-gst.playMusic();
-
 jQuery("#gameEndDayButton").on("click", () => {
   newDayModal();
 });
@@ -177,6 +176,7 @@ jQuery("#gameInventory").load("./components/hud/inventory/inventory.html");
 
 jQuery("#gameBackpack").on("click", () => {
   if (!inventoryDisplayed) {
+    playOpenBackpackSound();
     const offset = jQuery("#gameBackpack").offset();
     jQuery("#gameInventory").css({
       top: offset.top,

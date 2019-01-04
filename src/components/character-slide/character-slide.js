@@ -115,6 +115,7 @@ class CharacterSlide {
   }
 
   selectIndex() {
+    playPopupSound();
     jQuery("#characterSlideContainer" + this.id).on("click", () => {
       console.log("hi");
       selectCharacter(this.id);

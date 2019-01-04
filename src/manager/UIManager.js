@@ -121,6 +121,7 @@ const removeItemsUI = item => {
  * updates the money
  */
 const updateMoneyUI = newValue => {
+  playCashSound();
   jQuery(".gameMoneyText").animate(
     {
       opacity: "0"

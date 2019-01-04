@@ -10,6 +10,7 @@ const startGame = () => {
 };
 
 setTimeout(() => {
+  playIntroMusic();
   jQuery(document).ready(() => {
     jQuery(document).keypress(() => {
       startGame();

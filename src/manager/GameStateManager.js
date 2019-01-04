@@ -379,11 +379,4 @@ class GameStateManager {
       }
     }
   }
-
-  playMusic() {
-    var audio = new Audio("../assets/audio/background-music.mp3");
-    audio.loop = true;
-    audio.volume = 0.2;
-    audio.play();
-  }
 }
