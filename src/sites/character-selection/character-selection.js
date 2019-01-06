@@ -65,6 +65,8 @@ jQuery(".characterSelectionSlide").click(function() {
     .addClass("next");
 });
 
+playIntroMusic();
+
 //injecting the data
 const CHAR_SLIDE_PAGE = "./components/character-slide/character-slide.html";
 
@@ -124,6 +126,7 @@ selectCharacter(1);
 
 const start = () => {
   jQuery("#main").load("./sites/game/game.html", () => {
+    playPopupSound();
     console.log("Game starting with character" + JSON.stringify(gst.character));
     gst.startGame();
   });

@@ -25,6 +25,7 @@ class AreaChoiceItem {
 
   selectIndex() {
     jQuery("#areaChoiceContainer" + this.id).on("click", () => {
+      playPopupSound();
       gst.changeArea(this.id);
     });
   }

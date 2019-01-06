@@ -9,5 +9,6 @@ jQuery("#sellItemAcceptButton").text(
 );
 
 jQuery("#sellItemAcceptButton").on("click", () => {
+  playPopupSound();
   gst.sellItem(tempRemoveItem);
 });

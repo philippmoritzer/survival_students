@@ -2,25 +2,44 @@ var areaAudio;
 var intro;
 
 const changeAreaMusic = areaId => {
-  audio.pause();
-  audio.currentTime = 0;
+  if (areaAudio) {
+    areaAudio.pause();
+    areaAudio.currentTime = 0;
+  }
+
   switch (areaId) {
     case 0:
-      audio = new Audio();
+      areaAudio = new Audio("../assets/audio/home.mp3");
       break;
     case 1:
+      areaAudio = new Audio("../assets/audio/foodcourt.mp3");
       break;
     case 2:
+      areaAudio = new Audio("../assets/audio/hochschule.mp3");
       break;
     case 3:
+      areaAudio = new Audio("../assets/audio/city.mp3");
       break;
     case 4:
+      areaAudio = new Audio("../assets/audio/nature.mp3");
       break;
   }
 
-  audio.loop = true;
-  audio.volume = 0.2;
-  audio.play();
+  areaAudio.loop = true;
+  areaAudio.volume = 0.05;
+  const playPromise = areaAudio.play();
+  if (playPromise !== null) {
+    playPromise.catch(() => {
+      areaAudio.play();
+    });
+  }
+};
+
+const stopAreaMusic = () => {
+  if (areaAudio) {
+    areaAudio.pause();
+    areaAudio.currentTime = 0;
+  }
 };
 
 const playCashSound = () => {
@@ -28,7 +47,12 @@ const playCashSound = () => {
   soundAudio = new Audio("../assets/audio/cash-register.mp3");
   soundAudio.loop = false;
   soundAudio.volume = 0.3;
-  soundAudio.play();
+  const playPromise = soundAudio.play();
+  if (playPromise !== null) {
+    playPromise.catch(() => {
+      soundAudio.play();
+    });
+  }
 };
 
 /**
@@ -37,8 +61,13 @@ const playCashSound = () => {
 const playIntroMusic = () => {
   intro = new Audio("../assets/audio/intro.mp3");
   intro.loop = true;
-  intro.volume = 0.5;
-  intro.play();
+  intro.volume = 0.2;
+  const playPromise = intro.play();
+  if (playPromise !== null) {
+    playPromise.catch(() => {
+      intro.play();
+    });
+  }
 };
 
 /**
@@ -53,12 +82,61 @@ const playOpenBackpackSound = () => {
   var audio = new Audio("../assets/audio/backpack.mp3");
   audio.volume = 1;
   audio.loop = false;
-  audio.play();
+  const playPromise = audio.play();
+  if (playPromise !== null) {
+    playPromise.catch(() => {
+      audio.play();
+    });
+  }
 };
 
 const playPopupSound = () => {
-  var audio = new Audio("../assets/audio/popup.mp3");
-  audio.volume = 1;
+  var audio = new Audio("../assets/audio/popup.wav");
+  audio.volume = 0.5;
   audio.loop = false;
-  audio.play();
+  const playPromise = audio.play();
+  if (playPromise !== null) {
+    playPromise.catch(() => {
+      audio.play();
+    });
+  }
+};
+
+const playDayChangeMusic = () => {
+  var audio = new Audio("../assets/audio/daychange.mp3");
+
+  audio.volume = 0.1;
+  audio.loop = false;
+  const playPromise = audio.play();
+  if (playPromise !== null) {
+    playPromise.catch(() => {
+      audio.play();
+    });
+  }
+};
+
+const playWinMusic = () => {
+  var audio = new Audio("../assets/audio/win.mp3");
+
+  audio.volume = 0.1;
+  audio.loop = false;
+  const playPromise = audio.play();
+  if (playPromise !== null) {
+    playPromise.catch(() => {
+      audio.play();
+    });
+  }
+};
+
+const playLoseMusic = () => {
+  var audio = new Audio("../assets/audio/loss.mp3");
+
+  audio.volume = 0.1;
+  audio.loop = false;
+  const playPromise = audio.play();
+  if (playPromise !== null) {
+    playPromise.catch(() => {
+      audio.play();
+    });
+  }
 };

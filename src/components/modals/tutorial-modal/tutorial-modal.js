@@ -42,10 +42,10 @@ const loadTutorialElements = () => {
   loadTutorialElement(
     2,
     "Aktionen - Mit einem klick auf eine Aktion können detaillierte Informationen zur jeweiligen Aktion eingesehen werden." +
-      "Führen Sie Aktionen aus um Belohnungen (Items, s. Rucksack) zu bekommen und ihre Ressourcen zu füllen. Die Aktionen bringen farblich gemäß der Ressourcenübersicht Prozente für die jeweilige Leiste. Aktionen kosten Geld. Unterschiedliche Aktionen bringen unterschiedlich viele Punkte." +
+      "Führe Aktionen aus um Belohnungen (Items, s. Rucksack) zu bekommen und ihre Ressourcen zu füllen. Die Aktionen bringen farblich gemäß der Ressourcenübersicht Prozente für die jeweilige Leiste. Aktionen kosten Geld. Unterschiedliche Aktionen bringen unterschiedlich viele Punkte." +
       "Es gibt verschiedene Gebiete mit verschiedenen Aktionen. Über den Navigator kann das Gebiet gewechselt werden." +
-      +"Pro Tag können 3 Aktionen ausgeführt werden." +
-      "Über die Historie kann eingesehen werden, welche Aktionen zuletzt ausgeführt wurden. So kann es bei einem verlorenen Spiel nützlich sein zu reflektieren, welche Aktionen man nächstmal besser ausführen sollte.",
+      " Pro Tag können 3 Aktionen ausgeführt werden. Die Aktionen wechseln pro Tag. " +
+      " Über die Historie kann eingesehen werden, welche Aktionen zuletzt ausgeführt wurden. So kann es bei einem verlorenen Spiel nützlich sein zu reflektieren, welche Aktionen beim nächsten Spiel besser ausgeführt werden sollten.",
     ".gameActionArea"
   );
 

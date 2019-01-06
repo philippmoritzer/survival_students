@@ -137,7 +137,7 @@ const updateMoneyUI = newValue => {
   );
 };
 
-const initLoseUI = () => {
+const initOutroUI = () => {
   jQuery("#main").load("./sites/outro/outro.html");
 };
 

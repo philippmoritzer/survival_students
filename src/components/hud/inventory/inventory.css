@@ -2,7 +2,7 @@
   width: 100%;
   height: 100%;
   background-color: #999999;
-  background: url(http://api.thumbr.it/whitenoise-361x370.png?background=#696969ff&noise=7d7d7d&density=65&opacity=44);
+  background: url("/assets/images/inventory-background.png");
   display: flex;
   flex-direction: column;
   align-items: center;

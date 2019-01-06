@@ -1,0 +1,38 @@
+.outroScreen {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.outroImage {
+  width: 128px;
+  height: 128px;
+}
+
+.outroText {
+  color: white;
+  font-family: "ArcadeClassic";
+  font-size: 2em;
+}
+
+.outroLosingReasoning {
+  font-size: 1.5em;
+  color: white;
+  text-align: center;
+}
+
+.outroPlayAgainBorder {
+  border: 1px solid white;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.outroCredits {
+  align-self: center;
+  font-size: 1.5em;
+  color: white;
+  text-decoration: underline;
+  cursor: pointer;
+}

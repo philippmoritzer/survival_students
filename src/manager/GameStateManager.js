@@ -27,6 +27,7 @@ class GameStateManager {
     this.turnCount = 0;
     this.character.items = [];
     this.character.items.push(this.items[0]);
+    this.win = false;
   }
 
   changeArea(index) {
@@ -40,6 +41,7 @@ class GameStateManager {
   }
 
   changeDay() {
+    playDayChangeMusic();
     this.changeAreaTasks();
     if (this.day !== 0) {
       this.executeResourceLoss();
@@ -49,6 +51,9 @@ class GameStateManager {
       this.day++;
       this.turnCount = 0;
       changeUIDay(this.area);
+    } else {
+      this.win = true;
+      initOutroUI();
     }
   }
 
@@ -289,7 +294,7 @@ class GameStateManager {
       this.character.life.value <= 0 ||
       this.character.learn.value <= 0
     ) {
-      initLoseUI();
+      initOutroUI();
     }
   }
 
@@ -348,6 +353,7 @@ class GameStateManager {
       }
     }
     updateMoneyUI(this.character.money);
+    playCashSound();
     removeItemsUI(item);
   }
 

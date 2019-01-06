@@ -21,6 +21,7 @@ $(window).on("load", function() {
 //   gst.character = new Character(
 //     1,
 //     "Testname",
+//     "../assets/images/lisa.png",
 //     80000,
 //     HUNGER_RESOURCE_1,
 //     LIFE_RESOURCE_2,

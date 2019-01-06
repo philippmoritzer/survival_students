@@ -38,8 +38,9 @@ class InventoryItem {
     );
   }
 
-  initRightClickEvent() {
+  initClickEvent() {
     jQuery("#inventoryGridItem" + this.id).on("click", () => {
+      playPopupSound();
       tempRemoveItem = this.item;
       loadModal("./components/modals/sell-item-modal/sell-item-modal.html");
     });
@@ -53,6 +54,6 @@ class InventoryItem {
     this.makeElementUnique();
     this.setAttributes();
     this.loadHoverItem();
-    this.initRightClickEvent();
+    this.initClickEvent();
   }
 }

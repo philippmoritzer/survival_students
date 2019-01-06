@@ -93,10 +93,12 @@ loadResourceBars(resource_bar2, "#res2", RESOURCE_BAR_PAGE);
 loadResourceBars(resource_bar3, "#res3", RESOURCE_BAR_PAGE);
 
 jQuery("#gameEndDayButton").on("click", () => {
+  playPopupSound();
   newDayModal();
 });
 
 jQuery("#gameNavigator").on("click", () => {
+  playPopupSound();
   loadModal("./components/modals/area-choice-modal/area-choice-modal.html");
 });
 
@@ -117,6 +119,8 @@ const execAreaChange = area => {
       .animate({ opacity: 1 });
     jQuery("#modal").css({ display: "none" });
   });
+  changeAreaMusic(area.index);
+
   const actionItem1 = new ActionItem(0, area.actions[0]);
   const actionItem2 = new ActionItem(1, area.actions[1]);
   const actionItem3 = new ActionItem(2, area.actions[2]);
@@ -160,9 +164,6 @@ const switchItems = () => {
   gst.areas;
 };
 
-console.log();
-console.log();
-
 inventoryDisplayed = false;
 
 const hideInventory = () => {
@@ -190,10 +191,16 @@ jQuery("#gameBackpack").on("click", () => {
 });
 
 jQuery("#gameDecision").on("click", () => {
+  playPopupSound();
   loadModal("./components/modals/decision-tree-modal/decision-tree-modal.html");
 });
 
 jQuery("#gameTutorial").on("click", () => {
+  playPopupSound();
   loadModal("./components/modals/tutorial-modal/tutorial-modal.html");
   initTutorialModal();
+});
+
+jQuery("#gameCredits").on("click", () => {
+  window.open("/src/sites/credits/credits.html", "_blank");
 });

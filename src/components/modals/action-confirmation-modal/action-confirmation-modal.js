@@ -37,6 +37,7 @@ if (currentAction.cost > gst.character.money) {
 }
 
 jQuery("#actionConfirmationAcceptButton").on("click", () => {
+  playPopupSound();
   executeAction(currentAction);
   closeModal();
 });

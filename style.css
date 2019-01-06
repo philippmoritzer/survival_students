@@ -12,7 +12,7 @@ body {
 #main {
   /* background-color: skyblue; */
   height: 100%;
-  background: url("/assets/scenes/landscape.jpg") no-repeat center center fixed;
+  background: url("/assets/scenes/intro.jpg") no-repeat center center fixed;
 
   background-size: cover;
 }
