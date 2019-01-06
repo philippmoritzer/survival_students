@@ -14,5 +14,32 @@
     "image": "phone.png",
     "type": "life",
     "value": 0.1
+  },
+  {
+    "id": 3,
+    "title": "Lebensmittelvergiftung",
+    "description": "Iss lieber gesund",
+    "sellfor": -150,
+    "image": "phone.png",
+    "type": "hunger",
+    "value": -0.1
+  },
+  {
+    "id": 4,
+    "title": "Muskelkater",
+    "description": "Häufiger trainieren hilft",
+    "sellfor": -30,
+    "image": "phone.png",
+    "type": "life",
+    "value": -0.1
+  },
+  {
+    "id": 5,
+    "title": "Autogramm",
+    "description": "Scheiß Groupie",
+    "sellfor": 40,
+    "image": "phone.png",
+    "type": "life",
+    "value": 0.1
   }
 ]

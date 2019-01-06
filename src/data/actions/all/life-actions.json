@@ -25,6 +25,7 @@
     "type": "life",
     "value": 34,
     "cost": 500,
+    "rewards": 5,
     "area": 3
   },
   {
@@ -43,6 +44,7 @@
     "type": "life",
     "value": 34,
     "cost": 500,
+    "rewards": 4,
     "area": 3
   },
   {
@@ -61,6 +63,7 @@
     "type": "life",
     "value": 34,
     "cost": 500,
+    "rewards": 4,
     "area": 3
   },
 

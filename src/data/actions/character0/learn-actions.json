@@ -1,10 +1,28 @@
 [
   {
-    "name": "Character 1 Learn Event",
-    "desc": "Character 1 Learn Event Desc",
-    "img": "img",
+    "name": "Volkswirtschaft Vorlesung",
+    "desc": "Nicht ganz so kacke wie BWL",
+    "img": "employee.png",
+    "type": "learn",
+    "value": 34,
+    "cost": 500,
+    "area": 2
+  },
+  {
+    "name": "Privatunterricht",
+    "desc": "Papa zahlt",
+    "img": "employee.png",
     "type": "learn",
     "value": 34,
     "cost": 500
+  },
+  {
+    "name": "BWL Vorlesung",
+    "desc": "Langweilig aber nötig",
+    "img": "employee.png",
+    "type": "learn",
+    "value": 34,
+    "cost": 500,
+    "area": 2
   }
 ]
