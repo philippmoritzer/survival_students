@@ -178,7 +178,6 @@ class DecisionTreeModalItem {
    * @param {} resType
    */
   getImageByResource(resType) {
-    console.log(resType);
     switch (resType) {
       case "hunger":
         return "../assets/images/hunger.png";
