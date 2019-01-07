@@ -66,7 +66,6 @@ class GameStateManager {
       let items = [];
       jQuery.getJSON("./data/items/items.json", data => {
         items = data;
-        console.log(data);
         GameStateManager.getInstance().items = items;
       });
 
@@ -74,23 +73,21 @@ class GameStateManager {
       jQuery.getJSON("./data/actions/all/hunger-actions.json", data => {
         hungerActions = data;
         GameStateManager.getInstance().hungerActions = hungerActions;
-        console.log(GameStateManager.getInstance().hungerActions);
       });
 
       let lifeActions = [];
       jQuery.getJSON("./data/actions/all/life-actions.json", data => {
         lifeActions = data;
         GameStateManager.getInstance().lifeActions = lifeActions;
-        console.log((GameStateManager.getInstance().lifeActions = lifeActions));
       });
 
       let learnActions = [];
       jQuery.getJSON("./data/actions/all/learn-actions.json", data => {
         learnActions = data;
         GameStateManager.getInstance().learnActions = learnActions;
-        console.log(GameStateManager.getInstance().learnActions);
       });
 
+      //TODO: entfernen?
       const actions = [hungerActions, lifeActions, learnActions];
 
       let areas = [];
@@ -106,16 +103,13 @@ class GameStateManager {
   }
 
   loadCharacterSpecificActions() {
-    console.log("hi");
     let characterSpecificActionFolder = "character" + this.character.id;
-    console.log(characterSpecificActionFolder);
     return new Promise((resolve, reject) => {
       jQuery.getJSON(
         "./data/actions/" +
           characterSpecificActionFolder +
           "/hunger-actions.json",
         data => {
-          console.log(data);
           GameStateManager.getInstance().hungerActions = GameStateManager.getInstance().hungerActions.concat(
             data
           );
@@ -143,6 +137,71 @@ class GameStateManager {
         }
       );
     });
+  }
+
+  executeAction(action) {
+    if (this.turnCount === 2) {
+      updateGameDayEndButtonUI();
+    }
+
+    if (this.turnCount < 3 && this.character.money >= action.cost) {
+      this.turnCount++;
+
+      updateGameTurnIndicatorUI();
+      let calculatedValue;
+      switch (action.type) {
+        case "hunger":
+          this.character.money = this.character.money - action.cost;
+
+          calculatedValue = round(
+            action.value * this.character.hunger.multiplier,
+            0
+          );
+          this.character.hunger.value =
+            this.character.hunger.value + calculatedValue;
+
+          if (this.character.hunger.value > 100) {
+            this.character.hunger.value = 100;
+          }
+
+          updateResourceBarUI(0, this.character.hunger.value);
+          break;
+        case "life":
+          this.character.money = this.character.money - action.cost;
+
+          calculatedValue = round(
+            action.value * this.character.life.multiplier,
+            0
+          );
+          this.character.life.value =
+            this.character.life.value + calculatedValue;
+          if (this.character.life.value > 100) {
+            this.character.life.value = 100;
+          }
+          updateResourceBarUI(1, this.character.life.value);
+          break;
+        case "learn":
+          this.character.money = this.character.money - action.cost;
+          calculatedValue = round(
+            action.value * this.character.learn.multiplier,
+            0
+          );
+          this.character.learn.value =
+            this.character.learn.value + calculatedValue;
+          if (this.character.learn.value > 100) {
+            this.character.learn.value = 100;
+          }
+          updateResourceBarUI(2, this.character.learn.value);
+
+          break;
+      }
+      updateMoneyUI(this.character.money);
+
+      if (action.reward) {
+        this.addItem(action.reward);
+      }
+      actionHistory.push({ action: action, calcValue: calculatedValue });
+    }
   }
 
   getAreaByIndex(index) {
@@ -260,7 +319,6 @@ class GameStateManager {
    */
   evaluateAreaActionFit(action, actions, area) {
     while (action.area !== area.index) {
-      console.log("stuck");
       action = actions[Math.floor(Math.random() * actions.length)];
       if (!action.area) {
         break;

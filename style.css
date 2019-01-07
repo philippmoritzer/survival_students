@@ -17,6 +17,10 @@ body {
   background-size: cover;
 }
 
+#mainBrowserInfo {
+  display: none;
+}
+
 .modal {
   position: absolute;
   width: 100%;

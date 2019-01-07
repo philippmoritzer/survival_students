@@ -19,68 +19,23 @@ const changeUIDay = area => {
   loadActionItems(actionItem3, "#gameAction3", ACTION_ITEM_PAGE);
 };
 
-const executeAction = action => {
-  if (gst.turnCount === 2) {
-    jQuery("#gameEndDayButton").attr("disabled", false);
-  }
+/**
+ * Makes the "End Day"-Button available when all turns are used
+ */
+const updateGameDayEndButtonUI = () => {
+  jQuery("#gameEndDayButton").attr("disabled", false);
+};
 
-  if (gst.turnCount < 3 && gst.character.money >= action.cost) {
-    gst.turnCount++;
-    jQuery("#gameTurnIndicatorText").text(
-      gst.turnCount + " / " + MAX_TURN_COUNT
-    );
+/**
+ * updates the current Turn (e.g.Aktionen 0/3 -> 1/3)
+ */
+const updateGameTurnIndicatorUI = () => {
+  jQuery("#gameTurnIndicatorText").text(gst.turnCount + " / " + MAX_TURN_COUNT);
+};
 
-    let calculatedValue;
-    switch (action.type) {
-      case "hunger":
-        gst.character.money = gst.character.money - action.cost;
-
-        calculatedValue = round(
-          action.value * gst.character.hunger.multiplier,
-          0
-        );
-        gst.character.hunger.value =
-          gst.character.hunger.value + calculatedValue;
-
-        if (gst.character.hunger.value > 100) {
-          gst.character.hunger.value = 100;
-        }
-
-        activeResourceBars[0].updateState(gst.character.hunger.value);
-        break;
-      case "life":
-        gst.character.money = gst.character.money - action.cost;
-
-        calculatedValue = round(
-          action.value * gst.character.life.multiplier,
-          0
-        );
-        gst.character.life.value = gst.character.life.value + calculatedValue;
-        if (gst.character.life.value > 100) {
-          gst.character.life.value = 100;
-        }
-        console.log(gst.character.life.value);
-        activeResourceBars[1].updateState(gst.character.life.value);
-        break;
-      case "learn":
-        gst.character.money = gst.character.money - action.cost;
-        calculatedValue = round(
-          action.value * gst.character.learn.multiplier,
-          0
-        );
-        gst.character.learn.value = gst.character.learn.value + calculatedValue;
-        if (gst.character.learn.value > 100) {
-          gst.character.learn.value = 100;
-        }
-        activeResourceBars[2].updateState(gst.character.learn.value);
-        break;
-    }
-    updateMoneyUI(gst.character.money);
-
-    if (action.reward) {
-      gst.addItem(action.reward);
-    }
-    actionHistory.push({ action: action, calcValue: calculatedValue });
+const updateResourceBarUI = (resourceBarIndex, value) => {
+  if (resourceBarIndex >= 0 && resourceBarIndex <= 2) {
+    activeResourceBars[resourceBarIndex].updateState(value);
   }
 };
 
@@ -110,10 +65,12 @@ const addItemUI = item => {
   );
 };
 
+/**
+ * removes an item from the inventory (UI)
+ * @param {*} item
+ */
 const removeItemsUI = item => {
-  console.log("##DELETE");
   jQuery("#inventoryGridItem" + item.id).remove();
-  console.log("inventoryGridItem" + item.id);
   closeModal();
 };
 
@@ -139,10 +96,6 @@ const updateMoneyUI = newValue => {
 
 const initOutroUI = () => {
   jQuery("#main").load("./sites/outro/outro.html");
-};
-
-const initWinUI = () => {
-  //TODO
 };
 
 const loadModal = url => {

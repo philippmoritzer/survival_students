@@ -27,9 +27,7 @@ const newDayModal = () => {
   );
   jQuery("#gameActionBarTopItemDay").text("Tag  " + gst.day + " / 30");
   if (gst.day === 1) {
-    console.log("hallooo before timeout");
     setTimeout(function() {
-      console.log("hallo from timeout");
       loadModal("./components/modals/tutorial-modal/tutorial-modal.html");
       initTutorialModal();
     }, 3500);
@@ -107,7 +105,6 @@ jQuery("#gameNavigator").on("click", () => {
  * @param {area} area to change to
  */
 const execAreaChange = area => {
-  console.log(area.backgroundImage);
   jQuery("#main").animate({ opacity: 0 }, "slow", () => {
     jQuery("#main")
       .css({
@@ -146,7 +143,6 @@ gst.initPromise.then(val => {
   gst.loadCharacterSpecificActions().then(val => {
     gst.changeAreaTasks();
     gst.changeArea(0);
-    console.log(JSON.stringify(gst.character));
     const area = gst.getAreaByIndex(0);
     const actionItem1 = new ActionItem(0, area.actions[0]);
     const actionItem2 = new ActionItem(1, area.actions[1]);

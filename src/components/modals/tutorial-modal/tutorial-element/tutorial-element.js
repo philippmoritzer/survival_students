@@ -17,7 +17,6 @@ class TutorialElement {
   }
 
   setAttributes() {
-    console.log(JSON.stringify(this.bounds));
     jQuery("#tutorialElementContainer" + this.id).css({
       top: this.bounds.top + 10,
       left: this.bounds.left + 10,

@@ -39,7 +39,6 @@ if ($num % 2 == 0) {
 
 jQuery(".characterSelectionSlide").click(function() {
   $slide = jQuery(".active").width();
-  console.log(jQuery(".active").position().left);
 
   if (jQuery(this).hasClass("next")) {
     jQuery(".characterSelectionCardCarousel")
@@ -127,7 +126,6 @@ selectCharacter(1);
 const start = () => {
   jQuery("#main").load("./sites/game/game.html", () => {
     playPopupSound();
-    console.log("Game starting with character" + JSON.stringify(gst.character));
     gst.startGame();
   });
 };

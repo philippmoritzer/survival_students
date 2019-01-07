@@ -1,9 +1,7 @@
 //Resource-Bar Tutorial
 
 const loadTutorialElement = (id, text, identifier) => {
-  jQuery("#tutorialElementContainer" + this.id).detach(() => {
-    console.log("deleted");
-  });
+  jQuery("#tutorialElementContainer" + this.id).detach(() => {});
   jQuery.get(
     "./components/modals/tutorial-modal/tutorial-element/tutorial-element.html",
     data => {
