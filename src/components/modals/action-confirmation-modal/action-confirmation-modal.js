@@ -36,6 +36,13 @@ if (currentAction.cost > gst.character.money) {
   jQuery("#actionConfirmationAcceptButton").attr("disabled", true);
 }
 
+if (gst.turnCount === 3) {
+  jQuery("#actionConfirmationAcceptButton").text(
+    "Keine Aktionen mehr übrig. Komme morgen wieder"
+  );
+  jQuery("#actionConfirmationAcceptButton").attr("disabled", true);
+}
+
 jQuery("#actionConfirmationAcceptButton").on("click", () => {
   playPopupSound();
   gst.executeAction(currentAction);
