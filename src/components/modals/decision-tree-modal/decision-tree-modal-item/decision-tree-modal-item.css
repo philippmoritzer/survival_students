@@ -1,3 +1,8 @@
+.decisionTreeModalItemContainer {
+  width: 80%;
+  margin-top: 40px;
+}
+
 .decisionTreeModalItemDay {
   color: white;
   font-size: 1.5em;
@@ -9,6 +14,27 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+}
+
+.decisionTreeTopBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.decisionTreeDailyStartingValues {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.decisionTreeStartingValueText {
+  color: white;
+  margin-right: 5px;
+}
+
+.decisionTreeLowOpacity {
+  opacity: 0.7;
 }
 
 .decisionTreeActionName {

@@ -6,10 +6,50 @@
 </head>
 <body>
   <div class="decisionTreeModalItemContainer">
-    <h1 id="decisionTreeModalItemDay" class="decisionTreeModalItemDay">
-      <!--Inject Day-->
-    </h1>
-    <hr />
+    <div class="decisionTreeTopBar">
+      <h1 id="decisionTreeModalItemDay" class="decisionTreeModalItemDay">
+        <!--Inject Day-->
+      </h1>
+      <div class="decisionTreeDailyStartingValues">
+        <p class="decisionTreeStartingValueText decisionTreeLowOpacity">
+          Anfang des Tages:
+        </p>
+        <img
+          class="decisionTreeResImg decisionTreeLowOpacity"
+          src="../assets/images/hunger.png"
+          alt=""
+        />
+        <p
+          id="decisionTreeHungerStartingText"
+          class="decisionTreeStartingValueText decisionTreeLowOpacity"
+        >
+          <!--Inject starting hunger-->
+        </p>
+        <img
+          class="decisionTreeResImg decisionTreeLowOpacity"
+          src="../assets/images/life.png"
+          alt=""
+        />
+        <p
+          id="decisionTreeLifeStartingText"
+          class="decisionTreeStartingValueText decisionTreeLowOpacity"
+        >
+          <!--Inject starting life-->
+        </p>
+        <img
+          class="decisionTreeResImg decisionTreeLowOpacity"
+          src="../assets/images/learn.png"
+          alt=""
+        />
+        <p
+          id="decisionTreeLearnStartingText"
+          class="decisionTreeStartingValueText decisionTreeLowOpacity"
+        >
+          <!--Inject starting learn-->
+        </p>
+      </div>
+    </div>
+    <hr class="separator" />
     <div
       id="decisionTreeResourceContainer1"
       class="decisionTreeResourceContainer"
@@ -27,6 +67,7 @@
           <!--Inject money lost-->
         </p>
         <img
+          id="decisionTreeResImg1"
           class="decisionTreeResImg"
           src="../assets/images/hunger.png"
           alt=""
@@ -39,10 +80,56 @@
     <div
       id="decisionTreeResourceContainer2"
       class="decisionTreeResourceContainer"
-    ></div>
+    >
+      <p id="decisionTreeActionName2" class="decisionTreeActionName">
+        <!--Inject action1 name-->
+      </p>
+      <div id="decisionTreeResources2" class="decisionTreeResources">
+        <img
+          class="decisionTreeResImg"
+          src="../assets/images/money.png"
+          alt=""
+        />
+        <p id="decisionTreeMoneyLoss2" style="color: red;margin-right: 5px;">
+          <!--Inject money lost-->
+        </p>
+        <img
+          id="decisionTreeResImg2"
+          class="decisionTreeResImg"
+          src="../assets/images/hunger.png"
+          alt=""
+        />
+        <p id="decisionTreeResouceGain2" style="color: green;">
+          <!--Inject resource gain-->
+        </p>
+      </div>
+    </div>
     <div
       id="decisionTreeResourceContainer3"
       class="decisionTreeResourceContainer"
-    ></div>
+    >
+      <p id="decisionTreeActionName3" class="decisionTreeActionName">
+        <!--Inject action1 name-->
+      </p>
+      <div id="decisionTreeResources3" class="decisionTreeResources">
+        <img
+          class="decisionTreeResImg"
+          src="../assets/images/money.png"
+          alt=""
+        />
+        <p id="decisionTreeMoneyLoss3" style="color: red;margin-right: 5px;">
+          <!--Inject money lost-->
+        </p>
+        <img
+          id="decisionTreeResImg3"
+          class="decisionTreeResImg"
+          src="../assets/images/hunger.png"
+          alt=""
+        />
+        <p id="decisionTreeResouceGain3" style="color: green;">
+          <!--Inject resource gain-->
+        </p>
+      </div>
+    </div>
   </div>
 </body>

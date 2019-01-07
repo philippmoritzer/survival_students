@@ -28,6 +28,7 @@ class GameStateManager {
     this.character.items = [];
     this.character.items.push(this.items[0]);
     this.win = false;
+    this.dailyResources = [];
   }
 
   changeArea(index) {
@@ -40,11 +41,22 @@ class GameStateManager {
     this.navigationItemsLoaded = true;
   }
 
+  saveDailyResources() {
+    this.dailyResources.push({
+      hungerVal: this.character.hunger.value,
+      lifeVal: this.character.life.value,
+      learnVal: this.character.learn.value
+    });
+  }
+
   changeDay() {
     playDayChangeMusic();
     this.changeAreaTasks();
     if (this.day !== 0) {
       this.executeResourceLoss();
+      this.saveDailyResources();
+    } else {
+      this.saveDailyResources();
     }
     this.checkLosingCondition();
     if (this.day < 30) {
