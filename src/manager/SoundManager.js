@@ -74,8 +74,10 @@ const playIntroMusic = () => {
  * stop intro music. Execute at game.js loading
  */
 const stopIntroMusic = () => {
-  intro.pause();
-  intro.currentTime = 0;
+  if (intro) {
+    intro.pause();
+    intro.currentTime = 0;
+  }
 };
 
 const playOpenBackpackSound = () => {

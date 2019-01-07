@@ -14,7 +14,7 @@
     "type": "hunger",
     "value": 34,
     "cost": 500,
-    "rewards": 3,
+    "reward": 3,
     "area": 1
   },
   {
@@ -24,7 +24,7 @@
     "type": "hunger",
     "value": 32,
     "cost": 500,
-    "rewards": 3,
+    "reward": 3,
     "area": 1
   },
   {
@@ -79,7 +79,7 @@
     "type": "hunger",
     "value": 32,
     "cost": 500,
-    "rewards": 3,
+    "reward": 3,
     "area": 1
   },
   {
@@ -107,7 +107,7 @@
     "type": "hunger",
     "value": 32,
     "cost": 500,
-    "rewards": 3,
+    "reward": 3,
     "area": 1
   },
   {

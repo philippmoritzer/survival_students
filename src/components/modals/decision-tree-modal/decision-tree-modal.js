@@ -3,32 +3,24 @@ jQuery("#decisionTreeModalClose").on("click", () => {
 });
 
 for (let i = 0; i < actionHistory.length; i++) {
-  titleLoaded = false;
   if (i % 3 === 0) {
     jQuery.get(
-      "./components/modals/decision-tree-modal/decision-tree-title/decision-tree-title.html",
+      "./components/modals/decision-tree-modal/decision-tree-modal-item/decision-tree-modal-item.html",
       data => {
-        let dTreeTitle = new DecisionTreeTitle(i / 3);
-        jQuery("#decisionTreeContent").append(data);
-        dTreeTitle.init();
-        titleLoaded = true;
-      }
-    );
-  } else {
-    titleLoaded = true;
-  }
-
-  if (titleLoaded) {
-    jQuery.get(
-      "./components/modals/decision-tree-modal/decision-tree-item/decision-tree-item.html",
-      data => {
-        let dTreeItem = new DecisionTreeItem(
-          i,
-          actionHistory[i].action,
-          actionHistory[i].calcValue
-        );
-        jQuery("#decisionTreeContent").append(data);
-        dTreeItem.init();
+        jQuery("#decisionTreeModalContainer")
+          .append(data)
+          .ready(() => {
+            let tempActions = [];
+            tempActions.push(actionHistory[i]);
+            if (actionHistory[i + 1]) {
+              tempActions.push(actionHistory[i + 1]);
+            }
+            if (actionHistory[i + 2]) {
+              tempActions.push(actionHistory[i + 2]);
+            }
+            const dTreeItem = new DecisionTreeModalItem(i / 3, tempActions);
+            dTreeItem.init();
+          });
       }
     );
   }

@@ -1,0 +1,30 @@
+.decisionTreeModalItemDay {
+  color: white;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.decisionTreeResourceContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.decisionTreeActionName {
+  color: white;
+  font-size: 1.2em;
+}
+
+.decisionTreeResources {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.decisionTreeResImg {
+  width: 32px;
+  height: 32px;
+  margin-right: 5px;
+}
