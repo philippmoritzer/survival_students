@@ -6,5 +6,15 @@
     "type": "hunger",
     "value": 15,
     "cost": 500
+  },
+  {
+    "name": "Bock auf Chips",
+    "desc": "Chips und chillen? Klingt gut!",
+    "img": "img",
+    "type":"hunger",
+    "value": 10,
+    "cost": 20,
+    "reward": 7
+
   }
 ]

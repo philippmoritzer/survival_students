@@ -41,5 +41,32 @@
     "image": "phone.png",
     "type": "life",
     "value": 0.1
+  },
+  {
+    "id": 6,
+    "title": "Absturz",
+    "description": "Du kotzt dir die Seele aus dem Leib (-8% auf Lifestyle) [verkaufen kostet Geld]",
+    "sellfor": -20,
+    "type": "life",
+    "value": -0.08
+
+  },
+  {
+    "id": 7,
+    "title": "Neues Spiel gekauft",
+    "description": "Du hast dir ein neues Spiel gekauft, weil dir zu langweilig war (-15% auf Lernstand)[verkaufen kostet Geld]",
+    "sellfor": -120,
+    "type": "learn",
+    "value":-0.15
+  },
+  {
+    "id": 8,
+    "title": "Bowlingkugel und Fuß?",
+    "description": "Aua, als Entschädigung für deine Dummheit schenkt dir das Bowlingcenter die Bowlingkugel(+5% Lifestyle)",
+    "sellfor": 200,
+    "type":"life",
+    "value": 0.05
+
   }
+  
 ]

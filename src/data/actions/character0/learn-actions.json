@@ -5,7 +5,7 @@
     "img": "employee.png",
     "type": "learn",
     "value": 34,
-    "cost": 500,
+    "cost": 200,
     "area": 2
   },
   {
@@ -14,7 +14,7 @@
     "img": "employee.png",
     "type": "learn",
     "value": 34,
-    "cost": 500
+    "cost": 1000
   },
   {
     "name": "BWL Vorlesung",
@@ -22,7 +22,19 @@
     "img": "employee.png",
     "type": "learn",
     "value": 34,
-    "cost": 500,
+    "cost": 300,
     "area": 2
+  },
+  {
+    "name": "Lernen auf den Malediven",
+    "desc": "Du hast keine Lust auf Uni, auf den Malediven lässt es sich sowieso leichter lernen.",
+    
+    "type": "learn",
+    "value": 5, 
+    "cost": 3000,
+    "area":2
   }
+  
+    
+  
 ]

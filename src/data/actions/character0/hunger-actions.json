@@ -5,7 +5,7 @@
     "img": "steak.png",
     "type": "hunger",
     "value": 34,
-    "cost": 500,
+    "cost": 300,
     "area": 1
   },
   {
@@ -14,17 +14,17 @@
     "img": "teuer.png",
     "type": "hunger",
     "value": 34,
-    "cost": 500,
+    "cost": 600,
     "area": 1
   },
   {
-    "name": "Nobelrestaurant",
-    "desc": "Irgendso ein Fancy shit",
+    "name": "Koch bestellen",
+    "desc": "Kein Bock rauszugehen, also kommt der Koch zu dir!",
     "img": "teuer.png",
     "type": "hunger",
-    "value": 34,
-    "cost": 500,
-    "area": 1
+    "value": 20,
+    "cost": 750,
+    "area": 0
   },
   {
     "name": "Nobelrestaurant",

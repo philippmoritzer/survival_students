@@ -5,8 +5,17 @@
     "desc": "Kokosnuss zum Trinken, weil das macht man so in Asien",
     "img": "img",
     "type": "hunger",
-    "value": 34,
-    "cost": 500,
+    "value": 5,
+    "cost": 20,
+    "area": 1
+  },
+  {
+    "name": "Streetfood",
+    "desc": "Bush Food ist der Renner in Australien, erstmal einen Salamander",
+    "img": "img",
+    "type": "hunger",
+    "value": 7,
+    "cost": 50,
     "area": 1
   }
 ]
