@@ -3,7 +3,7 @@
   {
     "name": "Supermarkt",
     "desc": "Kokosnuss zum Trinken, weil das macht man so in Asien",
-    "img": "img",
+    "img": "coconut.png",
     "type": "hunger",
     "value": 5,
     "cost": 20,

@@ -2,7 +2,7 @@
   {
     "name": "Sports Night",
     "desc": "Ein sportlicher Abend in einer Bar der Wahl",
-    "img": "img",
+    "img": "beer.png",
     "type": "life",
     "value": 34,
     "cost": 500,
@@ -11,7 +11,7 @@
   {
     "name": "Bahama Mama",
     "desc": "Du hast Lust auf einen Bahama Mama auf den Bahamas",
-    "img": "img",
+    "img": "palm-tree.png",
     "type": "life",
     "value": 15,
     "cost": 2000,

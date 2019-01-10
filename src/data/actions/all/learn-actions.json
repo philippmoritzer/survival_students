@@ -11,7 +11,7 @@
   {
     "name": "Lerngruppe",
     "desc":"Eine Lerngruppe bilden",
-    "img": "img",
+    "img": "candidates.png",
     "type": "learn",
     "value": 34,
     "cost": 500
@@ -37,7 +37,7 @@
   {
     "name": "Projektarbeit",
     "desc": "Am Projekt weiterarbeiten",
-    "img": "img",
+    "img": "employee.png",
     "type": "learn",
     "value": 34,
     "cost": 500,
@@ -46,7 +46,7 @@
   {
     "name": "Für Klausur lernen",
     "desc": "Bereite dich auf die Klausuren vor",
-    "img": "img",
+    "img": "employee.png",
     "type": "learn",
     "value": 34,
     "cost": 500,

@@ -28,7 +28,7 @@
   {
     "name": "Lernen auf den Malediven",
     "desc": "Du hast keine Lust auf Uni, auf den Malediven lässt es sich sowieso leichter lernen.",
-    
+    "img" :"palm-tree.png",
     "type": "learn",
     "value": 5, 
     "cost": 3000,

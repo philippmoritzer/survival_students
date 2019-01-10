@@ -10,17 +10,18 @@
   {
     "name": "Modernes ruft!",
     "desc": "Eine Freundin fragt dich, ob du feiern gehen willst",
-    "img": "img",
+    "img": "disco-ball.png",
     "type": "life",
     "value": 15,
-    "cost": 70
+    "cost": 70,
+    "area": 3
 
   },
   {
     
       "name": "Bowlen mit Freunden?",
       "desc": "Pass auf, Bowlingkugeln sind schwer",
-      "img": "img",
+      "img": "bowling.png",
       "type": "life",
       "value": 15,
       "cost": 0,

@@ -1,13 +1,5 @@
 [
   {
-    "name": "HungerEvent1",
-    "desc": "Langer langer langer langer Langer langer langer langer langer langer Langer langer langer langer langer langer Langer langer langer langer Text",
-    "img": "img",
-    "type": "hunger",
-    "value": 15,
-    "cost": 500
-  },
-  {
     "name": "XXL Burgerhaus- Die mit dem großen M",
     "desc": "Ein Menü bestehend aus Burger, Pommes und einem Getränk",
     "img": "burger.png",
