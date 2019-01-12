@@ -46,6 +46,7 @@ if (!supported) {
   });
 
   // comment in to start at game.html
+
   // $(window).on("load", function() {
   //   var gst = GameStateManager.getInstance();
   //   gst.setLoaded();

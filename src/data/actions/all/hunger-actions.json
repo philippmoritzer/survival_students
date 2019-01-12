@@ -6,8 +6,7 @@
     "type": "hunger",
     "value": 34,
     "cost": 500,
-    "reward": 3,
-    "area": 1
+    "reward": 3
   },
   {
     "name": "Der Hühnchenmann aus Kentucky",
