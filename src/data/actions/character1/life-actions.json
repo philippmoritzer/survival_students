@@ -5,7 +5,7 @@
     "img": "img",
     "type": "life",
     "value": 20,
-    "cost": 50
+    "cost": 15
   },
   {
     "name": "Modernes ruft!",
@@ -13,7 +13,7 @@
     "img": "disco-ball.png",
     "type": "life",
     "value": 15,
-    "cost": 70,
+    "cost": 35,
     "area": 3
 
   },
@@ -24,7 +24,7 @@
       "img": "bowling.png",
       "type": "life",
       "value": 15,
-      "cost": 50,
+      "cost": 20,
       "area": 0,
       "reward": 8
     },
