@@ -1,14 +1,14 @@
 const HUNGER_RESOURCE_1 = new Resource(100, 0.3, 5);
-const HUNGER_RESOURCE_2 = new Resource(25, 1, 5);
+const HUNGER_RESOURCE_2 = new Resource(25, 1, 10);
 const HUNGER_RESOURCE_3 = new Resource(50, 0.5, 5);
 
-const LIFE_RESOURCE_1 = new Resource(25, 0.3, 5);
+const LIFE_RESOURCE_1 = new Resource(25, 0.3, 10);
 const LIFE_RESOURCE_2 = new Resource(100, 1, 5);
-const LIFE_RESOURCE_3 = new Resource(50, 0.5, 5);
+const LIFE_RESOURCE_3 = new Resource(50, 0.5, 4);
 
 const LEARN_RESOURCE_1 = new Resource(25, 1, 5);
 const LEARN_RESOURCE_2 = new Resource(50, 0.5, 5);
-const LEARN_RESOURCE_3 = new Resource(100, 0.3, 5);
+const LEARN_RESOURCE_3 = new Resource(100, 0.3, 8);
 
 //Declaring the starting values for different characters
 //possibly easier to change and balance out

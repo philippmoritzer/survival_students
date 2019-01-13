@@ -23,7 +23,7 @@
     "img": "test.png",
     "type": "learn",
     "value": 10,
-    "cost": 0,
-    "area": 2
+    "cost": 0
+    
   }
 ]

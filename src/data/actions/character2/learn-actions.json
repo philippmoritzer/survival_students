@@ -4,7 +4,38 @@
     "desc": "Nichts geht ohne Daniel",
     "img": "test.png",
     "type": "learn",
-    "value": 34,
-    "cost": 500
+    "value": 4,
+    "cost": 0
+  },
+  {
+    "name": "Mathe-Bibel.de",
+    "desc": "Größter Dreck, aber das einzige, was man versteht",
+    "img": "img",
+    "type": "learn",
+    "value": 7,
+    "cost": 0
+
+  },
+  {
+    "name": "Formelsammlung",
+    "desc": "In der Formelsammlung rumblättern kommt immer gut",
+    "img": "img",
+    "type": "learn",
+    "value": 6,
+    "cost": 0
+  },
+  
+  {
+    "name": "Mappe sortieren",
+    "desc": "Eine geordnete Mappe ist das halbe Lernen",
+    "img": "img",
+    "type": "learn",
+    "value": 5,
+    "cost": 0
+
+
   }
+
+  
+
 ]

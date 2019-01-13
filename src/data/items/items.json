@@ -67,6 +67,14 @@
     "type":"life",
     "value": 0.05
 
+  },
+  {
+    "id": 9,
+    "title": "Motivationslos",
+    "description": "Beim Googeln bist du doch auf Instagram gekommen und hast jetzt keine Lust mehr zu lernen(-10% Lernstand)[verkaufen kostet Geld]",
+    "sellfor": -250,
+    "type": "learn",
+    "value": -0.1
   }
   
 ]

@@ -4,16 +4,16 @@
     "desc": "Kobe Steak",
     "img": "steak.png",
     "type": "hunger",
-    "value": 34,
+    "value": 13,
     "cost": 300,
     "area": 1
   },
   {
     "name": "Nobelrestaurant",
-    "desc": "Irgendso ein Fancy shit",
+    "desc": "Salat mit Blattgold",
     "img": "teuer.png",
     "type": "hunger",
-    "value": 34,
+    "value": 15,
     "cost": 600,
     "area": 1
   },
@@ -34,5 +34,27 @@
     "value": 34,
     "cost": 500,
     "area": 1
-  }
+  },
+  {
+    
+      "name": "Chinesischer Tee",
+      "desc": "Schmeckt wie normaler Tee kostet aber 100-mal so viel",
+      "img": "img",
+      "type": "hunger",
+      "value": 12,
+      "cost": 200
+      
+    
+  },
+  {
+    
+    "name": "",
+    "desc": "Schmeckt wie normaler Tee kostet aber 100-mal so viel",
+    "img": "img",
+    "type": "hunger",
+    "value": 12,
+    "cost": 200
+    
+  
+}
 ]
