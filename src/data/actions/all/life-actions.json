@@ -5,7 +5,7 @@
     "img": "beer.png",
     "type": "life",
     "value": 5,
-    "cost": 75,
+    "cost": 40,
     "reward": 2,
     "area": 3
   },
@@ -15,7 +15,7 @@
     "img": "pool.png",
     "type": "life",
     "value": 6,
-    "cost": 50,
+    "cost": 10,
     "area": 3
   },
   {
@@ -24,7 +24,7 @@
     "img": "microphone.png",
     "type": "life",
     "value": 7,
-    "cost": 60,
+    "cost": 25,
     "reward": 5,
     "area": 3
   },
@@ -34,7 +34,7 @@
     "img": "disco-ball.png",
     "type": "life",
     "value": 7,
-    "cost": 80,
+    "cost": 50,
     "area": 3
   },
   {
@@ -53,7 +53,7 @@
     "img": "soccer.png",
     "type": "life",
     "value": 8,
-    "cost": 45,
+    "cost": 20,
     "area": 3
   },
   {
@@ -62,7 +62,7 @@
     "img": "gym2.png",
     "type": "life",
     "value": 5,
-    "cost": 40,
+    "cost": 10,
     "reward": 4,
     "area": 3
   },
@@ -73,7 +73,7 @@
     "img": "american-football.png",
     "type": "life",
     "value": 3,
-    "cost": 30
+    "cost": 20
   },
   {
     "name": "Kino",
@@ -81,6 +81,6 @@
     "img":"img",
     "type": "life",
     "value": 4,
-    "cost": 50
+    "cost": 15
   }
 ]

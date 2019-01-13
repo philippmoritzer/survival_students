@@ -15,7 +15,16 @@
     "img": "img",
     "type": "hunger",
     "value": 7,
-    "cost": 50
+    "cost": 30,
+    "area": 3
     
+  },
+  {
+    "name": "Krokodilfleisch",
+    "desc": "Die australische Küche ist einfach die beste",
+    "img": "img",
+    "type": "hunger",
+    "value": 8,
+    "cost": 35
   }
 ]

@@ -5,7 +5,7 @@
     "img": "burger.png",
     "type": "hunger",
     "value": 6,
-    "cost": 35,
+    "cost": 10,
     "reward": 3
   },
   {
@@ -14,7 +14,7 @@
     "img": "kfc.png",
     "type": "hunger",
     "value": 8,
-    "cost": 45,
+    "cost": 15,
     "reward": 3,
     "area": 1
   },
@@ -24,7 +24,7 @@
     "img": "bread.png",
     "type": "hunger",
     "value": 6,
-    "cost": 25,
+    "cost": 7,
     "area": 1
   },
   {
@@ -33,7 +33,7 @@
     "img": "tea.png",
     "type": "hunger",
     "value": 3,
-    "cost": 15,
+    "cost": 5,
     "area": 1
   },
   {
@@ -42,7 +42,7 @@
     "img": "eiskaffee.png",
     "type": "hunger",
     "value": 4,
-    "cost": 25,
+    "cost": 8,
     "area": 1
   },
   {
@@ -51,7 +51,7 @@
     "img": "fish.png",
     "type": "hunger",
     "value": 7,
-    "cost": 45,
+    "cost": 10,
     "area": 1
   },
   {
@@ -60,7 +60,7 @@
     "img": "fish.png",
     "type": "hunger",
     "value": 9,
-    "cost": 55,
+    "cost": 12,
     "area": 1
   },
   {
@@ -69,7 +69,7 @@
     "img": "fries.png",
     "type": "hunger",
     "value": 6,
-    "cost": 30,
+    "cost": 14,
     "reward": 3,
     "area": 1
   },
@@ -79,7 +79,7 @@
     "img": "ice.png",
     "type": "hunger",
     "value": 6,
-    "cost": 25,
+    "cost": 15,
     "area": 1
   },
   {
@@ -87,8 +87,8 @@
     "desc": "Der beste Döner der Stadt, mit oder ohne scharf",
     "img": "kebab.png",
     "type": "hunger",
-    "value": 10,
-    "cost": 35,
+    "value": 7,
+    "cost": 10,
     "area": 1
   },
   {
@@ -97,7 +97,7 @@
     "img": "kfc.png",
     "type": "hunger",
     "value": 8,
-    "cost": 50,
+    "cost": 15,
     "reward": 3,
     "area": 1
   },
@@ -107,7 +107,7 @@
     "img": "pasta.png",
     "type": "hunger",
     "value": 8,
-    "cost": 40,
+    "cost": 25,
     "area": 1
   },
   {
@@ -116,7 +116,7 @@
     "img": "pizza.png",
     "type": "hunger",
     "value": 9,
-    "cost": 50,
+    "cost": 20,
     "area": 1
   },
   {
@@ -125,7 +125,7 @@
     "img": "sushi.png",
     "type": "hunger",
     "value": 7,
-    "cost": 60,
+    "cost": 30,
     "area": 1
   },
   {
@@ -134,7 +134,7 @@
     "img": "rice.png",
     "type": "hunger",
     "value": 6,
-    "cost": 35,
+    "cost": 15,
     "area": 1
   },
   {
