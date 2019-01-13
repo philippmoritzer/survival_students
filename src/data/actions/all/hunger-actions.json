@@ -4,8 +4,8 @@
     "desc": "Ein Menü bestehend aus Burger, Pommes und einem Getränk",
     "img": "burger.png",
     "type": "hunger",
-    "value": 34,
-    "cost": 500,
+    "value": 6,
+    "cost": 35,
     "reward": 3
   },
   {
@@ -13,8 +13,8 @@
     "desc": "Eimer mit heißen Flügeln",
     "img": "kfc.png",
     "type": "hunger",
-    "value": 32,
-    "cost": 500,
+    "value": 8,
+    "cost": 45,
     "reward": 3,
     "area": 1
   },
@@ -23,8 +23,8 @@
     "desc": "Frühstück für den perfekten Start in den Tag",
     "img": "bread.png",
     "type": "hunger",
-    "value": 32,
-    "cost": 500,
+    "value": 6,
+    "cost": 25,
     "area": 1
   },
   {
@@ -32,8 +32,8 @@
     "desc": "Tee",
     "img": "tea.png",
     "type": "hunger",
-    "value": 32,
-    "cost": 500,
+    "value": 3,
+    "cost": 15,
     "area": 1
   },
   {
@@ -41,8 +41,8 @@
     "desc": "Eiskaffee",
     "img": "eiskaffee.png",
     "type": "hunger",
-    "value": 32,
-    "cost": 500,
+    "value": 4,
+    "cost": 25,
     "area": 1
   },
   {
@@ -50,8 +50,8 @@
     "desc": "Fischbrötchen",
     "img": "fish.png",
     "type": "hunger",
-    "value": 32,
-    "cost": 500,
+    "value": 7,
+    "cost": 45,
     "area": 1
   },
   {
@@ -59,8 +59,8 @@
     "desc": "Backfisch",
     "img": "fish.png",
     "type": "hunger",
-    "value": 32,
-    "cost": 500,
+    "value": 9,
+    "cost": 55,
     "area": 1
   },
   {
@@ -68,8 +68,8 @@
     "desc": "Pommes",
     "img": "fries.png",
     "type": "hunger",
-    "value": 32,
-    "cost": 500,
+    "value": 6,
+    "cost": 30,
     "reward": 3,
     "area": 1
   },
@@ -78,8 +78,8 @@
     "desc": "Das vermeintlich beste Eis der Stadt",
     "img": "ice.png",
     "type": "hunger",
-    "value": 32,
-    "cost": 500,
+    "value": 6,
+    "cost": 25,
     "area": 1
   },
   {
@@ -87,8 +87,8 @@
     "desc": "Der beste Döner der Stadt, mit oder ohne scharf",
     "img": "kebab.png",
     "type": "hunger",
-    "value": 32,
-    "cost": 500,
+    "value": 10,
+    "cost": 35,
     "area": 1
   },
   {
@@ -96,8 +96,8 @@
     "desc": "Chicken Nuggets",
     "img": "kfc.png",
     "type": "hunger",
-    "value": 32,
-    "cost": 500,
+    "value": 8,
+    "cost": 50,
     "reward": 3,
     "area": 1
   },
@@ -106,8 +106,8 @@
     "desc": "Pasta",
     "img": "pasta.png",
     "type": "hunger",
-    "value": 32,
-    "cost": 500,
+    "value": 8,
+    "cost": 40,
     "area": 1
   },
   {
@@ -115,8 +115,8 @@
     "desc": "Pizza",
     "img": "pizza.png",
     "type": "hunger",
-    "value": 32,
-    "cost": 500,
+    "value": 9,
+    "cost": 50,
     "area": 1
   },
   {
@@ -124,8 +124,8 @@
     "desc": "Sushi",
     "img": "sushi.png",
     "type": "hunger",
-    "value": 32,
-    "cost": 500,
+    "value": 7,
+    "cost": 60,
     "area": 1
   },
   {
@@ -133,8 +133,8 @@
     "desc": "Bratreis",
     "img": "rice.png",
     "type": "hunger",
-    "value": 32,
-    "cost": 500,
+    "value": 6,
+    "cost": 35,
     "area": 1
   },
   {
@@ -142,8 +142,8 @@
     "desc": "Ramen",
     "img": "ramen.png",
     "type": "hunger",
-    "value": 32,
-    "cost": 500,
-    "area": 1
+    "value": 4,
+    "cost": 20
+    
   }
 ]

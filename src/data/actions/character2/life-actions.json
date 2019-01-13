@@ -4,8 +4,24 @@
     "desc": "Ab ins Gym",
     "img": "gym.png",
     "type": "life",
-    "value": 34,
-    "cost": 500,
+    "value": 3,
+    "cost": 50,
     "area": 3
+  },
+  {
+    "name": "Saufen mit den Jungs",
+    "desc": "Unter 10 Bier geht gar nichts",
+    "img": "",
+    "type": "life",
+    "value": 10,
+    "cost": 75
+  },
+  {
+    "name": "",
+    "desc": "",
+    "img": "",
+    "type": "life",
+    "value": 10,
+    "cost": 75
   }
 ]

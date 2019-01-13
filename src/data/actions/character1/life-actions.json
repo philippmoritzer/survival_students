@@ -24,9 +24,17 @@
       "img": "bowling.png",
       "type": "life",
       "value": 15,
-      "cost": 0,
+      "cost": 50,
       "area": 0,
       "reward": 8
+    },
+    {
+      "name": "Sauna-Gang",
+      "desc": "In Australien war es heißer...",
+      "img": "img",
+      "type": "life",
+      "value": 12,
+      "cost": 35 
     }
   
 ]

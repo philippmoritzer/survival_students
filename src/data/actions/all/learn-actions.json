@@ -60,5 +60,14 @@
     "value": 34,
     "cost": 500,
     "area": 2
+  },
+  {
+    "name": "Googeln",
+    "desc": "Irgendeinen Fachbegriff googeln",
+    "img": "img",
+    "type": "learn",
+    "value": 4,
+    "cost": 0,
+    "reward": 9 
   }
 ]

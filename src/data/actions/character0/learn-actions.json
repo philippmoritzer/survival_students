@@ -33,6 +33,14 @@
     "value": 5, 
     "cost": 3000,
     "area":2
+  },
+  {
+    "name": "Wikipedia retten",
+    "desc": "2300€ an Wikipedia überweisen, weil die Pop-Ups beim lesen nerven",
+    "img": "img",
+    "value": 8,
+    "cost": 2300,
+    "area": 0
   }
   
     

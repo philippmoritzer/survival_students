@@ -16,5 +16,13 @@
     "cost": 20,
     "reward": 7
 
+  },
+  {
+    "name": "",
+    "desc": "Character 3 EventDesc",
+    "img": "img",
+    "type": "hunger",
+    "value": 15,
+    "cost": 500
   }
 ]
