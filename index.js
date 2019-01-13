@@ -26,7 +26,7 @@ if (!supported) {
   //At the initial start of the game - load intro.html into the main div
 
   console.log(
-    "%cSurvival Students - 1.0",
+    "%cSurvive A Month - 1.0",
 
     "background: black; color: white; font-size: x-large; font-family: 'Arial'; padding: 50px;"
   );

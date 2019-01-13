@@ -42,6 +42,10 @@ const stopAreaMusic = () => {
   }
 };
 
+/**
+ * call this method to play a cash sound
+ * (used at updating money)
+ */
 const playCashSound = () => {
   var soundAudio;
   soundAudio = new Audio("../assets/audio/cash-register.mp3");
