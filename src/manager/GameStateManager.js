@@ -306,13 +306,28 @@ class GameStateManager {
             );
           }
           break;
-        case "Natur":
+        case "Sportplatz":
           for (let i = 0; i < ACTIONS_PER_AREA; i++) {
-            let naturAction = this.learnActions[
-              Math.floor(Math.random() * this.learnActions.length)
-            ];
+            let rndAction = getRandomInt(0, 2);
+            let sportActions = null;
+
+            switch (rndAction) {
+              case 0:
+                sportActions = this.learnActions;
+                break;
+              case 1:
+                sportActions = this.hungerActions;
+                break;
+              case 2:
+                sportActions = this.lifeActions;
+                break;
+            }
+            console.log(JSON.stringify(sportActions));
+
+            let sportAction =
+              sportActions[Math.floor(Math.random() * sportActions.length)];
             area.actions.push(
-              this.evaluateAreaActionFit(naturAction, this.learnActions, area)
+              this.evaluateAreaActionFit(sportAction, sportActions, area)
             );
           }
           break;
@@ -332,8 +347,11 @@ class GameStateManager {
   evaluateAreaActionFit(action, actions, area) {
     while (action.area !== area.index) {
       action = actions[Math.floor(Math.random() * actions.length)];
+
       if (!action.area) {
-        break;
+        if (action.area !== 0) {
+          break;
+        }
       }
     }
     return action;

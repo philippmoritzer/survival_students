@@ -64,7 +64,7 @@
     "value": 5,
     "cost": 10,
     "reward": 4,
-    "area": 3
+    "area": 4
   },
 
   {
@@ -78,7 +78,7 @@
   {
     "name": "Kino",
     "desc": "Was läuft gerade im Kino?",
-    "img":"img",
+    "img": "img",
     "type": "life",
     "value": 4,
     "cost": 15

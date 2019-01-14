@@ -117,7 +117,7 @@
     "type": "hunger",
     "value": 9,
     "cost": 20,
-    "area": 1
+    "area": 4
   },
   {
     "name": "Asiarestaurant",
@@ -144,6 +144,5 @@
     "type": "hunger",
     "value": 4,
     "cost": 20
-    
   }
 ]

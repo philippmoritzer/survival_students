@@ -10,7 +10,7 @@
   },
   {
     "name": "Lerngruppe",
-    "desc":"Eine Lerngruppe bilden",
+    "desc": "Eine Lerngruppe bilden",
     "img": "candidates.png",
     "type": "learn",
     "value": 5,
@@ -41,7 +41,7 @@
     "type": "learn",
     "value": 3,
     "cost": 0,
-    "area":0
+    "area": 0
   },
   {
     "name": "Für Klausur lernen",
@@ -50,7 +50,7 @@
     "type": "learn",
     "value": 6,
     "cost": 0,
-    "area": 0
+    "area": 4
   },
   {
     "name": "Zusatzveranstaltung",
@@ -68,6 +68,6 @@
     "type": "learn",
     "value": 4,
     "cost": 0,
-    "reward": 9 
+    "reward": 9
   }
 ]
