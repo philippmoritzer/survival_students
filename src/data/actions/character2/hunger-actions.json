@@ -1,11 +1,11 @@
 [
   {
-    "name": "Character 3 Hunger Event",
-    "desc": "Character 3 EventDesc",
+    "name": "Spaghetti mit Bolognese",
+    "desc": "Nach dem Rezept von Mama",
     "img": "img",
     "type": "hunger",
-    "value": 15,
-    "cost": 500
+    "value": 6,
+    "cost": 15
   },
   {
     "name": "Bock auf Chips",
@@ -18,11 +18,11 @@
 
   },
   {
-    "name": "",
-    "desc": "Character 3 EventDesc",
-    "img": "img",
+    "name": "Tiefkühlpizza",
+    "desc": "Kostet weniger, ist aber auch nicht so geil",
+    "img": "pizza.png",
     "type": "hunger",
-    "value": 15,
-    "cost": 500
+    "value": 5,
+    "cost": 10
   }
 ]

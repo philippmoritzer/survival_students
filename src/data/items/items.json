@@ -19,7 +19,7 @@
     "id": 3,
     "title": "Lebensmittelvergiftung",
     "description": "Iss lieber gesund  (- 10% Hunger) [verkaufen kostet Geld]",
-    "sellfor": -150,
+    "sellfor": -50,
     "image": "phone.png",
     "type": "hunger",
     "value": -0.1
@@ -55,7 +55,7 @@
     "id": 7,
     "title": "Neues Spiel gekauft",
     "description": "Du hast dir ein neues Spiel gekauft, weil dir zu langweilig war (-15% auf Lernstand)[verkaufen kostet Geld]",
-    "sellfor": -120,
+    "sellfor": -60,
     "type": "learn",
     "value":-0.15
   },
@@ -63,7 +63,7 @@
     "id": 8,
     "title": "Bowlingkugel und Fuß?",
     "description": "Aua, als Entschädigung für deine Dummheit schenkt dir das Bowlingcenter die Bowlingkugel(+5% Lifestyle)",
-    "sellfor": 200,
+    "sellfor": 50,
     "type":"life",
     "value": 0.05
 
@@ -72,7 +72,7 @@
     "id": 9,
     "title": "Motivationslos",
     "description": "Beim Googeln bist du doch auf Instagram gekommen und hast jetzt keine Lust mehr zu lernen(-10% Lernstand)[verkaufen kostet Geld]",
-    "sellfor": -250,
+    "sellfor": -50,
     "type": "learn",
     "value": -0.1
   }

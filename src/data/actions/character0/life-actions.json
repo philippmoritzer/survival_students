@@ -47,5 +47,13 @@
     "cost": 1200
     
   
-}
+},
+ {
+  "name": "Ski fahren in der Schweiz",
+  "desc": "Mit allem Schickimicki",
+  "img": "img",
+  "type": "life",
+  "value": 6,
+  "cost": 800
+ }
 ]

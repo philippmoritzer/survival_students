@@ -4,7 +4,7 @@
     "desc": "Nicht ganz so kacke wie BWL",
     "img": "employee.png",
     "type": "learn",
-    "value": 34,
+    "value": 4,
     "cost": 200,
     "area": 2
   },
@@ -13,7 +13,7 @@
     "desc": "Papa zahlt",
     "img": "employee.png",
     "type": "learn",
-    "value": 34,
+    "value": 6,
     "cost": 1000
   },
   {
@@ -21,7 +21,7 @@
     "desc": "Langweilig aber nötig",
     "img": "employee.png",
     "type": "learn",
-    "value": 34,
+    "value": 3,
     "cost": 300,
     "area": 2
   },
@@ -38,10 +38,29 @@
     "name": "Wikipedia retten",
     "desc": "2300€ an Wikipedia überweisen, weil die Pop-Ups beim lesen nerven",
     "img": "img",
-    "value": 8,
+    "type":"learn",
+    "value": 7,
     "cost": 2300,
     "area": 0
+  },
+  {
+    "name": "Vorlesung an der Harvard Univerity besuchen",
+    "desc": "Du brauchst mal Abwechslung",
+    "img": "img",
+    "type":"learn",
+    "value": 6,
+    "cost": 1000
+    
+  },
+  {
+    "name": "Ghostwriter",
+    "desc": "Hausarbeiten selber schreiben ist was für Loser",
+    "img": "img",
+    "type": "learn",
+    "value": 3,
+    "cost": 1200
   }
+   
   
     
   
