@@ -320,7 +320,6 @@ class GameStateManager {
                 sportActions = this.lifeActions;
                 break;
             }
-            console.log(JSON.stringify(sportActions));
 
             let sportAction =
               sportActions[Math.floor(Math.random() * sportActions.length)];
@@ -450,8 +449,7 @@ class GameStateManager {
   characterOwnsItem(item) {
     for (let i = 0; i < this.character.items.length; i++) {
       const element = this.character.items[i];
-      console.log("###item" + item);
-      console.log("###owneditem" + element.id);
+
       if (element.id === item) {
         return true;
       }
