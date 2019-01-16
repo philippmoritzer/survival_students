@@ -11,7 +11,7 @@
   {
     "name": "Saufen mit den Jungs",
     "desc": "Unter 10 Bier geht gar nichts",
-    "img": "",
+    "img": "beer.png",
     "type": "life",
     "value": 8,
     "cost": 75,
@@ -20,7 +20,7 @@
   {
     "name": "Thekenbachelor",
     "desc": "Sauf dich durch die Kneipen deiner Stadt",
-    "img": "",
+    "img": "beer.png",
     "type": "life",
     "value": 6,
     "cost": 45

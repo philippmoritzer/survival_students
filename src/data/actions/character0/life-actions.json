@@ -1,12 +1,12 @@
 [
   {
-    "name": "Sports Night",
-    "desc": "Ein sportlicher Abend in einer Bar der Wahl",
-    "img": "beer.png",
+    "name": "Club",
+    "desc": "Kauf dir deinen eigenen Club",
+    "img": "dancing.png",
     "type": "life",
-    "value": 34,
-    "cost": 500,
-    "area": 1
+    "value": 6,
+    "cost": 300,
+    "area": 3
   },
   {
     "name": "Bahama Mama",
@@ -14,17 +14,17 @@
     "img": "palm-tree.png",
     "type": "life",
     "value": 12,
-    "cost": 2000,
-    "area": 1
+    "cost": 450,
+    "area": 0
     
   },
   {
     "name": "Party mit den Bwl",
     "desc": "Nicht die reichsten und besten, aber wenigstens feiern",
-    "img": "img",
+    "img": "confetti.png",
     "type": "life",
     "value": 6,
-    "cost": 2000,
+    "cost": 250,
     "area": 1
     
   },
@@ -32,28 +32,31 @@
   {
     "name": "Original finnische Sauna",
     "desc": "Mit dem Heli nach Finnland für einen richtig geilen Sauna-Gang",
-    "img":"img",
+    "img":"sauna.png",
     "type": "life",
     "value": 8,
-    "cost": 1500
+    "cost": 350,
+    "area": 2
   },
   {
     
     "name": "Wine tasting",
     "desc": "Für ein wine tasting nach Frankreich? ",
-    "img": "img",
+    "img": "wine.png",
     "type": "life",
     "value": 7,
-    "cost": 1200
+    "cost": 200,
+    "area": 3
     
   
 },
  {
   "name": "Ski fahren in der Schweiz",
   "desc": "Mit allem Schickimicki",
-  "img": "img",
+  "img": "ski.png",
   "type": "life",
   "value": 6,
-  "cost": 800
+  "cost": 250,
+  "area": 0
  }
 ]

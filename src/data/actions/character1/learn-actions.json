@@ -11,7 +11,7 @@
   {
     "name": "Gender Studies Vorlesung",
     "desc": "Deine Lieblingsvorlesung findet gleich statt, bloß nicht versäumen",
-    "img": "employee.png",
+    "img": "presentation.png",
     "type": "learn",
     "value": 20,
     "cost": 0,
@@ -20,7 +20,7 @@
   {
     "name": "Native Cultures of Southeast Asia",
     "desc": "Perfect for your english skills!",
-    "img": "test.png",
+    "img": "test2.png",
     "type": "learn",
     "value": 10,
     "cost": 0

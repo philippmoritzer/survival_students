@@ -2,15 +2,16 @@
   {
     "name": "Spaghetti mit Bolognese",
     "desc": "Nach dem Rezept von Mama",
-    "img": "img",
+    "img": "spaghetti.png",
     "type": "hunger",
     "value": 6,
-    "cost": 15
+    "cost": 15,
+    "area": 0
   },
   {
     "name": "Bock auf Chips",
     "desc": "Chips und chillen? Klingt gut!",
-    "img": "img",
+    "img": "chips.png",
     "type":"hunger",
     "value": 10,
     "cost": 20,
@@ -23,6 +24,7 @@
     "img": "pizza.png",
     "type": "hunger",
     "value": 5,
-    "cost": 10
+    "cost": 10,
+    "area": 3
   }
 ]

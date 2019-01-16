@@ -2,7 +2,7 @@
   {
     "name": "Volkswirtschaft Vorlesung",
     "desc": "Nicht ganz so kacke wie BWL",
-    "img": "employee.png",
+    "img": "presentation.png",
     "type": "learn",
     "value": 4,
     "cost": 200,
@@ -11,15 +11,16 @@
   {
     "name": "Privatunterricht",
     "desc": "Papa zahlt",
-    "img": "employee.png",
+    "img": "bank.png",
     "type": "learn",
     "value": 6,
-    "cost": 1000
+    "cost": 600,
+    "area": 0
   },
   {
     "name": "BWL Vorlesung",
     "desc": "Langweilig aber nötig",
-    "img": "employee.png",
+    "img": "presentation.png",
     "type": "learn",
     "value": 3,
     "cost": 300,
@@ -31,34 +32,36 @@
     "img" :"palm-tree.png",
     "type": "learn",
     "value": 5, 
-    "cost": 3000,
-    "area":2
+    "cost": 500,
+    "area": 0
   },
   {
     "name": "Wikipedia retten",
-    "desc": "2300€ an Wikipedia überweisen, weil die Pop-Ups beim lesen nerven",
-    "img": "img",
+    "desc": "Geld an Wikipedia überweisen, weil die Pop-Ups beim lesen nerven",
+    "img": "wikipedia-logotype-of-earth-puzzle.png",
     "type":"learn",
     "value": 7,
-    "cost": 2300,
+    "cost": 450,
     "area": 0
   },
   {
     "name": "Vorlesung an der Harvard Univerity besuchen",
     "desc": "Du brauchst mal Abwechslung",
-    "img": "img",
+    "img": "school.png",
     "type":"learn",
     "value": 6,
-    "cost": 1000
+    "cost": 250,
+    "area": 3
     
   },
   {
     "name": "Ghostwriter",
     "desc": "Hausarbeiten selber schreiben ist was für Loser",
-    "img": "img",
+    "img": "notebook.png",
     "type": "learn",
     "value": 3,
-    "cost": 1200
+    "cost": 150,
+    "area": 3
   }
    
   

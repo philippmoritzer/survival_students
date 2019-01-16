@@ -11,7 +11,7 @@
   {
     "name": "Nobelrestaurant",
     "desc": "Salat mit Blattgold",
-    "img": "teuer.png",
+    "img": "salad.png",
     "type": "hunger",
     "value": 4,
     "cost": 600,
@@ -29,7 +29,7 @@
   {
     "name": "Nobelrestaurant",
     "desc": "Kaviar",
-    "img": "fish.png",
+    "img": "caviar.png",
     "type": "hunger",
     "value": 6,
     "cost": 500,
@@ -39,10 +39,11 @@
     
       "name": "Chinesischer Tee",
       "desc": "Schmeckt wie normaler Tee kostet aber 100-mal so viel",
-      "img": "img",
+      "img": "green-tea.png",
       "type": "hunger",
       "value": 5,
-      "cost": 200
+      "cost": 200,
+      "area": 0
       
     
   },
@@ -50,20 +51,22 @@
     
     "name": "Sushi",
     "desc": "Natürlich vergoldetes Sushi mit vier Diamanten",
-    "img": "img",
+    "img": "sushi.png",
     "type": "hunger",
     "value": 6,
-    "cost": 650
+    "cost": 650,
+    "area": 3
     
   
 },
 {
     "name": "Maladúa",
     "desc": "Der beste Schinken weltweit",
-    "img": "img",
+    "img": "pig.png",
     "type": "hunger",
     "value": 5,
-    "cost": 450
+    "cost": 450,
+    "area": 3
     
 }
 ]

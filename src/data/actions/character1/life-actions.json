@@ -2,7 +2,7 @@
   {
     "name": "Am Strand chillen",
     "desc": "Wer will nicht mit den Freunden am Strand chillen?",
-    "img": "img",
+    "img": "sun-umbrella.png",
     "type": "life",
     "value": 20,
     "cost": 15
@@ -20,7 +20,7 @@
   {
     "name": "Sauna-Gang",
     "desc": "In Australien war es heißer...",
-    "img": "img",
+    "img": "sauna.png",
     "type": "life",
     "value": 12,
     "cost": 35

@@ -12,7 +12,7 @@
   {
     "name": "Streetfood",
     "desc": "Bush Food ist der Renner in Australien, erstmal einen Salamander",
-    "img": "img",
+    "img": "salamander.png",
     "type": "hunger",
     "value": 7,
     "cost": 30,
@@ -22,7 +22,7 @@
   {
     "name": "Krokodilfleisch",
     "desc": "Die australische Küche ist einfach die beste",
-    "img": "img",
+    "img": "alligator.png",
     "type": "hunger",
     "value": 8,
     "cost": 35

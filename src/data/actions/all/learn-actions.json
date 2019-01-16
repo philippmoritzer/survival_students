@@ -21,7 +21,7 @@
   {
     "name": "Vorlesung",
     "desc": "Eine Vorlesung in der Uni besuchen",
-    "img": "employee.png",
+    "img": "conference.png",
     "type": "learn",
     "reward": 14,
     "value": 3,
@@ -31,7 +31,7 @@
   {
     "name": "Tutorium",
     "desc": "Ins Tutorium gehen, ideal um Defizite aufzuarbeiten",
-    "img": "employee.png",
+    "img": "presentation.png",
     "type": "learn",
     "reward": 11,
     "value": 6,
@@ -41,7 +41,7 @@
   {
     "name": "Projektarbeit",
     "desc": "Am Projekt weiterarbeiten",
-    "img": "employee.png",
+    "img": "meeting.png",
     "type": "learn",
     "value": 3,
     "cost": 0,
@@ -50,7 +50,7 @@
   {
     "name": "Für Klausur lernen",
     "desc": "Bereite dich auf die Klausuren vor",
-    "img": "employee.png",
+    "img": "test2.png",
     "type": "learn",
     "reward": 7,
     "value": 6,
@@ -70,7 +70,7 @@
   {
     "name": "Googeln",
     "desc": "Irgendeinen Fachbegriff googeln",
-    "img": "img",
+    "img": "search.png",
     "type": "learn",
     "reward": 9,
     "value": 4,

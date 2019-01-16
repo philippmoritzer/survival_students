@@ -2,7 +2,7 @@
   {
     "name": "Daniel Jung",
     "desc": "Nichts geht ohne Daniel",
-    "img": "test.png",
+    "img": "video-tutorial.png",
     "type": "learn",
     "value": 4,
     "cost": 0
@@ -10,7 +10,7 @@
   {
     "name": "Mathe-Bibel.de",
     "desc": "Größter Dreck, aber das einzige, was man versteht",
-    "img": "img",
+    "img": "video-tutorial.png",
     "type": "learn",
     "value": 7,
     "cost": 0
@@ -19,7 +19,7 @@
   {
     "name": "Formelsammlung",
     "desc": "In der Formelsammlung rumblättern kommt immer gut",
-    "img": "img",
+    "img": "open-book.png",
     "type": "learn",
     "value": 6,
     "cost": 0
@@ -28,7 +28,7 @@
   {
     "name": "Mappe sortieren",
     "desc": "Eine geordnete Mappe ist das halbe Lernen",
-    "img": "img",
+    "img": "folder.png",
     "type": "learn",
     "value": 5,
     "cost": 0
