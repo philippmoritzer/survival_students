@@ -7,7 +7,8 @@ const changeUIDay = area => {
   if (gst.day === 1) {
   }
 
-  jQuery("#gameEndDayButton").attr("disabled", true);
+  // jQuery("#gameEndDayButton").attr("disabled", true);
+  jQuery("#gameEndDayButton").addClass("gameEndDayButtonActionsLeft");
   jQuery("#gameTurnIndicatorText").text(gst.turnCount + " / " + MAX_TURN_COUNT);
 
   const actionItem1 = new ActionItem(0, area.actions[0]);
@@ -23,7 +24,7 @@ const changeUIDay = area => {
  * Makes the "End Day"-Button available when all turns are used
  */
 const updateGameDayEndButtonUI = () => {
-  jQuery("#gameEndDayButton").attr("disabled", false);
+  jQuery("#gameEndDayButton").removeClass("gameEndDayButtonActionsLeft");
 };
 
 /**
