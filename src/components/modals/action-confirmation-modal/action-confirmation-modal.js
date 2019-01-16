@@ -49,9 +49,9 @@ jQuery("#actionConfirmationAcceptButton").on("click", () => {
   closeModal();
 });
 
-if (currentAction.reward) {
+if (currentAction.reward && !gst.characterOwnsItem(currentAction.reward)) {
   const item = gst.getItemById(currentAction.reward);
-  if (!gst.characterOwnsItem(item)) {
+  if (!gst.characterOwnsItem(item.id)) {
     const assetPath = "../assets/images/items/";
     jQuery("#actionConfirmationRewardImg").attr("src", assetPath + item.image);
 

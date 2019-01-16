@@ -15,26 +15,14 @@
     "value": 15,
     "cost": 35,
     "area": 3
-
   },
+
   {
-    
-      "name": "Bowlen mit Freunden?",
-      "desc": "Pass auf, Bowlingkugeln sind schwer",
-      "img": "bowling.png",
-      "type": "life",
-      "value": 15,
-      "cost": 20,
-      "area": 0,
-      "reward": 8
-    },
-    {
-      "name": "Sauna-Gang",
-      "desc": "In Australien war es heißer...",
-      "img": "img",
-      "type": "life",
-      "value": 12,
-      "cost": 35 
-    }
-  
+    "name": "Sauna-Gang",
+    "desc": "In Australien war es heißer...",
+    "img": "img",
+    "type": "life",
+    "value": 12,
+    "cost": 35
+  }
 ]

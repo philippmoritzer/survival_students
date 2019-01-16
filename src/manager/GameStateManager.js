@@ -99,14 +99,12 @@ class GameStateManager {
         GameStateManager.getInstance().learnActions = learnActions;
       });
 
-      //TODO: entfernen?
       const actions = [hungerActions, lifeActions, learnActions];
 
       let areas = [];
       jQuery.getJSON("./data/area/areas.json", data => {
         areas = data;
         GameStateManager.getInstance().areas = areas;
-        //FIX ME, fragt den letzten ab und resolvt dann
         resolve();
       });
     });
@@ -347,7 +345,6 @@ class GameStateManager {
   evaluateAreaActionFit(action, actions, area) {
     while (action.area !== area.index) {
       action = actions[Math.floor(Math.random() * actions.length)];
-
       if (!action.area) {
         if (action.area !== 0) {
           break;
@@ -448,12 +445,14 @@ class GameStateManager {
   /**
    * checks if the character owns an item
    * a character is only allowed to own a item once.
-   * @param {*} item item to check
+   * @param {*} item item-id to check
    */
   characterOwnsItem(item) {
     for (let i = 0; i < this.character.items.length; i++) {
       const element = this.character.items[i];
-      if (element.id === item.id) {
+      console.log("###item" + item);
+      console.log("###owneditem" + element.id);
+      if (element.id === item) {
         return true;
       }
     }

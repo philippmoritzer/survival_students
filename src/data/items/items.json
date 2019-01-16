@@ -9,7 +9,7 @@
   {
     "id": 2,
     "title": "Handynummer",
-    "description": "Erhöht das Ansehen (+ 10% auf Lifestyle)",
+    "description": "Erhöht das Ansehen. (+ 10% auf Lifestyle)",
     "sellfor": 50,
     "image": "phone.png",
     "type": "life",
@@ -18,9 +18,9 @@
   {
     "id": 3,
     "title": "Lebensmittelvergiftung",
-    "description": "Iss lieber gesund  (- 10% Hunger) [verkaufen kostet Geld]",
+    "description": "Iss lieber gesund.  (- 10% Hunger) [verkaufen kostet Geld]",
     "sellfor": -50,
-    "image": "phone.png",
+    "image": "poison.png",
     "type": "hunger",
     "value": -0.1
   },
@@ -29,7 +29,7 @@
     "title": "Muskelkater",
     "description": "Häufiger trainieren hilft (- 10% Lifestyle) [verkaufen kostet Geld]",
     "sellfor": -30,
-    "image": "phone.png",
+    "image": "muscle.png",
     "type": "life",
     "value": -0.1
   },
@@ -38,43 +38,107 @@
     "title": "Autogramm",
     "description": "Du Groupie (+ 10% auf Lifestyle)",
     "sellfor": 40,
-    "image": "phone.png",
+    "image": "autograph.png",
     "type": "life",
     "value": 0.1
   },
   {
     "id": 6,
-    "title": "Absturz",
-    "description": "Du kotzt dir die Seele aus dem Leib (-8% auf Lifestyle) [verkaufen kostet Geld]",
+    "title": "Kater",
+    "description": "Zu viel getrunken. Die Konsequenz ist ein schlimmer Kater. (-8% auf Lifestyle) [verkaufen kostet Geld]",
     "sellfor": -20,
+    "image": "cat.png",
     "type": "life",
     "value": -0.08
-
   },
   {
     "id": 7,
-    "title": "Neues Spiel gekauft",
-    "description": "Du hast dir ein neues Spiel gekauft, weil dir zu langweilig war (-15% auf Lernstand)[verkaufen kostet Geld]",
+    "title": "Spiel",
+    "description": "Du hast dir ein neues Spiel gekauft, weil dir zu langweilig war. Beim Verkauf machst du leider Verlust. (-15% auf Lernen)[verkaufen kostet Geld]",
     "sellfor": -60,
+    "image": "game.png",
     "type": "learn",
-    "value":-0.15
+    "value": -0.15
   },
   {
     "id": 8,
-    "title": "Bowlingkugel und Fuß?",
-    "description": "Aua, als Entschädigung für deine Dummheit schenkt dir das Bowlingcenter die Bowlingkugel(+5% Lifestyle)",
+    "title": "Bowlingkugel",
+    "description": "Aua, als Entschädigung für deine Verletzung beim Bowlen schenkt dir das Bowlingcenter die Bowlingkugel (+5% Lifestyle)",
     "sellfor": 50,
-    "type":"life",
+    "image": "bowling.png",
+    "type": "life",
     "value": 0.05
-
   },
   {
     "id": 9,
-    "title": "Motivationslos",
-    "description": "Beim Googeln bist du doch auf Instagram gekommen und hast jetzt keine Lust mehr zu lernen(-10% Lernstand)[verkaufen kostet Geld]",
+    "title": "Schlechte Note",
+    "description": "Du hast eine schlechte Note bekommen. Deine Motivation lässt nach. (-10% Lernstand)[verkaufen kostet Geld]",
     "sellfor": -50,
+    "image": "grade.png",
     "type": "learn",
     "value": -0.1
+  },
+  {
+    "id": 10,
+    "title": "Essensgutschein",
+    "description": "Für deine häufigen Besuche bekommst du einen Essensgutschein. (+5% Hunger)",
+    "sellfor": 50,
+    "image": "coupon.png",
+    "type": "hunger",
+    "value": 0.05
+  },
+  {
+    "id": 11,
+    "title": "Spickzettel",
+    "description": "Ultimativer Spickzettel. (+10% Lernstand)",
+    "sellfor": 50,
+    "image": "note.png",
+    "type": "learn",
+    "value": 0.1
+  },
+  {
+    "id": 12,
+    "title": "Diätnahrung",
+    "description": "Durch die Diät erleidest du weniger Hunger. (+10% Hunger)",
+    "sellfor": 150,
+    "image": "vitamins.png",
+    "type": "hunger",
+    "value": 0.1
+  },
+  {
+    "id": 13,
+    "title": "Nahrungsergänzungsmittel",
+    "description": "Es muss weniger gegessen werden. Dafür steigt das Hungergefühl ins unermessliche (-15% Hunger)[verkaufen kostet Geld]",
+    "sellfor": -50,
+    "image": "vitamins.png",
+    "type": "hunger",
+    "value": -0.15
+  },
+  {
+    "id": 14,
+    "title": "Taschenrechner",
+    "description": "Gefunden im Hörsaal. Könnte nützlich sein. (+5% Lernstand)",
+    "sellfor": 250,
+    "image": "calculator.png",
+    "type": "learn",
+    "value": 0.05
+  },
+  {
+    "id": 15,
+    "title": "Essenseinladung",
+    "description": "Deine Eltern laden dich zum Essen ein. (+5% Hunger)",
+    "sellfor": 50,
+    "image": "invitation.png",
+    "type": "learn",
+    "value": 0.05
+  },
+  {
+    "id": 16,
+    "title": "Motivationsvideo",
+    "description": "Motiviert zum lernen. (+10% Lernstand)",
+    "sellfor": 50,
+    "image": "video.png",
+    "type": "learn",
+    "value": 0.1
   }
-  
 ]

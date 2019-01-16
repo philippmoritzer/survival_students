@@ -45,7 +45,7 @@ class ActionItem {
         break;
       case "learn":
         jQuery("#actionContainer" + this.id).css({
-          "background-color": "rgba(249, 168, 37, 0.7)"
+          "background-color": "rgba(249, 168, 37, 0.9)"
         });
         break;
     }

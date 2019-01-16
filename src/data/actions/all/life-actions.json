@@ -23,9 +23,9 @@
     "desc": "Wer auch immer ist in der Stadt",
     "img": "microphone.png",
     "type": "life",
+    "reward": 5,
     "value": 7,
     "cost": 25,
-    "reward": 5,
     "area": 3
   },
   {
@@ -33,6 +33,7 @@
     "desc": "Feiern bis zum Umkippen",
     "img": "disco-ball.png",
     "type": "life",
+    "reward": 6,
     "value": 7,
     "cost": 50,
     "area": 3
@@ -42,9 +43,9 @@
     "desc": "Nichts geht über einen Lauf durch den Wald, obwohl...",
     "img": "shoe.png",
     "type": "life",
+    "reward": 4,
     "value": 4,
     "cost": 0,
-    "reward": 4,
     "area": 3
   },
   {
@@ -61,10 +62,20 @@
     "desc": "Ab ins Gym",
     "img": "gym2.png",
     "type": "life",
+    "reward": 4,
     "value": 5,
     "cost": 10,
-    "reward": 4,
     "area": 4
+  },
+  {
+    "name": "Bowlen mit Freunden?",
+    "desc": "Pass auf, Bowlingkugeln sind schwer",
+    "img": "bowling.png",
+    "type": "life",
+    "reward": 8,
+    "value": 15,
+    "cost": 20,
+    "area": 0
   },
 
   {
