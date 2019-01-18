@@ -89,7 +89,7 @@
   {
     "name": "Kino",
     "desc": "Was läuft gerade im Kino?",
-    "img": "img",
+    "img": "video-camera.png",
     "type": "life",
     "value": 4,
     "cost": 15
